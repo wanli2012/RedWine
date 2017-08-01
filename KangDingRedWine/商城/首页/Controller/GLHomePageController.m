@@ -9,7 +9,7 @@
 #import "GLHomePageController.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import "GLHomePage_GoodsCell.h"
-#import "GLHome_AllClassifyController.h"
+#import "GLHomePage_AllController.h"
 
 @interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
@@ -55,7 +55,7 @@
     [self setHeaderView];
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
-    
+    self.hidesBottomBarWhenPushed = YES;
 }
 
 
@@ -111,6 +111,7 @@
         
         [view addSubview:imageV];
         [view addSubview:label];
+        
         [self.contentV addSubview:view];
     }
 
@@ -119,15 +120,16 @@
 //全部分类
 - (IBAction)allClassify:(id)sender {
    
-//    GLHome_AllClassifyController * allVC = [[GLHome_AllClassifyController alloc] init];
-//    [self.navigationController pushViewController:allVC animated:YES];
-//    self.hidesBottomBarWhenPushed = NO;
+    GLHomePage_AllController * allVC = [[GLHomePage_AllController alloc] init];
+    [self.navigationController pushViewController:allVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 
