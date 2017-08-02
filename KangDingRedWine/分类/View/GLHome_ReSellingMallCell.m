@@ -41,7 +41,8 @@
         cell.titleLabel.textColor =  YYSRGBColor(255, 50, 50, 1);//红色
         
     }else{
-        cell.titleLabel.textColor = [UIColor whiteColor];
+        
+        cell.titleLabel.textColor = YYSRGBColor(179, 179, 179, 1);//白色
     }
     
     return cell;

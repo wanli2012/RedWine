@@ -23,6 +23,10 @@
 		4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1800EC1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m */; };
 		4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1800ED1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib */; };
 		4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */; };
+		4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */; };
+		4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */; };
+		4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */; };
+		4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6351F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -101,6 +105,12 @@
 		4A1800EC1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsCollectionViewCell.m; sourceTree = "<group>"; };
 		4A1800ED1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Tabbar和Nav.xcassets"; sourceTree = "<group>"; };
+		4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailController.h; sourceTree = "<group>"; };
+		4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailController.m; sourceTree = "<group>"; };
+		4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailController.xib; sourceTree = "<group>"; };
+		4A50A6331F317BC300A28363 /* GLHome_GoodsDetailCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailCellCell.h; sourceTree = "<group>"; };
+		4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailCellCell.m; sourceTree = "<group>"; };
+		4A50A6351F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailCellCell.xib; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -269,6 +279,35 @@
 			path = XBConst;
 			sourceTree = "<group>";
 		};
+		4A50A62B1F31768700A28363 /* 商品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				4A50A62C1F31768700A28363 /* Controller */,
+				4A50A62D1F31768700A28363 /* View */,
+			);
+			path = "商品详情";
+			sourceTree = "<group>";
+		};
+		4A50A62C1F31768700A28363 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */,
+				4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */,
+				4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A50A62D1F31768700A28363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A50A6331F317BC300A28363 /* GLHome_GoodsDetailCellCell.h */,
+				4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */,
+				4A50A6351F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +447,7 @@
 			children = (
 				4A911A271F25E3AB003C0F6C /* 首页 */,
 				4A6C29B71F302C3500B3A568 /* 全部分类 */,
+				4A50A62B1F31768700A28363 /* 商品详情 */,
 			);
 			path = "商城";
 			sourceTree = "<group>";
@@ -697,6 +737,7 @@
 				4A6C29D71F302C4B00B3A568 /* GLHome_PersonCustomController.xib in Resources */,
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
+				4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */,
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
 				4A911A1C1F25E2FD003C0F6C /* Assets.xcassets in Resources */,
@@ -708,6 +749,7 @@
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A6C29DB1F302C4B00B3A568 /* GLHome_ReSellingMallCell.xib in Resources */,
+				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
 			);
@@ -796,6 +838,7 @@
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
+				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
 				4A911A4D1F25E406003C0F6C /* BasetabbarViewController.m in Sources */,
 				4A6C29D41F302C4B00B3A568 /* GLHome_ExchangeController.m in Sources */,
 				4A911A681F25E40B003C0F6C /* GetLabelBounds.m in Sources */,
@@ -811,6 +854,7 @@
 				4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */,
 				4A911A401F25E3F8003C0F6C /* usermodelachivar.m in Sources */,
 				4A7768411F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.m in Sources */,
+				4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

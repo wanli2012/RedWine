@@ -94,6 +94,7 @@
         
         GLHome_ResellingEnsurelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLHome_ResellingEnsurelCell"];
         cell.delegate = self;
+        cell.selectionStyle = 0;
         return cell;
         
     }else{
@@ -137,18 +138,18 @@
                     [weakSelf.isSelectedArr2 replaceObjectAtIndex:i withObject:@NO];
                 }
                 _value2 = weakSelf.titleArr2[index];
-                [weakSelf.isSelectedArr2 replaceObjectAtIndex:index withObject:@(![weakSelf.isSelectedArr[index] boolValue])];
+                [weakSelf.isSelectedArr2 replaceObjectAtIndex:index withObject:@(![weakSelf.isSelectedArr2[index] boolValue])];
             }else{
                 for (int i = 0; i < self.isSelectedArr3.count; i ++) {
                     [weakSelf.isSelectedArr3 replaceObjectAtIndex:i withObject:@NO];
                 }
                 _value3 = weakSelf.titleArr3[index];
-                [weakSelf.isSelectedArr3 replaceObjectAtIndex:index withObject:@(![weakSelf.isSelectedArr[index] boolValue])];
+                [weakSelf.isSelectedArr3 replaceObjectAtIndex:index withObject:@(![weakSelf.isSelectedArr3[index] boolValue])];
             }
 
             [weakSelf.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section], nil] withRowAnimation:UITableViewRowAnimationNone];
         };
-        
+        cell.selectionStyle = 0;
         return cell;
     }
 
@@ -163,7 +164,7 @@
         headerV.tag = section;
         
         UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(10, 0, kSCREEN_WIDTH - 20, 1)];
-        lineV.backgroundColor = [UIColor whiteColor];
+        lineV.backgroundColor = YYSRGBColor(179, 179, 179, 1);
         
         UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 60, 30)];
         
@@ -183,7 +184,7 @@
         }else if(section == 2){
             
             [leftBtn setTitle:@"种类" forState:UIControlStateNormal];
-
+            
         }
         
         [leftBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];

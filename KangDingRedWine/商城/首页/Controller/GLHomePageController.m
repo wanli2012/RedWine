@@ -55,6 +55,7 @@
     [self setHeaderView];
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
+//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     self.hidesBottomBarWhenPushed = YES;
 }
 
@@ -214,7 +215,13 @@
     headerV.backgroundColor = [UIColor whiteColor];
     headerV.tag = section;
     
-    UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 80, 30)];
+    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(10, 0, kSCREEN_WIDTH - 20, 1)];
+    lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    UIView *lineV2 = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kSCREEN_WIDTH - 20, 1)];
+    lineV2.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 80, 30)];
     
     UIImage *img = [UIImage imageNamed:@"复消商城标题装饰"];
     img = [img stretchableImageWithLeftCapWidth:floorf(img.size.width /2 ) topCapHeight:floorf(img.size.height/2)];
@@ -226,7 +233,7 @@
     [leftBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 90, 10, 80, 30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(kSCREEN_WIDTH - 90, 20, 80, 30)];
     label.text = @"查看更多";
     label.font = [UIFont systemFontOfSize:13];
     label.textColor = [UIColor redColor];
@@ -235,23 +242,28 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(more:)];
     [headerV addGestureRecognizer:tap];
     
+    if(section != 0){
+        
+        [headerV addSubview:lineV2];
+    }
+    
     [headerV addSubview:leftBtn];
     [headerV addSubview:label];
     
     return headerV;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    
-    UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 20)];
-    footerV.backgroundColor = [UIColor whiteColor];
-    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kSCREEN_WIDTH, 1)];
-    lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
-    [footerV addSubview:lineV];
-    
-    return footerV;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//    
+//    UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 20)];
+//    footerV.backgroundColor = [UIColor whiteColor];
+//    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kSCREEN_WIDTH, 1)];
+//    lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
+//    
+//    [footerV addSubview:lineV];
+//    
+//    return footerV;
+//}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //确定图片宽高比为: 335:260 计算高度
@@ -278,11 +290,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 60;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 20;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    return 20;
+//}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat sectionHeaderHeight = 50;
@@ -310,6 +322,9 @@
         _cycleScrollView.placeholderImageContentMode = UIViewContentModeScaleAspectFill;
         _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;// 翻页 右下角
         _cycleScrollView.titleLabelBackgroundColor = YYSRGBColor(241, 242, 243, 1);// 图片对应的标题的 背景色。（因为没有设标题）
+        
+        _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"矩形-4-拷贝-2"];
+        _cycleScrollView.pageDotImage = [UIImage imageNamed:@"矩形-4-拷贝"];
         _cycleScrollView.placeholderImage = [UIImage imageNamed:LUNBO_PlaceHolder];
         _cycleScrollView.pageControlDotSize = CGSizeMake(10, 2);
     }
