@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GLHomePage_GoodsCellDelegate <NSObject>
+
+- (void)didSelectedItem:(NSInteger )section row:(NSInteger)row;
+
+@end
+
 @interface GLHomePage_GoodsCell : UITableViewCell
 
-//@property (nonatomic, assign)NSInteger rowHeight;
+@property (nonatomic, weak)id <GLHomePage_GoodsCellDelegate> delegate;
 
 @property (nonatomic, assign)NSInteger number;
+
+@property (nonatomic, assign)NSInteger section;
+@property (nonatomic, assign)NSInteger row;
 
 @end

@@ -12,7 +12,10 @@
 #define kPIC_HEIGHT  200
 
 @interface GLHome_GoodsDetailController ()<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+@property (weak, nonatomic) IBOutlet UIView *navView;
 
 @end
 
@@ -27,13 +30,18 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(-1, -kPIC_HEIGHT, kSCREEN_WIDTH + 1, kPIC_HEIGHT)];
     imageView.layer.masksToBounds = YES;
     
-    imageView.image = [UIImage imageNamed:@"测试图片"];
+    imageView.image = [UIImage imageNamed:@"timg"];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.tag = 101;
     
+    self.backBtn.layer.cornerRadius = 20.f;
+
     [self.tableView addSubview:imageView];
 
+}
+- (IBAction)back:(id)sender {
     
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark UITableViewDelegate UITableViewDataSource

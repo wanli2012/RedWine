@@ -39,11 +39,13 @@
     [self addSubview:self.collectionView];
 
     [self.collectionView registerNib:[UINib nibWithNibName:@"GLHome_GoodsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"GLHome_GoodsCollectionViewCell"];
+    
 }
 
-
 #pragma mark UICollectionView
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
     CGFloat width = (kSCREEN_WIDTH - 1) / 2;
     CGFloat height = (width - 20) * 260 / 335 + 75;
     if(_number == 0){
@@ -78,6 +80,12 @@
     
     return CGSizeMake(width, height);
     
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([self.delegate respondsToSelector:@selector(didSelectedItem:row:)]) {
+        [self.delegate didSelectedItem:self.section row:indexPath.row];
+    }
 }
 
 #pragma mark lazy

@@ -10,8 +10,9 @@
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import "GLHomePage_GoodsCell.h"
 #import "GLHomePage_AllController.h"
+#import "GLHome_GoodsDetailController.h"
 
-@interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,GLHomePage_GoodsCellDelegate>
 {
     CGFloat _headerImageHeight;
     NSInteger _number;
@@ -164,6 +165,12 @@
     }
 }
 
+- (void)didSelectedItem:(NSInteger)section row:(NSInteger)row{
+    
+    GLHome_GoodsDetailController *detailVC = [[GLHome_GoodsDetailController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
 #pragma mark UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -205,7 +212,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     GLHomePage_GoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLHomePage_GoodsCell"];
+    
     cell.number = _number;
+    cell.delegate = self;
+    cell.section = indexPath.section;
     
     return cell;
 }
