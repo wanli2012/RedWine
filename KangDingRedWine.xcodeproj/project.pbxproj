@@ -23,6 +23,7 @@
 		4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1800EC1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m */; };
 		4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1800ED1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib */; };
 		4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */; };
+		4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */; };
 		4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */; };
 		4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */; };
 		4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */; };
@@ -31,7 +32,6 @@
 		4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */; };
 		4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */; };
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
-		4A50A6611F31C24900A28363 /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6601F31C24900A28363 /* HJCarouselViewLayout.m */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -110,6 +110,8 @@
 		4A1800EC1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsCollectionViewCell.m; sourceTree = "<group>"; };
 		4A1800ED1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Tabbar和Nav.xcassets"; sourceTree = "<group>"; };
+		4A48DA8F1F33224B00FF8D8F /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
+		4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
 		4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailController.h; sourceTree = "<group>"; };
 		4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailController.m; sourceTree = "<group>"; };
 		4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailController.xib; sourceTree = "<group>"; };
@@ -121,8 +123,6 @@
 		4A50A63C1F31BEB100A28363 /* GLMineCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMineCollectionCell.h; sourceTree = "<group>"; };
 		4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMineCollectionCell.m; sourceTree = "<group>"; };
 		4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMineCollectionCell.xib; sourceTree = "<group>"; };
-		4A50A65F1F31C24900A28363 /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
-		4A50A6601F31C24900A28363 /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -527,8 +527,8 @@
 		4A911A2D1F25E3AB003C0F6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4A50A65F1F31C24900A28363 /* HJCarouselViewLayout.h */,
-				4A50A6601F31C24900A28363 /* HJCarouselViewLayout.m */,
+				4A48DA8F1F33224B00FF8D8F /* HJCarouselViewLayout.h */,
+				4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */,
 				4A1800C91F2ACBFB00F6E63D /* GLMineController.h */,
 				4A1800CA1F2ACBFB00F6E63D /* GLMineController.m */,
 				4A1800CB1F2ACBFB00F6E63D /* GLMineController.xib */,
@@ -840,7 +840,7 @@
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,
 				4A1800E51F2ADE2A00F6E63D /* XBConst.m in Sources */,
 				4A1800E11F2ADE2A00F6E63D /* XBScrollPageController.m in Sources */,
-				4A50A6611F31C24900A28363 /* HJCarouselViewLayout.m in Sources */,
+				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,

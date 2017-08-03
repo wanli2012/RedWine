@@ -12,8 +12,20 @@
 
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+{
+    NSArray *_titleArr;
+    
+}
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *middleViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight2;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight3;
+
 
 @end
 
@@ -24,6 +36,20 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     
+    self.contentViewWidth.constant = kSCREEN_WIDTH;
+    self.contentViewHeight.constant = kSCREEN_HEIGHT;
+    
+    self.topViewHeight.constant = 240 * autoSizeScaleY;
+    self.collectionView.height = 100 * autoSizeScaleY;
+    self.middleViewHeight.constant = 80 * autoSizeScaleY;
+    
+    self.spaceHeight.constant = 10 * autoSizeScaleY;
+    
+    self.spaceHeight2.constant = self.spaceHeight.constant;
+    self.spaceHeight3.constant = self.spaceHeight.constant;
+    
+    _titleArr = @[@"理财积分",@"余额",@"余额4",@"余额3",@"余额2",@"1"];
+    
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
@@ -33,12 +59,11 @@
 
     layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimCarousel];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
     layout.itemSize = CGSizeMake(100, 100);
-
     self.collectionView.collectionViewLayout = layout;
 
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
@@ -52,6 +77,7 @@
     NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
     NSIndexPath *curIndexPath = nil;
     NSInteger curzIndex = 0;
+    
     for (NSIndexPath *path in indexPaths.objectEnumerator) {
         UICollectionViewLayoutAttributes *attributes = [self.collectionView layoutAttributesForItemAtIndexPath:path];
         if (!curIndexPath) {
@@ -59,6 +85,7 @@
             curzIndex = attributes.zIndex;
             continue;
         }
+        
         if (attributes.zIndex > curzIndex) {
             curIndexPath = path;
             curzIndex = attributes.zIndex;
@@ -69,8 +96,11 @@
 }
 
 #pragma mark <UICollectionViewDataSource>
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+ 
+    return _titleArr.count;
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,7 +110,9 @@
     cell.clipsToBounds = YES;
     cell.layer.borderColor = [UIColor whiteColor].CGColor;
     cell.layer.borderWidth = 2.f;
-  
+    
+    cell.titleLabel.text = _titleArr[indexPath.row];
+    
     return cell;
 }
 
@@ -92,22 +124,16 @@
     }
     
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-    
-        HJCarouselViewLayout *layout = (HJCarouselViewLayout *)collectionView.collectionViewLayout;
-        CGFloat cellHeight = layout.itemSize.height;
-        CGRect visibleRect = CGRectZero;
-        if (indexPath.row > curIndexPath.row) {
-            visibleRect = CGRectMake(0, cellHeight * indexPath.row + cellHeight / 2, CGRectGetWidth(collectionView.frame), cellHeight / 2);
-        } else {
-            visibleRect = CGRectMake(0, cellHeight * indexPath.row, CGRectGetWidth(collectionView.frame), CGRectGetHeight(collectionView.frame));
-        }
-        [self.collectionView scrollRectToVisible:visibleRect animated:YES];
-    
+
     return NO;
 }
 
+
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     NSLog(@"click %ld", indexPath.row);
+    
 }
 
 @end

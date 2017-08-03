@@ -10,7 +10,6 @@
 
 #define INTERSPACEPARAM  1
 
-
 @interface HJCarouselViewLayout () {
     CGFloat _viewHeight;
     CGFloat _itemHeight;
@@ -44,7 +43,7 @@
         
         _viewHeight = CGRectGetWidth(self.collectionView.frame);
         _itemHeight = self.itemSize.width;
-        self.collectionView.contentInset = UIEdgeInsetsMake(0,0, 0, 0);
+        self.collectionView.contentInset = UIEdgeInsetsMake(0, (_viewHeight - _itemHeight) / 2, 0, (_viewHeight - _itemHeight) / 2);
     }
 }
 
@@ -56,22 +55,17 @@
     }
     return CGSizeMake(cellCount * _itemHeight, CGRectGetHeight(self.collectionView.frame));
 }
-//可见元素的布局
+
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
     NSInteger cellCount = [self.collectionView numberOfItemsInSection:0];
-    
     CGFloat centerY = (self.scrollDirection == UICollectionViewScrollDirectionVertical ? self.collectionView.contentOffset.y : self.collectionView.contentOffset.x) + _viewHeight / 2;
-    
     NSInteger index = centerY / _itemHeight;
     NSInteger count = (self.visibleCount - 1) / 2;
     NSInteger minIndex = MAX(0, (index - count));
     NSInteger maxIndex = MIN((cellCount - 1), (index + count));
-    
     NSMutableArray *array = [NSMutableArray array];
-    
     for (NSInteger i = minIndex; i <= maxIndex; i++) {
-        
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [array addObject:attributes];
@@ -79,22 +73,22 @@
     return array;
 }
 
-//所有元素的布局
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     attributes.size = self.itemSize;
     
     CGFloat cY = (self.scrollDirection == UICollectionViewScrollDirectionVertical ? self.collectionView.contentOffset.y : self.collectionView.contentOffset.x) + _viewHeight / 2;
     CGFloat attributesY = _itemHeight * indexPath.row + _itemHeight / 2;
-    attributes.zIndex = - ABS(attributesY - cY);
+    
+    attributes.zIndex = -ABS(attributesY - cY);
     
     CGFloat delta = cY - attributesY;
-    CGFloat ratio =  - delta / (_itemHeight * 2);//动过
+    
+    CGFloat ratio =  - delta / (_itemHeight * 2);
     CGFloat scale = 1 - ABS(delta) / (_itemHeight * 6.0) * cos(ratio * M_PI_4);
-    attributes.transform = CGAffineTransformMakeScale(scale, scale);
+    attributes.transform = CGAffineTransformMakeScale(scale , scale );
     
     CGFloat centerY = attributesY;
-    
     switch (self.carouselAnim) {
         case HJCarouselAnimRotary:
             attributes.transform = CGAffineTransformRotate(attributes.transform, - ratio * M_PI_4);
@@ -121,16 +115,13 @@
                     CGFloat param = delta / (_itemHeight / 2);
                     rect.size.width = _itemHeight * scale * (1 - param) + sin(0.25 * M_PI_2) * _itemHeight * INTERSPACEPARAM * 2 * param;
                 }
-                
                 attributes.frame = rect;
                 return attributes;
             }
-            
             break;
         case HJCarouselAnimCoverFlow: {
-            
             CATransform3D transform = CATransform3DIdentity;
-            transform.m34 = - 1.0/400.0f;
+            transform.m34 = -1.0/400.0f;
             transform = CATransform3DRotate(transform, ratio * M_PI_4, 1, 0, 0);
             attributes.transform3D = transform;
         }
@@ -149,7 +140,6 @@
 }
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
-    
     CGFloat index = roundf(((self.scrollDirection == UICollectionViewScrollDirectionVertical ? proposedContentOffset.y : proposedContentOffset.x) + _viewHeight / 2 - _itemHeight / 2) / _itemHeight);
     if (self.scrollDirection == UICollectionViewScrollDirectionVertical) {
         proposedContentOffset.y = _itemHeight * index + _itemHeight / 2 - _viewHeight / 2;

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GLMineCollectionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
