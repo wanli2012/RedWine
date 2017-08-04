@@ -46,6 +46,9 @@
 		4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72981F34687800DF9FF7 /* GLMine_BankListCell.xib */; };
 		4A6B729E1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B729C1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m */; };
 		4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B729D1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib */; };
+		4A6B72A71F34801100DF9FF7 /* shopingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72A21F34801100DF9FF7 /* shopingModel.m */; };
+		4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72A51F34801100DF9FF7 /* LBShopingCarTableViewCell.m */; };
+		4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -158,6 +161,11 @@
 		4A6B729B1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_BankCardBlindingController.h; sourceTree = "<group>"; };
 		4A6B729C1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_BankCardBlindingController.m; sourceTree = "<group>"; };
 		4A6B729D1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_BankCardBlindingController.xib; sourceTree = "<group>"; };
+		4A6B72A11F34801100DF9FF7 /* shopingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopingModel.h; sourceTree = "<group>"; };
+		4A6B72A21F34801100DF9FF7 /* shopingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopingModel.m; sourceTree = "<group>"; };
+		4A6B72A41F34801100DF9FF7 /* LBShopingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBShopingCarTableViewCell.h; sourceTree = "<group>"; };
+		4A6B72A51F34801100DF9FF7 /* LBShopingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBShopingCarTableViewCell.m; sourceTree = "<group>"; };
+		4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBShopingCarTableViewCell.xib; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -369,8 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				4A6B72671F34121E00DF9FF7 /* Controller */,
-				4A6B72681F34121E00DF9FF7 /* Model */,
-				4A6B72691F34121E00DF9FF7 /* View */,
+				4A6B72A01F34801100DF9FF7 /* model */,
+				4A6B72A31F34801100DF9FF7 /* view */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -383,20 +391,6 @@
 				4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A6B72681F34121E00DF9FF7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4A6B72691F34121E00DF9FF7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		4A6B726F1F341AF200DF9FF7 /* 个人信息 */ = {
@@ -484,6 +478,25 @@
 				4A6B72981F34687800DF9FF7 /* GLMine_BankListCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A6B72A01F34801100DF9FF7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72A11F34801100DF9FF7 /* shopingModel.h */,
+				4A6B72A21F34801100DF9FF7 /* shopingModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4A6B72A31F34801100DF9FF7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72A41F34801100DF9FF7 /* LBShopingCarTableViewCell.h */,
+				4A6B72A51F34801100DF9FF7 /* LBShopingCarTableViewCell.m */,
+				4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
@@ -895,6 +908,7 @@
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
 				4A911A1C1F25E2FD003C0F6C /* Assets.xcassets in Resources */,
 				4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */,
+				4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */,
 				4A6C29DD1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.xib in Resources */,
 				4A50A6391F31A4BC00A28363 /* 商品详情.xcassets in Resources */,
 				4A77683B1F3072B400C01BD5 /* GLHomePage_AllOneCell.xib in Resources */,
@@ -996,9 +1010,11 @@
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
 				4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */,
+				4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */,
 				4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */,
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
+				4A6B72A71F34801100DF9FF7 /* shopingModel.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
 				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
