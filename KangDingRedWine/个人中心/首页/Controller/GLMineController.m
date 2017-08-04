@@ -9,6 +9,7 @@
 #import "GLMineController.h"
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
+#import "GLMine_PersonInfoController.h"
 
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -41,6 +42,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *myJuniorBtn;//我的下级
 @property (weak, nonatomic) IBOutlet UIButton *salesAcountBtn;//销售额
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pendingPayImageVWidth;//待付款图片宽度
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *toBeReceivedImageVWidth;//待收货图片宽度
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pendingEvaluationImageVWidth;//待评价图片宽度
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *completeImageVWidth;//已完成图片宽度
 
 @end
 
@@ -51,8 +56,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self adaptUI];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self adaptUI];//适配UI
     
     _titleArr = @[@"理财积分",@"余额",@"余额4",@"余额3",@"余额2",@"1"];
     
@@ -61,8 +66,8 @@
     self.collectionView.showsVerticalScrollIndicator = NO;
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GLMineCollectionCell class]) bundle:nil] forCellWithReuseIdentifier:@"GLMineCollectionCell"];
     
+    //自定义布局
     HJCarouselViewLayout *layout = nil;
-
     layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimCarousel];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(100 * autoSizeScaleY, 100 * autoSizeScaleY);
@@ -70,11 +75,12 @@
 
 }
 
+//适配UI
 - (void)adaptUI{
     
     self.contentViewWidth.constant = kSCREEN_WIDTH;
     self.contentViewHeight.constant = kSCREEN_HEIGHT - 64 - 49;
-    self.topViewHeight.constant = 240 * autoSizeScaleY;
+    self.topViewHeight.constant = 230 * autoSizeScaleY;
     
     self.collectionViewHeight.constant = 100 * autoSizeScaleY;
     self.middleViewHeight.constant = 80 * autoSizeScaleY;
@@ -82,18 +88,70 @@
     self.spaceHeight.constant = 15 * autoSizeScaleY;
     self.spaceHeight2.constant = self.spaceHeight.constant;
     self.spaceHeight3.constant = self.spaceHeight.constant;
-
-    self.nameLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
-    self.myOrderLabel.font = [UIFont systemFontOfSize:15 * autoSizeScaleY];
-    self.checkAllOrderLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleY];
-    self.pendingPayLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
-    self.toBeReceivedLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
     
-    self.pendingEvaluationLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
-    self.completeLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    self.pendingEvaluationImageVWidth.constant = 30 *autoSizeScaleX;
+    self.toBeReceivedImageVWidth.constant = self.pendingEvaluationImageVWidth.constant;
+    self.pendingPayImageVWidth.constant = self.pendingEvaluationImageVWidth.constant;
+    self.completeImageVWidth.constant = self.pendingEvaluationImageVWidth.constant;
+
+    self.nameLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleX];
+    self.myOrderLabel.font = [UIFont systemFontOfSize:15 * autoSizeScaleX];
+    self.checkAllOrderLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleX];
+    
+    self.pendingPayLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleX];
+    self.toBeReceivedLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleX];
+    self.pendingEvaluationLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleX];
+    self.completeLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleX];
+    
     [self.mySuperiorBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
     [self.myJuniorBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
     [self.salesAcountBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
+    
+}
+//消息
+- (IBAction)infomation:(id)sender {
+    
+    NSLog(@"消息");
+    
+}
+
+//设置界面
+- (IBAction)set:(id)sender {
+    NSLog(@"设置界面");
+}
+//个人信息
+- (IBAction)personInfo:(id)sender {
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLMine_PersonInfoController *personVC = [[GLMine_PersonInfoController alloc] init];
+    [self.navigationController pushViewController:personVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+    
+}
+
+//全部订单
+- (IBAction)allOrderList:(id)sender {
+    NSLog(@"全部订单");
+}
+
+//四种订单界面
+- (IBAction)pushToOrder:(UITapGestureRecognizer *)tap {
+    
+  NSLog(@"四种订单");
+}
+
+//我的上级
+- (IBAction)pushToMySuperior:(id)sender {
+    
+}
+
+//我的下级
+- (IBAction)pushToMyJunior:(id)sender {
+    
+}
+
+//销售额
+- (IBAction)pushToSalesAcount:(id)sender {
     
 }
 

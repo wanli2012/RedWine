@@ -34,6 +34,10 @@
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
 		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
 		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
+		4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */; };
+		4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */; };
+		4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */; };
+		4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -128,6 +132,12 @@
 		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
 		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
 		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
+		4A6B72721F341BCF00DF9FF7 /* GLMine_PersonInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_PersonInfoController.h; sourceTree = "<group>"; };
+		4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_PersonInfoController.m; sourceTree = "<group>"; };
+		4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_PersonInfoController.xib; sourceTree = "<group>"; };
+		4A6B727C1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_PersonInfoCell.h; sourceTree = "<group>"; };
+		4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_PersonInfoCell.m; sourceTree = "<group>"; };
+		4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_PersonInfoCell.xib; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -369,6 +379,35 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A6B726F1F341AF200DF9FF7 /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72701F341AF200DF9FF7 /* Controller */,
+				4A6B72711F341AF200DF9FF7 /* View */,
+			);
+			path = "个人信息";
+			sourceTree = "<group>";
+		};
+		4A6B72701F341AF200DF9FF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72721F341BCF00DF9FF7 /* GLMine_PersonInfoController.h */,
+				4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */,
+				4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B72711F341AF200DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B727C1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.h */,
+				4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */,
+				4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				4A911A2C1F25E3AB003C0F6C /* 首页 */,
+				4A6B726F1F341AF200DF9FF7 /* 个人信息 */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -756,8 +796,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
+				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
+				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
@@ -857,12 +899,14 @@
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
+				4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */,
 				4A911A7D1F25E7CA003C0F6C /* LoadWaitView.m in Sources */,
 				4A6C29D81F302C4B00B3A568 /* GLHome_ReSellingMallController.m in Sources */,
 				4A911A701F25E40B003C0F6C /* UIView+SFrame.m in Sources */,
 				4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */,
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
+				4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */,
 				4A911A711F25E40B003C0F6C /* UIView+XBExtension.m in Sources */,
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
