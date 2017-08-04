@@ -34,6 +34,18 @@
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
 		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
 		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
+		4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */; };
+		4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */; };
+		4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */; };
+		4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */; };
+		4A6B72871F34615B00DF9FF7 /* GLMine_AccountSafetyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */; };
+		4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */; };
+		4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B728D1F3464E700DF9FF7 /* GLMine_BankListController.m */; };
+		4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B728E1F3464E700DF9FF7 /* GLMine_BankListController.xib */; };
+		4A6B72991F34687800DF9FF7 /* GLMine_BankListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72971F34687800DF9FF7 /* GLMine_BankListCell.m */; };
+		4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72981F34687800DF9FF7 /* GLMine_BankListCell.xib */; };
+		4A6B729E1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B729C1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m */; };
+		4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B729D1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -84,10 +96,6 @@
 		4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A781F25E7CA003C0F6C /* LoadWaitView.xib */; };
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
-		F95E4C1F1F341D5D0046792A /* LBShopingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */; };
-		F95E4C201F341D5D0046792A /* LBShopingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */; };
-		F95E4C221F341F9D0046792A /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95E4C211F341F9D0046792A /* 购物车.xcassets */; };
-		F95E4C251F3466E80046792A /* shopingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E4C241F3466E80046792A /* shopingModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +140,24 @@
 		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
 		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
 		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
+		4A6B72721F341BCF00DF9FF7 /* GLMine_PersonInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_PersonInfoController.h; sourceTree = "<group>"; };
+		4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_PersonInfoController.m; sourceTree = "<group>"; };
+		4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_PersonInfoController.xib; sourceTree = "<group>"; };
+		4A6B727C1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_PersonInfoCell.h; sourceTree = "<group>"; };
+		4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_PersonInfoCell.m; sourceTree = "<group>"; };
+		4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_PersonInfoCell.xib; sourceTree = "<group>"; };
+		4A6B72841F34615B00DF9FF7 /* GLMine_AccountSafetyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_AccountSafetyController.h; sourceTree = "<group>"; };
+		4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_AccountSafetyController.m; sourceTree = "<group>"; };
+		4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_AccountSafetyController.xib; sourceTree = "<group>"; };
+		4A6B728C1F3464E700DF9FF7 /* GLMine_BankListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_BankListController.h; sourceTree = "<group>"; };
+		4A6B728D1F3464E700DF9FF7 /* GLMine_BankListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_BankListController.m; sourceTree = "<group>"; };
+		4A6B728E1F3464E700DF9FF7 /* GLMine_BankListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_BankListController.xib; sourceTree = "<group>"; };
+		4A6B72961F34687800DF9FF7 /* GLMine_BankListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_BankListCell.h; sourceTree = "<group>"; };
+		4A6B72971F34687800DF9FF7 /* GLMine_BankListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_BankListCell.m; sourceTree = "<group>"; };
+		4A6B72981F34687800DF9FF7 /* GLMine_BankListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_BankListCell.xib; sourceTree = "<group>"; };
+		4A6B729B1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_BankCardBlindingController.h; sourceTree = "<group>"; };
+		4A6B729C1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_BankCardBlindingController.m; sourceTree = "<group>"; };
+		4A6B729D1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_BankCardBlindingController.xib; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -219,12 +245,6 @@
 		4A911A7A1F25E7CA003C0F6C /* NodataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodataView.m; sourceTree = "<group>"; };
 		4A911A7B1F25E7CA003C0F6C /* NodataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataView.xib; sourceTree = "<group>"; };
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
-		F95E4C1C1F341D5D0046792A /* LBShopingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBShopingCarTableViewCell.h; sourceTree = "<group>"; };
-		F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBShopingCarTableViewCell.m; sourceTree = "<group>"; };
-		F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBShopingCarTableViewCell.xib; sourceTree = "<group>"; };
-		F95E4C211F341F9D0046792A /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
-		F95E4C231F3466E80046792A /* shopingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopingModel.h; sourceTree = "<group>"; };
-		F95E4C241F3466E80046792A /* shopingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopingModel.m; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,7 +267,6 @@
 				4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */,
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
-				F95E4C211F341F9D0046792A /* 购物车.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -350,6 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				4A6B72671F34121E00DF9FF7 /* Controller */,
+				4A6B72681F34121E00DF9FF7 /* Model */,
+				4A6B72691F34121E00DF9FF7 /* View */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -360,10 +381,109 @@
 				4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */,
 				4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */,
 				4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */,
-				F95E4C1A1F341D4B0046792A /* model */,
-				F95E4C1B1F341D4B0046792A /* view */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B72681F34121E00DF9FF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A6B72691F34121E00DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A6B726F1F341AF200DF9FF7 /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72701F341AF200DF9FF7 /* Controller */,
+				4A6B72711F341AF200DF9FF7 /* View */,
+			);
+			path = "个人信息";
+			sourceTree = "<group>";
+		};
+		4A6B72701F341AF200DF9FF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72721F341BCF00DF9FF7 /* GLMine_PersonInfoController.h */,
+				4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */,
+				4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B72711F341AF200DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B727C1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.h */,
+				4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */,
+				4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A6B72811F3460E900DF9FF7 /* 账户安全 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72821F3460E900DF9FF7 /* Controller */,
+				4A6B72831F3460E900DF9FF7 /* View */,
+			);
+			path = "账户安全";
+			sourceTree = "<group>";
+		};
+		4A6B72821F3460E900DF9FF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72841F34615B00DF9FF7 /* GLMine_AccountSafetyController.h */,
+				4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */,
+				4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B72831F3460E900DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A6B72891F3464D300DF9FF7 /* 银行卡 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B728A1F3464D300DF9FF7 /* Controller */,
+				4A6B728B1F3464D300DF9FF7 /* View */,
+			);
+			path = "银行卡";
+			sourceTree = "<group>";
+		};
+		4A6B728A1F3464D300DF9FF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B728C1F3464E700DF9FF7 /* GLMine_BankListController.h */,
+				4A6B728D1F3464E700DF9FF7 /* GLMine_BankListController.m */,
+				4A6B728E1F3464E700DF9FF7 /* GLMine_BankListController.xib */,
+				4A6B729B1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.h */,
+				4A6B729C1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m */,
+				4A6B729D1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B728B1F3464D300DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72961F34687800DF9FF7 /* GLMine_BankListCell.h */,
+				4A6B72971F34687800DF9FF7 /* GLMine_BankListCell.m */,
+				4A6B72981F34687800DF9FF7 /* GLMine_BankListCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
@@ -554,6 +674,9 @@
 			isa = PBXGroup;
 			children = (
 				4A911A2C1F25E3AB003C0F6C /* 首页 */,
+				4A6B726F1F341AF200DF9FF7 /* 个人信息 */,
+				4A6B72811F3460E900DF9FF7 /* 账户安全 */,
+				4A6B72891F3464D300DF9FF7 /* 银行卡 */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -690,25 +813,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F95E4C1A1F341D4B0046792A /* model */ = {
-			isa = PBXGroup;
-			children = (
-				F95E4C231F3466E80046792A /* shopingModel.h */,
-				F95E4C241F3466E80046792A /* shopingModel.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		F95E4C1B1F341D4B0046792A /* view */ = {
-			isa = PBXGroup;
-			children = (
-				F95E4C1C1F341D5D0046792A /* LBShopingCarTableViewCell.h */,
-				F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */,
-				F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -771,10 +875,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95E4C221F341F9D0046792A /* 购物车.xcassets in Resources */,
+				4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */,
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
+				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
+				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
+				4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
@@ -794,13 +901,14 @@
 				4A7768421F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.xib in Resources */,
 				4A1800CD1F2ACBFB00F6E63D /* GLMineController.xib in Resources */,
 				4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */,
+				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A6C29DB1F302C4B00B3A568 /* GLHome_ReSellingMallCell.xib in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
-				F95E4C201F341D5D0046792A /* LBShopingCarTableViewCell.xib in Resources */,
+				4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,25 +979,27 @@
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
-				F95E4C251F3466E80046792A /* shopingModel.m in Sources */,
 				4A6C29DC1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.m in Sources */,
+				4A6B72871F34615B00DF9FF7 /* GLMine_AccountSafetyController.m in Sources */,
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
+				4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */,
 				4A911A7D1F25E7CA003C0F6C /* LoadWaitView.m in Sources */,
 				4A6C29D81F302C4B00B3A568 /* GLHome_ReSellingMallController.m in Sources */,
 				4A911A701F25E40B003C0F6C /* UIView+SFrame.m in Sources */,
 				4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */,
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
+				4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */,
 				4A911A711F25E40B003C0F6C /* UIView+XBExtension.m in Sources */,
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
 				4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */,
+				4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */,
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
-				F95E4C1F1F341D5D0046792A /* LBShopingCarTableViewCell.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
 				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
 				4A911A4D1F25E406003C0F6C /* BasetabbarViewController.m in Sources */,
@@ -905,7 +1015,9 @@
 				4A911A111F25E2FD003C0F6C /* main.m in Sources */,
 				4A6C29DA1F302C4B00B3A568 /* GLHome_ReSellingMallCell.m in Sources */,
 				4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */,
+				4A6B729E1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.m in Sources */,
 				4A911A401F25E3F8003C0F6C /* usermodelachivar.m in Sources */,
+				4A6B72991F34687800DF9FF7 /* GLMine_BankListCell.m in Sources */,
 				4A7768411F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.m in Sources */,
 				4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */,
 				4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */,

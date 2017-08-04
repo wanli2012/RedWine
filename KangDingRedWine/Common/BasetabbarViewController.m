@@ -20,6 +20,7 @@
 @implementation BasetabbarViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.view.backgroundColor=TABBARTITLE_COLOR;
@@ -40,7 +41,6 @@
     BaseNavigationViewController *homeNav = [[BaseNavigationViewController alloc] initWithRootViewController:homeVC];
     homeNav.tabBarItem = [self barTitle:@"首页" image:@"首页白" selectImage:@"首页"];
     
-    
     //分类
     GLHome_AllClassifyController *classifyVC = [[GLHome_AllClassifyController alloc] init];
     BaseNavigationViewController *classifyNav = [[BaseNavigationViewController alloc] initWithRootViewController:classifyVC];
@@ -55,6 +55,7 @@
     GLMineController *mineVC = [[GLMineController alloc] init];
     BaseNavigationViewController *mineNav = [[BaseNavigationViewController alloc] initWithRootViewController:mineVC];
     mineNav.tabBarItem = [self barTitle:@"我的" image:@"个人白" selectImage:@"个人"];
+    
 //    if ([UserModel defaultUser].loginstatus == YES) {//登录状态
 //        if ([[UserModel defaultUser].group_id isEqualToString:MANAGER] || [[UserModel defaultUser].group_id isEqualToString:DIRECTOR] || [[UserModel defaultUser].group_id isEqualToString:MINISTER]) {//经理
 //

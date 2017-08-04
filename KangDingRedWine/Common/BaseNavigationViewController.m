@@ -32,19 +32,6 @@
 //    gradientLayer.endPoint = CGPointMake(1.0, 0);
 //    gradientLayer.frame = CGRectMake(0, -20, self.view.frame.size.width, 64);
 //    [self.navigationBar.layer addSublayer:gradientLayer];
-    //    //设置渐变色
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    gradientLayer.colors = @[(__bridge id)YYSRGBColor(255, 80, 0, 1).CGColor,(__bridge id)YYSRGBColor(246, 109, 2, 1).CGColor];
-    //    gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor,(__bridge id)[UIColor whiteColor].CGColor];
-    gradientLayer.locations = @[@0.5, @1.0];
-    gradientLayer.startPoint = CGPointMake(0, 0);
-    gradientLayer.type = kCAGradientLayerAxial;
-    gradientLayer.endPoint = CGPointMake(1.0, 0);
-    gradientLayer.frame = CGRectMake(0, -20, kSCREEN_WIDTH, 64);
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, kSCREEN_WIDTH, 64)];
-    [backgroundView.layer addSublayer:gradientLayer];
-    
-    [self.navigationBar insertSubview:backgroundView belowSubview:self.navigationItem.titleView];
 }
 
 //+(void)initialize
@@ -72,9 +59,10 @@
     
     [self.visibleViewController.navigationItem setHidesBackButton:YES];
     
-    UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [button setImage:[UIImage imageNamed:@"iv_back"] forState:UIControlStateNormal];
-    [button setImageEdgeInsets:UIEdgeInsetsMake(5, -5, 5, 25)];
+    UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 44)];
+    [button setImage:[UIImage imageNamed:@"标题栏返回键1白"] forState:UIControlStateNormal];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 25)];
+    
     button.backgroundColor=[UIColor clearColor];
     [button addTarget:self action:@selector(popself) forControlEvents:UIControlEventTouchUpInside];
     
