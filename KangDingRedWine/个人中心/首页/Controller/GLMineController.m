@@ -18,13 +18,26 @@
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+//适配间距 高度
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *middleViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight2;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceHeight3;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;//名字Label
+@property (weak, nonatomic) IBOutlet UILabel *myOrderLabel;//我的订单
+@property (weak, nonatomic) IBOutlet UILabel *checkAllOrderLabel;//查看全部订单
+@property (weak, nonatomic) IBOutlet UILabel *pendingPayLabel;//待付款
+@property (weak, nonatomic) IBOutlet UILabel *toBeReceivedLabel;//待收货
+@property (weak, nonatomic) IBOutlet UILabel *pendingEvaluationLabel;//待评价
+@property (weak, nonatomic) IBOutlet UILabel *completeLabel;//已完成
+
+
 
 
 @end
@@ -32,21 +45,12 @@
 @implementation GLMineController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.contentViewWidth.constant = kSCREEN_WIDTH;
-    self.contentViewHeight.constant = kSCREEN_HEIGHT;
-    
-    self.topViewHeight.constant = 240 * autoSizeScaleY;
-    self.collectionView.height = 100 * autoSizeScaleY;
-    self.middleViewHeight.constant = 80 * autoSizeScaleY;
-    
-    self.spaceHeight.constant = 10 * autoSizeScaleY;
-    
-    self.spaceHeight2.constant = self.spaceHeight.constant;
-    self.spaceHeight3.constant = self.spaceHeight.constant;
+    [self adaptUI];
     
     _titleArr = @[@"理财积分",@"余额",@"余额4",@"余额3",@"余额2",@"1"];
     
@@ -59,9 +63,24 @@
 
     layout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimCarousel];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(100, 100);
+    layout.itemSize = CGSizeMake(100 * autoSizeScaleY, 100 * autoSizeScaleY);
     self.collectionView.collectionViewLayout = layout;
 
+}
+
+- (void)adaptUI{
+    
+    self.contentViewWidth.constant = kSCREEN_WIDTH;
+    self.contentViewHeight.constant = kSCREEN_HEIGHT - 64 - 49;
+    self.topViewHeight.constant = 240 * autoSizeScaleY;
+    
+    self.collectionViewHeight.constant = 100 * autoSizeScaleY;
+    self.middleViewHeight.constant = 80 * autoSizeScaleY;
+    
+    self.spaceHeight.constant = 15 * autoSizeScaleY;
+    self.spaceHeight2.constant = self.spaceHeight.constant;
+    self.spaceHeight3.constant = self.spaceHeight.constant;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -106,10 +125,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     GLMineCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLMineCollectionCell" forIndexPath:indexPath];
-    cell.layer.cornerRadius = 50.f;
+    cell.layer.cornerRadius = 50 * autoSizeScaleY;
     cell.clipsToBounds = YES;
     cell.layer.borderColor = [UIColor whiteColor].CGColor;
-    cell.layer.borderWidth = 2.f;
+    cell.layer.borderWidth = 2 * autoSizeScaleY;
     
     cell.titleLabel.text = _titleArr[indexPath.row];
     
