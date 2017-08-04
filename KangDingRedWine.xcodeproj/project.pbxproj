@@ -84,6 +84,10 @@
 		4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A781F25E7CA003C0F6C /* LoadWaitView.xib */; };
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
+		F95E4C1F1F341D5D0046792A /* LBShopingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */; };
+		F95E4C201F341D5D0046792A /* LBShopingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */; };
+		F95E4C221F341F9D0046792A /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95E4C211F341F9D0046792A /* 购物车.xcassets */; };
+		F95E4C251F3466E80046792A /* shopingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E4C241F3466E80046792A /* shopingModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +219,12 @@
 		4A911A7A1F25E7CA003C0F6C /* NodataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodataView.m; sourceTree = "<group>"; };
 		4A911A7B1F25E7CA003C0F6C /* NodataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataView.xib; sourceTree = "<group>"; };
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
+		F95E4C1C1F341D5D0046792A /* LBShopingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBShopingCarTableViewCell.h; sourceTree = "<group>"; };
+		F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBShopingCarTableViewCell.m; sourceTree = "<group>"; };
+		F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBShopingCarTableViewCell.xib; sourceTree = "<group>"; };
+		F95E4C211F341F9D0046792A /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
+		F95E4C231F3466E80046792A /* shopingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopingModel.h; sourceTree = "<group>"; };
+		F95E4C241F3466E80046792A /* shopingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopingModel.m; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +247,7 @@
 				4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */,
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
+				F95E4C211F341F9D0046792A /* 购物车.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -339,8 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				4A6B72671F34121E00DF9FF7 /* Controller */,
-				4A6B72681F34121E00DF9FF7 /* Model */,
-				4A6B72691F34121E00DF9FF7 /* View */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -351,22 +360,10 @@
 				4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */,
 				4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */,
 				4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */,
+				F95E4C1A1F341D4B0046792A /* model */,
+				F95E4C1B1F341D4B0046792A /* view */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A6B72681F34121E00DF9FF7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4A6B72691F34121E00DF9FF7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
@@ -693,6 +690,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F95E4C1A1F341D4B0046792A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F95E4C231F3466E80046792A /* shopingModel.h */,
+				F95E4C241F3466E80046792A /* shopingModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F95E4C1B1F341D4B0046792A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F95E4C1C1F341D5D0046792A /* LBShopingCarTableViewCell.h */,
+				F95E4C1D1F341D5D0046792A /* LBShopingCarTableViewCell.m */,
+				F95E4C1E1F341D5D0046792A /* LBShopingCarTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -755,6 +771,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95E4C221F341F9D0046792A /* 购物车.xcassets in Resources */,
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
@@ -783,6 +800,7 @@
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
+				F95E4C201F341D5D0046792A /* LBShopingCarTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,6 +871,7 @@
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
+				F95E4C251F3466E80046792A /* shopingModel.m in Sources */,
 				4A6C29DC1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.m in Sources */,
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
@@ -870,6 +889,7 @@
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
+				F95E4C1F1F341D5D0046792A /* LBShopingCarTableViewCell.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
 				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
 				4A911A4D1F25E406003C0F6C /* BasetabbarViewController.m in Sources */,
