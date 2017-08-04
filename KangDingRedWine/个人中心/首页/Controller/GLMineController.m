@@ -37,7 +37,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *pendingEvaluationLabel;//待评价
 @property (weak, nonatomic) IBOutlet UILabel *completeLabel;//已完成
 
-
+@property (weak, nonatomic) IBOutlet UIButton *mySuperiorBtn;//我的上级 按钮
+@property (weak, nonatomic) IBOutlet UIButton *myJuniorBtn;//我的下级
+@property (weak, nonatomic) IBOutlet UIButton *salesAcountBtn;//销售额
 
 
 @end
@@ -80,6 +82,18 @@
     self.spaceHeight.constant = 15 * autoSizeScaleY;
     self.spaceHeight2.constant = self.spaceHeight.constant;
     self.spaceHeight3.constant = self.spaceHeight.constant;
+
+    self.nameLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    self.myOrderLabel.font = [UIFont systemFontOfSize:15 * autoSizeScaleY];
+    self.checkAllOrderLabel.font = [UIFont systemFontOfSize:13 * autoSizeScaleY];
+    self.pendingPayLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    self.toBeReceivedLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    
+    self.pendingEvaluationLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    self.completeLabel.font = [UIFont systemFontOfSize:14 * autoSizeScaleY];
+    [self.mySuperiorBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
+    [self.myJuniorBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
+    [self.salesAcountBtn.titleLabel setFont:[UIFont systemFontOfSize:15 * autoSizeScaleY]];
     
 }
 
@@ -88,6 +102,7 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
     
 }
 

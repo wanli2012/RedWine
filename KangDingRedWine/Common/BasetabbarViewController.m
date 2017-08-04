@@ -11,6 +11,7 @@
 #import "GLHomePageController.h"
 #import "GLMineController.h"
 #import "GLHome_AllClassifyController.h"
+#import "GLShoppingCartController.h"
 
 @interface BasetabbarViewController ()<UITabBarControllerDelegate>
 
@@ -39,16 +40,21 @@
     BaseNavigationViewController *homeNav = [[BaseNavigationViewController alloc] initWithRootViewController:homeVC];
     homeNav.tabBarItem = [self barTitle:@"首页" image:@"首页白" selectImage:@"首页"];
     
-    //个人中心
-    GLMineController *mineVC = [[GLMineController alloc] init];
-    BaseNavigationViewController *mineNav = [[BaseNavigationViewController alloc] initWithRootViewController:mineVC];
-    mineNav.tabBarItem = [self barTitle:@"我的" image:@"个人白" selectImage:@"个人"];
     
     //分类
     GLHome_AllClassifyController *classifyVC = [[GLHome_AllClassifyController alloc] init];
     BaseNavigationViewController *classifyNav = [[BaseNavigationViewController alloc] initWithRootViewController:classifyVC];
     classifyNav.tabBarItem = [self barTitle:@"分类" image:@"分类白" selectImage:@"分类"];
     
+    //购物车
+    GLShoppingCartController *cartVC = [[GLShoppingCartController alloc] init];
+    BaseNavigationViewController *cartNav = [[BaseNavigationViewController alloc] initWithRootViewController:cartVC];
+    cartNav.tabBarItem = [self barTitle:@"购物车" image:@"购物车白" selectImage:@"购物车"];
+    
+    //个人中心
+    GLMineController *mineVC = [[GLMineController alloc] init];
+    BaseNavigationViewController *mineNav = [[BaseNavigationViewController alloc] initWithRootViewController:mineVC];
+    mineNav.tabBarItem = [self barTitle:@"我的" image:@"个人白" selectImage:@"个人"];
 //    if ([UserModel defaultUser].loginstatus == YES) {//登录状态
 //        if ([[UserModel defaultUser].group_id isEqualToString:MANAGER] || [[UserModel defaultUser].group_id isEqualToString:DIRECTOR] || [[UserModel defaultUser].group_id isEqualToString:MINISTER]) {//经理
 //
@@ -60,7 +66,7 @@
 //            self.viewControllers = @[mallNav,mineNav];
 //        }
 //    }else{//退出状态
-        self.viewControllers = @[homeNav,classifyNav,mineNav];
+        self.viewControllers = @[homeNav,classifyNav,cartNav,mineNav];
 //    }
 //
 //    self.selectedIndex=0;

@@ -32,6 +32,8 @@
 		4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */; };
 		4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */; };
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
+		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
+		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
 		4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */; };
 		4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */; };
 		4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C29BE1F302C4B00B3A568 /* GLHome_AllClassifyController.m */; };
@@ -123,6 +125,9 @@
 		4A50A63C1F31BEB100A28363 /* GLMineCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMineCollectionCell.h; sourceTree = "<group>"; };
 		4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMineCollectionCell.m; sourceTree = "<group>"; };
 		4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMineCollectionCell.xib; sourceTree = "<group>"; };
+		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
+		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
+		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
 		4A6C29BA1F302C4B00B3A568 /* GLHome_AgentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentController.h; sourceTree = "<group>"; };
 		4A6C29BB1F302C4B00B3A568 /* GLHome_AgentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentController.m; sourceTree = "<group>"; };
 		4A6C29BC1F302C4B00B3A568 /* GLHome_AgentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentController.xib; sourceTree = "<group>"; };
@@ -322,6 +327,48 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A6B72651F34121E00DF9FF7 /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72661F34121E00DF9FF7 /* 首页 */,
+			);
+			path = "购物车";
+			sourceTree = "<group>";
+		};
+		4A6B72661F34121E00DF9FF7 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B72671F34121E00DF9FF7 /* Controller */,
+				4A6B72681F34121E00DF9FF7 /* Model */,
+				4A6B72691F34121E00DF9FF7 /* View */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		4A6B72671F34121E00DF9FF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */,
+				4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */,
+				4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6B72681F34121E00DF9FF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A6B72691F34121E00DF9FF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4A6C29B71F302C3500B3A568 /* 全部分类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,8 +471,8 @@
 			children = (
 				4A911A261F25E3AB003C0F6C /* 商城 */,
 				4A6C29B81F302C4B00B3A568 /* 分类 */,
+				4A6B72651F34121E00DF9FF7 /* 购物车 */,
 				4A911A2B1F25E3AB003C0F6C /* 个人中心 */,
-				4A911A301F25E3AB003C0F6C /* gjf */,
 				4A911A371F25E3F8003C0F6C /* 数据保存 */,
 				4A911A411F25E400003C0F6C /* 网络请求 */,
 				4A911A451F25E406003C0F6C /* Common */,
@@ -549,45 +596,6 @@
 				4A50A63C1F31BEB100A28363 /* GLMineCollectionCell.h */,
 				4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */,
 				4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A911A301F25E3AB003C0F6C /* gjf */ = {
-			isa = PBXGroup;
-			children = (
-				4A911A311F25E3AB003C0F6C /* 首页 */,
-			);
-			path = gjf;
-			sourceTree = "<group>";
-		};
-		4A911A311F25E3AB003C0F6C /* 首页 */ = {
-			isa = PBXGroup;
-			children = (
-				4A911A321F25E3AB003C0F6C /* Controller */,
-				4A911A331F25E3AB003C0F6C /* Model */,
-				4A911A341F25E3AB003C0F6C /* View */,
-			);
-			path = "首页";
-			sourceTree = "<group>";
-		};
-		4A911A321F25E3AB003C0F6C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A911A331F25E3AB003C0F6C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4A911A341F25E3AB003C0F6C /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -749,6 +757,7 @@
 			files = (
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
+				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
@@ -878,6 +887,7 @@
 				4A6C29D01F302C4B00B3A568 /* GLHome_AgentController.m in Sources */,
 				4A911A401F25E3F8003C0F6C /* usermodelachivar.m in Sources */,
 				4A7768411F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.m in Sources */,
+				4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */,
 				4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

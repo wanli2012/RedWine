@@ -20,10 +20,13 @@
                 <outlet property="contentViewHeight" destination="kyg-dY-4Up" id="mUC-ln-5ba"/>
                 <outlet property="contentViewWidth" destination="8gc-aT-Izg" id="pgP-hW-vnz"/>
                 <outlet property="middleViewHeight" destination="fuF-Jd-kcG" id="nLo-Ak-lKs"/>
+                <outlet property="myJuniorBtn" destination="q9z-FI-2f5" id="9cu-et-BFP"/>
                 <outlet property="myOrderLabel" destination="8Xc-Bq-Mvt" id="w4r-ak-5jC"/>
+                <outlet property="mySuperiorBtn" destination="vMd-RD-8tt" id="oUk-Xd-2Lg"/>
                 <outlet property="nameLabel" destination="ZsB-EM-BBY" id="k87-z9-Kfk"/>
                 <outlet property="pendingEvaluationLabel" destination="Omu-2Z-YS0" id="tIQ-7D-cLn"/>
                 <outlet property="pendingPayLabel" destination="oJF-tk-ila" id="1ap-w0-TLW"/>
+                <outlet property="salesAcountBtn" destination="ptV-u7-sgp" id="hzz-ZF-aTI"/>
                 <outlet property="spaceHeight" destination="g95-Yp-Rd4" id="k1Z-wg-QNA"/>
                 <outlet property="spaceHeight2" destination="ysr-Tc-pXA" id="h8s-PI-paO"/>
                 <outlet property="spaceHeight3" destination="sI0-gP-umS" id="9RY-5X-r9Y"/>
