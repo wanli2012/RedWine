@@ -111,6 +111,12 @@
 		4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A781F25E7CA003C0F6C /* LoadWaitView.xib */; };
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
+		F957D2B81F359D6E00A63845 /* LBAddHarvestAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2AE1F359D6E00A63845 /* LBAddHarvestAddressViewController.m */; };
+		F957D2B91F359D6E00A63845 /* LBAddHarvestAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2AF1F359D6E00A63845 /* LBAddHarvestAddressViewController.xib */; };
+		F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B11F359D6E00A63845 /* LBHarvestAddressListViewController.m */; };
+		F957D2BB1F359D6E00A63845 /* LBHarvestAddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B21F359D6E00A63845 /* LBHarvestAddressListViewController.xib */; };
+		F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */; };
+		F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +288,15 @@
 		4A911A7A1F25E7CA003C0F6C /* NodataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodataView.m; sourceTree = "<group>"; };
 		4A911A7B1F25E7CA003C0F6C /* NodataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataView.xib; sourceTree = "<group>"; };
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
+		F957D2AD1F359D6E00A63845 /* LBAddHarvestAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBAddHarvestAddressViewController.h; sourceTree = "<group>"; };
+		F957D2AE1F359D6E00A63845 /* LBAddHarvestAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBAddHarvestAddressViewController.m; sourceTree = "<group>"; };
+		F957D2AF1F359D6E00A63845 /* LBAddHarvestAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressViewController.xib; sourceTree = "<group>"; };
+		F957D2B01F359D6E00A63845 /* LBHarvestAddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHarvestAddressListViewController.h; sourceTree = "<group>"; };
+		F957D2B11F359D6E00A63845 /* LBHarvestAddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHarvestAddressListViewController.m; sourceTree = "<group>"; };
+		F957D2B21F359D6E00A63845 /* LBHarvestAddressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBHarvestAddressListViewController.xib; sourceTree = "<group>"; };
+		F957D2B51F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBAddHarvestAddressTableViewCell.h; sourceTree = "<group>"; };
+		F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBAddHarvestAddressTableViewCell.m; sourceTree = "<group>"; };
+		F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressTableViewCell.xib; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -703,6 +718,7 @@
 				4A911A261F25E3AB003C0F6C /* 商城 */,
 				4A6C29B81F302C4B00B3A568 /* 分类 */,
 				4A6B72651F34121E00DF9FF7 /* 购物车 */,
+				F957D2AC1F359D6E00A63845 /* 添加收获地址 */,
 				4A911A2B1F25E3AB003C0F6C /* 个人中心 */,
 				4A911A371F25E3F8003C0F6C /* 数据保存 */,
 				4A911A411F25E400003C0F6C /* 网络请求 */,
@@ -928,6 +944,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F957D2AC1F359D6E00A63845 /* 添加收获地址 */ = {
+			isa = PBXGroup;
+			children = (
+				F957D2AD1F359D6E00A63845 /* LBAddHarvestAddressViewController.h */,
+				F957D2AE1F359D6E00A63845 /* LBAddHarvestAddressViewController.m */,
+				F957D2AF1F359D6E00A63845 /* LBAddHarvestAddressViewController.xib */,
+				F957D2B01F359D6E00A63845 /* LBHarvestAddressListViewController.h */,
+				F957D2B11F359D6E00A63845 /* LBHarvestAddressListViewController.m */,
+				F957D2B21F359D6E00A63845 /* LBHarvestAddressListViewController.xib */,
+				F957D2B31F359D6E00A63845 /* model */,
+				F957D2B41F359D6E00A63845 /* view */,
+			);
+			path = "添加收获地址";
+			sourceTree = "<group>";
+		};
+		F957D2B31F359D6E00A63845 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F957D2B41F359D6E00A63845 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F957D2B51F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.h */,
+				F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */,
+				F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -997,6 +1045,7 @@
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
 				4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */,
+				F957D2BB1F359D6E00A63845 /* LBHarvestAddressListViewController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
@@ -1016,11 +1065,13 @@
 				4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */,
 				4A6C29DD1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.xib in Resources */,
 				4A50A6391F31A4BC00A28363 /* 商品详情.xcassets in Resources */,
+				F957D2B91F359D6E00A63845 /* LBAddHarvestAddressViewController.xib in Resources */,
 				4A77683B1F3072B400C01BD5 /* GLHomePage_AllOneCell.xib in Resources */,
 				4A7768421F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.xib in Resources */,
 				4A1800CD1F2ACBFB00F6E63D /* GLMineController.xib in Resources */,
 				4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */,
 				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
+				F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
 				4A4CE2E31F35911E002E3CD0 /* LBRegisterViewController.xib in Resources */,
 				4A4CE2D31F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib in Resources */,
@@ -1097,6 +1148,7 @@
 				4A911A6D1F25E40B003C0F6C /* UIButton+SetEdgeInsets.m in Sources */,
 				4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */,
 				4A911A6C1F25E40B003C0F6C /* ScaleSizeImage.m in Sources */,
+				F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */,
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,
 				4A1800E51F2ADE2A00F6E63D /* XBConst.m in Sources */,
 				4A1800E11F2ADE2A00F6E63D /* XBScrollPageController.m in Sources */,
@@ -1123,6 +1175,7 @@
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
 				4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */,
 				4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */,
+				F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */,
 				4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */,
 				4A4CE2D21F3572EB002E3CD0 /* GLShoppingCart_OrderController.m in Sources */,
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
@@ -1131,6 +1184,7 @@
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
 				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
+				F957D2B81F359D6E00A63845 /* LBAddHarvestAddressViewController.m in Sources */,
 				4A911A4D1F25E406003C0F6C /* BasetabbarViewController.m in Sources */,
 				4A6C29D41F302C4B00B3A568 /* GLHome_ExchangeController.m in Sources */,
 				4A911A681F25E40B003C0F6C /* GetLabelBounds.m in Sources */,
