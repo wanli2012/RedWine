@@ -370,7 +370,7 @@
                                                     <state key="normal" title="我的下级" backgroundImage="我的下级"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="pushToMyJunior:" destination="-1" eventType="touchUpInside" id="ATn-PX-RdY"/>
@@ -385,7 +385,7 @@
                                                     <state key="normal" title="销售额" backgroundImage="销售额"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="pushToSalesAcount:" destination="-1" eventType="touchUpInside" id="d9Z-GE-QIc"/>
