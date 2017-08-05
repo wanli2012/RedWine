@@ -99,6 +99,7 @@
 		4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A781F25E7CA003C0F6C /* LoadWaitView.xib */; };
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
+		F957D2871F3557E200A63845 /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F957D2861F3557E200A63845 /* 购物车.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +254,7 @@
 		4A911A7A1F25E7CA003C0F6C /* NodataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodataView.m; sourceTree = "<group>"; };
 		4A911A7B1F25E7CA003C0F6C /* NodataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataView.xib; sourceTree = "<group>"; };
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
+		F957D2861F3557E200A63845 /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */,
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
+				F957D2861F3557E200A63845 /* 购物车.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
 				4A911A1F1F25E2FD003C0F6C /* LaunchScreen.storyboard in Resources */,
 				4A6C29D71F302C4B00B3A568 /* GLHome_PersonCustomController.xib in Resources */,
+				F957D2871F3557E200A63845 /* 购物车.xcassets in Resources */,
 				4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */,
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
