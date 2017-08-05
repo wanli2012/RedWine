@@ -13,7 +13,6 @@
 //上下居中，图片在上，文字在下
 - (void)verticalCenterImageAndTitle:(CGFloat)spacing;
 
-
 //左右居中，文字在左，图片在右
 - (void)horizontalCenterTitleAndImage:(CGFloat)spacing;
 
