@@ -10,6 +10,7 @@
 #import "LBShopingCarTableViewCell.h"
 #import "UIButton+SetEdgeInsets.h"
 #import "shopingModel.h"
+#import "LBLoginViewController.h"
 
 @interface GLShoppingCartController ()<UITableViewDataSource,UITableViewDelegate,LBShopingCarTableViewCelldelegete>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -89,6 +90,8 @@
 //去结算
 - (IBAction)GoBuying:(UIButton *)sender {
     
+    LBLoginViewController *vc = [[LBLoginViewController alloc]init];
+    [self presentViewController:vc animated:NO completion:nil];
     
 }
 #pragma mark -------- LBShopingCarTableViewCelldelegete

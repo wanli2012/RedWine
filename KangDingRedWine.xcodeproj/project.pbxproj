@@ -100,6 +100,13 @@
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
 		F957D2871F3557E200A63845 /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F957D2861F3557E200A63845 /* 购物车.xcassets */; };
+		F957D28C1F3558B100A63845 /* LBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D28A1F3558B100A63845 /* LBLoginViewController.m */; };
+		F957D28D1F3558B100A63845 /* LBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D28B1F3558B100A63845 /* LBLoginViewController.xib */; };
+		F957D2911F3558D000A63845 /* LBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D28F1F3558D000A63845 /* LBRegisterViewController.m */; };
+		F957D2921F3558D000A63845 /* LBRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2901F3558D000A63845 /* LBRegisterViewController.xib */; };
+		F957D2961F3558EF00A63845 /* LBForgetSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2941F3558EF00A63845 /* LBForgetSecretViewController.m */; };
+		F957D2971F3558EF00A63845 /* LBForgetSecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2951F3558EF00A63845 /* LBForgetSecretViewController.xib */; };
+		F957D2991F35598500A63845 /* 登录注册.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F957D2981F35598500A63845 /* 登录注册.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,6 +262,16 @@
 		4A911A7B1F25E7CA003C0F6C /* NodataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataView.xib; sourceTree = "<group>"; };
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
 		F957D2861F3557E200A63845 /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
+		F957D2891F3558B100A63845 /* LBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLoginViewController.h; sourceTree = "<group>"; };
+		F957D28A1F3558B100A63845 /* LBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLoginViewController.m; sourceTree = "<group>"; };
+		F957D28B1F3558B100A63845 /* LBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBLoginViewController.xib; sourceTree = "<group>"; };
+		F957D28E1F3558D000A63845 /* LBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBRegisterViewController.h; sourceTree = "<group>"; };
+		F957D28F1F3558D000A63845 /* LBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBRegisterViewController.m; sourceTree = "<group>"; };
+		F957D2901F3558D000A63845 /* LBRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBRegisterViewController.xib; sourceTree = "<group>"; };
+		F957D2931F3558EF00A63845 /* LBForgetSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBForgetSecretViewController.h; sourceTree = "<group>"; };
+		F957D2941F3558EF00A63845 /* LBForgetSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBForgetSecretViewController.m; sourceTree = "<group>"; };
+		F957D2951F3558EF00A63845 /* LBForgetSecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBForgetSecretViewController.xib; sourceTree = "<group>"; };
+		F957D2981F35598500A63845 /* 登录注册.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "登录注册.xcassets"; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +295,7 @@
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
 				F957D2861F3557E200A63845 /* 购物车.xcassets */,
+				F957D2981F35598500A63845 /* 登录注册.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -602,6 +620,7 @@
 		4A911A0E1F25E2FD003C0F6C /* KangDingRedWine */ = {
 			isa = PBXGroup;
 			children = (
+				F957D2881F35589700A63845 /* 登录注册 */,
 				4A911A261F25E3AB003C0F6C /* 商城 */,
 				4A6C29B81F302C4B00B3A568 /* 分类 */,
 				4A6B72651F34121E00DF9FF7 /* 购物车 */,
@@ -829,6 +848,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F957D2881F35589700A63845 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				F957D2891F3558B100A63845 /* LBLoginViewController.h */,
+				F957D28A1F3558B100A63845 /* LBLoginViewController.m */,
+				F957D28B1F3558B100A63845 /* LBLoginViewController.xib */,
+				F957D28E1F3558D000A63845 /* LBRegisterViewController.h */,
+				F957D28F1F3558D000A63845 /* LBRegisterViewController.m */,
+				F957D2901F3558D000A63845 /* LBRegisterViewController.xib */,
+				F957D2931F3558EF00A63845 /* LBForgetSecretViewController.h */,
+				F957D2941F3558EF00A63845 /* LBForgetSecretViewController.m */,
+				F957D2951F3558EF00A63845 /* LBForgetSecretViewController.xib */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -896,6 +931,7 @@
 				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
+				F957D2991F35598500A63845 /* 登录注册.xcassets in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
 				4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
@@ -911,16 +947,19 @@
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
 				4A911A1C1F25E2FD003C0F6C /* Assets.xcassets in Resources */,
+				F957D28D1F3558B100A63845 /* LBLoginViewController.xib in Resources */,
 				4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */,
 				4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */,
 				4A6C29DD1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.xib in Resources */,
 				4A50A6391F31A4BC00A28363 /* 商品详情.xcassets in Resources */,
+				F957D2921F3558D000A63845 /* LBRegisterViewController.xib in Resources */,
 				4A77683B1F3072B400C01BD5 /* GLHomePage_AllOneCell.xib in Resources */,
 				4A7768421F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.xib in Resources */,
 				4A1800CD1F2ACBFB00F6E63D /* GLMineController.xib in Resources */,
 				4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */,
 				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
+				F957D2971F3558EF00A63845 /* LBForgetSecretViewController.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A6C29DB1F302C4B00B3A568 /* GLHome_ReSellingMallCell.xib in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
@@ -1010,6 +1049,7 @@
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
 				4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */,
+				F957D2911F3558D000A63845 /* LBRegisterViewController.m in Sources */,
 				4A911A711F25E40B003C0F6C /* UIView+XBExtension.m in Sources */,
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
@@ -1028,8 +1068,10 @@
 				4A911A6B1F25E40B003C0F6C /* predicateModel.m in Sources */,
 				4A1800E31F2ADE2A00F6E63D /* XBPageCell.m in Sources */,
 				4A911A4C1F25E406003C0F6C /* BaseNavigationViewController.m in Sources */,
+				F957D28C1F3558B100A63845 /* LBLoginViewController.m in Sources */,
 				4A1800E41F2ADE2A00F6E63D /* XBTagTitleCell.m in Sources */,
 				4A1800E91F2B233300F6E63D /* GLHomePage_GoodsCell.m in Sources */,
+				F957D2961F3558EF00A63845 /* LBForgetSecretViewController.m in Sources */,
 				4A911A141F25E2FD003C0F6C /* AppDelegate.m in Sources */,
 				4A911A3E1F25E3F8003C0F6C /* MerchantInformationModel.m in Sources */,
 				4A911A111F25E2FD003C0F6C /* main.m in Sources */,
