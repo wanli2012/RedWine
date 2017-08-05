@@ -10,4 +10,6 @@
 
 @interface LBAddHarvestAddressViewController : UIViewController
 
+@property (assign , nonatomic)NSInteger type;//1表示添加。2表示修改
+
 @end
