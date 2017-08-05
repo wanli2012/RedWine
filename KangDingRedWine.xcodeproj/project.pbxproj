@@ -28,6 +28,14 @@
 		4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2C91F35647E002E3CD0 /* GLMine_RealNameController.xib */; };
 		4A4CE2D21F3572EB002E3CD0 /* GLShoppingCart_OrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2D01F3572EB002E3CD0 /* GLShoppingCart_OrderController.m */; };
 		4A4CE2D31F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2D11F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib */; };
+		4A4CE2DE1F35911E002E3CD0 /* LBForgetSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2D61F35911E002E3CD0 /* LBForgetSecretViewController.m */; };
+		4A4CE2DF1F35911E002E3CD0 /* LBForgetSecretViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2D71F35911E002E3CD0 /* LBForgetSecretViewController.xib */; };
+		4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2D91F35911E002E3CD0 /* LBLoginViewController.m */; };
+		4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2DA1F35911E002E3CD0 /* LBLoginViewController.xib */; };
+		4A4CE2E21F35911E002E3CD0 /* LBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2DC1F35911E002E3CD0 /* LBRegisterViewController.m */; };
+		4A4CE2E31F35911E002E3CD0 /* LBRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */; };
+		4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2E41F359145002E3CD0 /* 登录注册.xcassets */; };
+		4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2E51F359145002E3CD0 /* 购物车.xcassets */; };
 		4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */; };
 		4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */; };
 		4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */; };
@@ -139,6 +147,17 @@
 		4A4CE2CF1F3572EB002E3CD0 /* GLShoppingCart_OrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCart_OrderController.h; sourceTree = "<group>"; };
 		4A4CE2D01F3572EB002E3CD0 /* GLShoppingCart_OrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCart_OrderController.m; sourceTree = "<group>"; };
 		4A4CE2D11F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCart_OrderController.xib; sourceTree = "<group>"; };
+		4A4CE2D51F35911E002E3CD0 /* LBForgetSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBForgetSecretViewController.h; sourceTree = "<group>"; };
+		4A4CE2D61F35911E002E3CD0 /* LBForgetSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBForgetSecretViewController.m; sourceTree = "<group>"; };
+		4A4CE2D71F35911E002E3CD0 /* LBForgetSecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBForgetSecretViewController.xib; sourceTree = "<group>"; };
+		4A4CE2D81F35911E002E3CD0 /* LBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBLoginViewController.h; sourceTree = "<group>"; };
+		4A4CE2D91F35911E002E3CD0 /* LBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBLoginViewController.m; sourceTree = "<group>"; };
+		4A4CE2DA1F35911E002E3CD0 /* LBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBLoginViewController.xib; sourceTree = "<group>"; };
+		4A4CE2DB1F35911E002E3CD0 /* LBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBRegisterViewController.h; sourceTree = "<group>"; };
+		4A4CE2DC1F35911E002E3CD0 /* LBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBRegisterViewController.m; sourceTree = "<group>"; };
+		4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBRegisterViewController.xib; sourceTree = "<group>"; };
+		4A4CE2E41F359145002E3CD0 /* 登录注册.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "登录注册.xcassets"; sourceTree = "<group>"; };
+		4A4CE2E51F359145002E3CD0 /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
 		4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailController.h; sourceTree = "<group>"; };
 		4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailController.m; sourceTree = "<group>"; };
 		4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailController.xib; sourceTree = "<group>"; };
@@ -281,6 +300,8 @@
 		4A1800CE1F2AD82600F6E63D /* 图片资源 */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CE2E41F359145002E3CD0 /* 登录注册.xcassets */,
+				4A4CE2E51F359145002E3CD0 /* 购物车.xcassets */,
 				4A1800CF1F2AD83A00F6E63D /* 首页.xcassets */,
 				4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */,
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
@@ -396,6 +417,22 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A4CE2D41F35911E002E3CD0 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE2D51F35911E002E3CD0 /* LBForgetSecretViewController.h */,
+				4A4CE2D61F35911E002E3CD0 /* LBForgetSecretViewController.m */,
+				4A4CE2D71F35911E002E3CD0 /* LBForgetSecretViewController.xib */,
+				4A4CE2D81F35911E002E3CD0 /* LBLoginViewController.h */,
+				4A4CE2D91F35911E002E3CD0 /* LBLoginViewController.m */,
+				4A4CE2DA1F35911E002E3CD0 /* LBLoginViewController.xib */,
+				4A4CE2DB1F35911E002E3CD0 /* LBRegisterViewController.h */,
+				4A4CE2DC1F35911E002E3CD0 /* LBRegisterViewController.m */,
+				4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */,
+			);
+			path = "登录注册";
 			sourceTree = "<group>";
 		};
 		4A50A62B1F31768700A28363 /* 商品详情 */ = {
@@ -662,6 +699,7 @@
 		4A911A0E1F25E2FD003C0F6C /* KangDingRedWine */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CE2D41F35911E002E3CD0 /* 登录注册 */,
 				4A911A261F25E3AB003C0F6C /* 商城 */,
 				4A6C29B81F302C4B00B3A568 /* 分类 */,
 				4A6B72651F34121E00DF9FF7 /* 购物车 */,
@@ -960,13 +998,16 @@
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
 				4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
+				4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
+				4A4CE2DF1F35911E002E3CD0 /* LBForgetSecretViewController.xib in Resources */,
 				4A911A1F1F25E2FD003C0F6C /* LaunchScreen.storyboard in Resources */,
 				4A6C29D71F302C4B00B3A568 /* GLHome_PersonCustomController.xib in Resources */,
 				4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */,
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
+				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
 				4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */,
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
@@ -981,9 +1022,11 @@
 				4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */,
 				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
+				4A4CE2E31F35911E002E3CD0 /* LBRegisterViewController.xib in Resources */,
 				4A4CE2D31F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A6C29DB1F302C4B00B3A568 /* GLHome_ReSellingMallCell.xib in Resources */,
+				4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
@@ -1047,10 +1090,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4CE2E21F35911E002E3CD0 /* LBRegisterViewController.m in Sources */,
 				4A911A4E1F25E406003C0F6C /* LBLoginNavigationViewController.m in Sources */,
 				4A1800CC1F2ACBFB00F6E63D /* GLMineController.m in Sources */,
 				4A7768381F3072B400C01BD5 /* GLHomePage_AllController.m in Sources */,
 				4A911A6D1F25E40B003C0F6C /* UIButton+SetEdgeInsets.m in Sources */,
+				4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */,
 				4A911A6C1F25E40B003C0F6C /* ScaleSizeImage.m in Sources */,
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,
 				4A1800E51F2ADE2A00F6E63D /* XBConst.m in Sources */,
@@ -1094,6 +1139,7 @@
 				4A911A4C1F25E406003C0F6C /* BaseNavigationViewController.m in Sources */,
 				4A1800E41F2ADE2A00F6E63D /* XBTagTitleCell.m in Sources */,
 				4A1800E91F2B233300F6E63D /* GLHomePage_GoodsCell.m in Sources */,
+				4A4CE2DE1F35911E002E3CD0 /* LBForgetSecretViewController.m in Sources */,
 				4A911A141F25E2FD003C0F6C /* AppDelegate.m in Sources */,
 				4A911A3E1F25E3F8003C0F6C /* MerchantInformationModel.m in Sources */,
 				4A911A111F25E2FD003C0F6C /* main.m in Sources */,
