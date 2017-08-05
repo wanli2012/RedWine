@@ -31,7 +31,7 @@
 #pragma UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.dataArr.count;
+    return 10;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LBAddHarvestAddressTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LBAddHarvestAddressTableViewCell"];
