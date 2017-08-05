@@ -10,7 +10,7 @@
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
-
+#import "LBHarvestAddressListViewController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -112,7 +112,10 @@
 - (IBAction)infomation:(id)sender {
     
     NSLog(@"消息");
-    
+    self.hidesBottomBarWhenPushed = YES;
+    LBHarvestAddressListViewController *vc = [[LBHarvestAddressListViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 //设置界面
