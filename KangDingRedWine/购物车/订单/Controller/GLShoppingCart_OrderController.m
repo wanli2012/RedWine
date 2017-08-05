@@ -19,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"确认订单";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.contentViewWidth.constant = kSCREEN_WIDTH;
+    self.contentViewHeight.constant = kSCREEN_HEIGHT - 64;
+    
 }
 
 @end
