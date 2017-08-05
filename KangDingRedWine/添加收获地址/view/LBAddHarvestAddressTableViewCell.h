@@ -7,6 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HarvestAddressModel;
+
+
+@protocol LBAddHarvestAddressTableViewCelldelegete <NSObject>
+
+-(void)SetAsDefaultRow:(NSInteger)row;
+-(void)deleteRow:(NSInteger)row;
+-(void)modifyRow:(NSInteger)row;
+
+@end
 
 @interface LBAddHarvestAddressTableViewCell : UITableViewCell
 
@@ -16,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *selectBt;
 @property (weak, nonatomic) IBOutlet UIButton *modifyBt;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBt;
+@property (strong , nonatomic)HarvestAddressModel *model;
 
+@property(nonatomic,assign)id<LBAddHarvestAddressTableViewCelldelegete>  delegete;
+@property(nonatomic,assign)NSInteger  row;
 
 @end

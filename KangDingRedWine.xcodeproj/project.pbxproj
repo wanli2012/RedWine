@@ -117,6 +117,7 @@
 		F957D2BB1F359D6E00A63845 /* LBHarvestAddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B21F359D6E00A63845 /* LBHarvestAddressListViewController.xib */; };
 		F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */; };
 		F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */; };
+		F957D2C01F359FBF00A63845 /* HarvestAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -297,6 +298,8 @@
 		F957D2B51F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBAddHarvestAddressTableViewCell.h; sourceTree = "<group>"; };
 		F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBAddHarvestAddressTableViewCell.m; sourceTree = "<group>"; };
 		F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressTableViewCell.xib; sourceTree = "<group>"; };
+		F957D2BE1F359FBF00A63845 /* HarvestAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarvestAddressModel.h; sourceTree = "<group>"; };
+		F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarvestAddressModel.m; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -962,6 +965,8 @@
 		F957D2B31F359D6E00A63845 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				F957D2BE1F359FBF00A63845 /* HarvestAddressModel.h */,
+				F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1148,6 +1153,7 @@
 				4A911A6D1F25E40B003C0F6C /* UIButton+SetEdgeInsets.m in Sources */,
 				4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */,
 				4A911A6C1F25E40B003C0F6C /* ScaleSizeImage.m in Sources */,
+				F957D2C01F359FBF00A63845 /* HarvestAddressModel.m in Sources */,
 				F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */,
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,
 				4A1800E51F2ADE2A00F6E63D /* XBConst.m in Sources */,
