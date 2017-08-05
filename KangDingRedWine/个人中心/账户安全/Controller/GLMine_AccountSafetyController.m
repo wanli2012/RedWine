@@ -9,6 +9,7 @@
 #import "GLMine_AccountSafetyController.h"
 #import "GLMine_PersonInfoCell.h"
 #import "GLMine_BankListController.h"
+#import "GLMine_RealNameController.h"
 
 @interface GLMine_AccountSafetyController ()
 
@@ -120,12 +121,14 @@
                 break;
             case 1://实名认证
             {
-                NSLog(@"实名认证");
+                
+                GLMine_RealNameController *realVC = [[GLMine_RealNameController alloc] init];
+                [self.navigationController pushViewController:realVC animated:YES];
             }
                 break;
             case 2://银行卡
             {
-//                NSLog(@"银行卡");
+
                 GLMine_BankListController *bankVC = [[GLMine_BankListController alloc] init];
                 [self.navigationController pushViewController:bankVC animated:YES];
                 

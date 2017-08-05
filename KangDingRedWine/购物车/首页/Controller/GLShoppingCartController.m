@@ -10,6 +10,7 @@
 #import "LBShopingCarTableViewCell.h"
 #import "UIButton+SetEdgeInsets.h"
 #import "shopingModel.h"
+#import "GLShoppingCart_OrderController.h"
 
 @interface GLShoppingCartController ()<UITableViewDataSource,UITableViewDelegate,LBShopingCarTableViewCelldelegete>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -89,6 +90,10 @@
 //去结算
 - (IBAction)GoBuying:(UIButton *)sender {
     
+    self.hidesBottomBarWhenPushed = YES;
+    GLShoppingCart_OrderController *orderVC = [[GLShoppingCart_OrderController alloc] init];
+    [self.navigationController pushViewController:orderVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
     
 }
 #pragma mark -------- LBShopingCarTableViewCelldelegete
