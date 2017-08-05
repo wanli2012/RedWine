@@ -11,6 +11,8 @@
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
 #import "LBHarvestAddressListViewController.h"
+#import "GLMine_OrderListController.h"
+#import "GLMine_DonationListController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -72,6 +74,8 @@
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(100 * autoSizeScaleY, 100 * autoSizeScaleY);
     self.collectionView.collectionViewLayout = layout;
+    
+    self.hidesBottomBarWhenPushed = YES;
 
 }
 
@@ -141,6 +145,35 @@
 - (IBAction)pushToOrder:(UITapGestureRecognizer *)tap {
     
   NSLog(@"四种订单");
+    
+    switch (tap.view.tag) {
+            
+        case 11://待付款
+        {
+            GLMine_OrderListController *orderListVC = [[GLMine_OrderListController alloc] init];
+            [self.navigationController pushViewController:orderListVC animated:YES];
+        }
+            break;
+        case 12://待收货
+        {
+            
+        }
+            break;
+        case 13://待评价
+        {
+            
+        }
+            break;
+        case 14://已完成
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 //我的上级
@@ -156,6 +189,11 @@
 //销售额
 - (IBAction)pushToSalesAcount:(id)sender {
     
+    self.hidesBottomBarWhenPushed =YES;
+    GLMine_DonationListController *donationVC = [[GLMine_DonationListController alloc] init];
+    [self.navigationController pushViewController:donationVC animated:YES];
+    
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

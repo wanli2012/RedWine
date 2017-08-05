@@ -7,8 +7,10 @@
 //
 
 #import "GLHome_AgentController.h"
+#import "GLHome_AgentCell.h"
 
 @interface GLHome_AgentController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,8 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"GLHome_AgentCell" bundle:nil] forCellReuseIdentifier:@"GLHome_AgentCell"];
+
 }
 
+#pragma mark UITableViewDelegate UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 10;
+    
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    GLHome_AgentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLHome_AgentCell"];
+    cell.selectionStyle = 0;
+    
+    return cell;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    tableView.estimatedRowHeight = 44;
+    tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    return tableView.rowHeight;
+}
 
 @end

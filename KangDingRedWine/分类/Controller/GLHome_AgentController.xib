@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GLHome_AgentController">
             <connections>
+                <outlet property="tableView" destination="jrJ-PO-64C" id="1mE-fP-0Hj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-PO-64C">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PaL-7p-S7w"/>
+                        <outlet property="delegate" destination="-1" id="gDX-Bw-S2u"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jrJ-PO-64C" secondAttribute="trailing" id="4ri-Rp-lvP"/>
+                <constraint firstItem="jrJ-PO-64C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C4G-Y1-MoB"/>
+                <constraint firstAttribute="bottom" secondItem="jrJ-PO-64C" secondAttribute="bottom" id="GqR-hV-qWf"/>
+                <constraint firstItem="jrJ-PO-64C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ove-M1-Fua"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

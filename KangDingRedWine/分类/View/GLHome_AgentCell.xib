@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="KGk-i7-Jjw" customClass="GLHome_AgentCell">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-4J-Y9x">
+                        <rect key="frame" x="10" y="10" width="100" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人代理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-0V-Mop">
+                                <rect key="frame" x="10" y="0.0" width="58" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="酒杯" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-4l-MKg">
+                                <rect key="frame" x="73" y="8" width="10" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="3G3-Ah-kdx"/>
+                                    <constraint firstAttribute="width" constant="10" id="zwZ-ha-Auo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gfk-4l-MKg" firstAttribute="centerY" secondItem="tFn-4J-Y9x" secondAttribute="centerY" id="1nu-Co-rAB"/>
+                            <constraint firstAttribute="bottom" secondItem="9iW-0V-Mop" secondAttribute="bottom" id="49S-0G-m6L"/>
+                            <constraint firstAttribute="height" constant="30" id="DiC-sT-8dn"/>
+                            <constraint firstItem="Gfk-4l-MKg" firstAttribute="leading" secondItem="9iW-0V-Mop" secondAttribute="trailing" constant="5" id="epp-Ws-Xrb"/>
+                            <constraint firstItem="9iW-0V-Mop" firstAttribute="top" secondItem="tFn-4J-Y9x" secondAttribute="top" id="fBP-9d-aRT"/>
+                            <constraint firstItem="9iW-0V-Mop" firstAttribute="leading" secondItem="tFn-4J-Y9x" secondAttribute="leading" constant="10" id="nDO-hf-9EG"/>
+                            <constraint firstAttribute="width" constant="100" id="qXv-Ct-Js9"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3倍酒劵/私人订制葡萄酒/5000全团了积分,3倍酒劵/私人订制葡萄酒/5000全团了积分" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wR-em-4Mc">
+                        <rect key="frame" x="10" y="50" width="305" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ 5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8p-yV-mbH">
+                        <rect key="frame" x="10" y="103.5" width="56.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzx-EX-VG1">
+                        <rect key="frame" x="235" y="99" width="80" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="pUy-QF-gSd"/>
+                            <constraint firstAttribute="height" constant="30" id="wtQ-Wq-NML"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="立即购买">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr8-Vx-SfL">
+                        <rect key="frame" x="10" y="138.5" width="315" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="OKh-cZ-Qnq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L8p-yV-mbH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6Gg-JP-8kA"/>
+                    <constraint firstItem="4wR-em-4Mc" firstAttribute="top" secondItem="tFn-4J-Y9x" secondAttribute="bottom" constant="10" id="7kG-82-5gU"/>
+                    <constraint firstAttribute="trailing" secondItem="rr8-Vx-SfL" secondAttribute="trailing" id="LCr-mI-9Dn"/>
+                    <constraint firstAttribute="trailing" secondItem="fzx-EX-VG1" secondAttribute="trailing" constant="10" id="PAq-KQ-hpL"/>
+                    <constraint firstItem="rr8-Vx-SfL" firstAttribute="top" secondItem="L8p-yV-mbH" secondAttribute="bottom" constant="14" id="V6X-hz-VUe"/>
+                    <constraint firstAttribute="trailing" secondItem="4wR-em-4Mc" secondAttribute="trailing" constant="10" id="VNV-4l-WF0"/>
+                    <constraint firstItem="rr8-Vx-SfL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YbM-b2-v9I"/>
+                    <constraint firstItem="fzx-EX-VG1" firstAttribute="centerY" secondItem="L8p-yV-mbH" secondAttribute="centerY" id="Zbd-UH-wSN"/>
+                    <constraint firstAttribute="bottom" secondItem="rr8-Vx-SfL" secondAttribute="bottom" id="gKF-fW-rcE"/>
+                    <constraint firstItem="tFn-4J-Y9x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qxP-yP-Yu8"/>
+                    <constraint firstItem="L8p-yV-mbH" firstAttribute="top" secondItem="4wR-em-4Mc" secondAttribute="bottom" constant="20" id="vvT-63-9Kn"/>
+                    <constraint firstItem="tFn-4J-Y9x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="waw-fM-YOu"/>
+                    <constraint firstItem="4wR-em-4Mc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xjc-QH-QQe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleView" destination="tFn-4J-Y9x" id="WBm-vQ-ZLT"/>
+            </connections>
+            <point key="canvasLocation" x="4.5" y="34.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="酒杯" width="9" height="15"/>
+    </resources>
+</document>

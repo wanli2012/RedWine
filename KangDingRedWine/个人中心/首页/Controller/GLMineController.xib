@@ -164,10 +164,10 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-8m-asd">
                                             <rect key="frame" x="0.0" y="160" width="394" height="80"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W54-aI-PPC">
+                                                <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W54-aI-PPC">
                                                     <rect key="frame" x="0.0" y="0.0" width="99" height="80"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待付款" translatesAutoresizingMaskIntoConstraints="NO" id="jwL-eX-wXQ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待付款" translatesAutoresizingMaskIntoConstraints="NO" id="jwL-eX-wXQ">
                                                             <rect key="frame" x="34.5" y="13" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="jwL-eX-wXQ" secondAttribute="height" id="6b0-MY-nNR"/>
@@ -194,10 +194,10 @@
                                                         <outletCollection property="gestureRecognizers" destination="FKN-NM-c9B" appends="YES" id="HHA-jC-d7z"/>
                                                     </connections>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ip-Nel">
+                                                <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ip-Nel">
                                                     <rect key="frame" x="99" y="0.0" width="99" height="80"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待收货" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-lm-vAq">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待收货" translatesAutoresizingMaskIntoConstraints="NO" id="f4j-lm-vAq">
                                                             <rect key="frame" x="34" y="13" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="f4j-lm-vAq" secondAttribute="height" id="9gY-NJ-IrR"/>
@@ -224,10 +224,10 @@
                                                         <outletCollection property="gestureRecognizers" destination="HzV-0D-sux" appends="YES" id="z8e-UI-86W"/>
                                                     </connections>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ife-wP-eDS">
+                                                <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ife-wP-eDS">
                                                     <rect key="frame" x="198" y="0.0" width="99" height="80"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待评价" translatesAutoresizingMaskIntoConstraints="NO" id="IO5-tf-TSL">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="待评价" translatesAutoresizingMaskIntoConstraints="NO" id="IO5-tf-TSL">
                                                             <rect key="frame" x="34.5" y="13" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="4MZ-TV-spd"/>
@@ -254,10 +254,10 @@
                                                         <outletCollection property="gestureRecognizers" destination="8cF-nq-6ZJ" appends="YES" id="ZSH-GZ-sTf"/>
                                                     </connections>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW8-oE-4Bd">
+                                                <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW8-oE-4Bd">
                                                     <rect key="frame" x="297" y="0.0" width="97" height="80"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="已完成" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-IH-pbX">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="已完成" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-IH-pbX">
                                                             <rect key="frame" x="34" y="13" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="0eG-IH-pbX" secondAttribute="height" multiplier="1:1" id="9UU-zW-dEc"/>

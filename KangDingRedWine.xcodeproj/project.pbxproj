@@ -36,6 +36,19 @@
 		4A4CE2E31F35911E002E3CD0 /* LBRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */; };
 		4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2E41F359145002E3CD0 /* 登录注册.xcassets */; };
 		4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2E51F359145002E3CD0 /* 购物车.xcassets */; };
+		4A4CE2EB1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2E91F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m */; };
+		4A4CE2EC1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2EA1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib */; };
+		4A4CE2F31F35B22A002E3CD0 /* GLMine_OrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2F11F35B22A002E3CD0 /* GLMine_OrderListController.m */; };
+		4A4CE2F41F35B22A002E3CD0 /* GLMine_OrderListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2F21F35B22A002E3CD0 /* GLMine_OrderListController.xib */; };
+		4A4CE2F81F35B394002E3CD0 /* GLMine_OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2F61F35B394002E3CD0 /* GLMine_OrderListCell.m */; };
+		4A4CE2F91F35B394002E3CD0 /* GLMine_OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2F71F35B394002E3CD0 /* GLMine_OrderListCell.xib */; };
+		4A4CE2FD1F35BA5A002E3CD0 /* GLHome_AgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2FB1F35BA5A002E3CD0 /* GLHome_AgentCell.m */; };
+		4A4CE2FE1F35BA5A002E3CD0 /* GLHome_AgentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2FC1F35BA5A002E3CD0 /* GLHome_AgentCell.xib */; };
+		4A4CE3001F35BB3C002E3CD0 /* 分类.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2FF1F35BB3C002E3CD0 /* 分类.xcassets */; };
+		4A4CE3071F35BF8B002E3CD0 /* GLMine_DonationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE3051F35BF8B002E3CD0 /* GLMine_DonationListController.m */; };
+		4A4CE3081F35BF8B002E3CD0 /* GLMine_DonationListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE3061F35BF8B002E3CD0 /* GLMine_DonationListController.xib */; };
+		4A4CE30C1F35C20C002E3CD0 /* GLMine_DonationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */; };
+		4A4CE30D1F35C20C002E3CD0 /* GLMine_DonationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */; };
 		4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */; };
 		4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */; };
 		4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */; };
@@ -164,6 +177,25 @@
 		4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBRegisterViewController.xib; sourceTree = "<group>"; };
 		4A4CE2E41F359145002E3CD0 /* 登录注册.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "登录注册.xcassets"; sourceTree = "<group>"; };
 		4A4CE2E51F359145002E3CD0 /* 购物车.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "购物车.xcassets"; sourceTree = "<group>"; };
+		4A4CE2E81F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCart_OrderCell.h; sourceTree = "<group>"; };
+		4A4CE2E91F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCart_OrderCell.m; sourceTree = "<group>"; };
+		4A4CE2EA1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCart_OrderCell.xib; sourceTree = "<group>"; };
+		4A4CE2F01F35B22A002E3CD0 /* GLMine_OrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_OrderListController.h; sourceTree = "<group>"; };
+		4A4CE2F11F35B22A002E3CD0 /* GLMine_OrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_OrderListController.m; sourceTree = "<group>"; };
+		4A4CE2F21F35B22A002E3CD0 /* GLMine_OrderListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_OrderListController.xib; sourceTree = "<group>"; };
+		4A4CE2F51F35B394002E3CD0 /* GLMine_OrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_OrderListCell.h; sourceTree = "<group>"; };
+		4A4CE2F61F35B394002E3CD0 /* GLMine_OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_OrderListCell.m; sourceTree = "<group>"; };
+		4A4CE2F71F35B394002E3CD0 /* GLMine_OrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_OrderListCell.xib; sourceTree = "<group>"; };
+		4A4CE2FA1F35BA5A002E3CD0 /* GLHome_AgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AgentCell.h; sourceTree = "<group>"; };
+		4A4CE2FB1F35BA5A002E3CD0 /* GLHome_AgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AgentCell.m; sourceTree = "<group>"; };
+		4A4CE2FC1F35BA5A002E3CD0 /* GLHome_AgentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AgentCell.xib; sourceTree = "<group>"; };
+		4A4CE2FF1F35BB3C002E3CD0 /* 分类.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "分类.xcassets"; sourceTree = "<group>"; };
+		4A4CE3041F35BF8B002E3CD0 /* GLMine_DonationListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_DonationListController.h; sourceTree = "<group>"; };
+		4A4CE3051F35BF8B002E3CD0 /* GLMine_DonationListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_DonationListController.m; sourceTree = "<group>"; };
+		4A4CE3061F35BF8B002E3CD0 /* GLMine_DonationListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListController.xib; sourceTree = "<group>"; };
+		4A4CE3091F35C20C002E3CD0 /* GLMine_DonationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_DonationListCell.h; sourceTree = "<group>"; };
+		4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_DonationListCell.m; sourceTree = "<group>"; };
+		4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListCell.xib; sourceTree = "<group>"; };
 		4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailController.h; sourceTree = "<group>"; };
 		4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailController.m; sourceTree = "<group>"; };
 		4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailController.xib; sourceTree = "<group>"; };
@@ -321,6 +353,7 @@
 				4A1800F01F2B420000F6E63D /* Tabbar和Nav.xcassets */,
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
+				4A4CE2FF1F35BB3C002E3CD0 /* 分类.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -430,6 +463,9 @@
 		4A4CE2CE1F3572B3002E3CD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CE2E81F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.h */,
+				4A4CE2E91F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m */,
+				4A4CE2EA1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +484,64 @@
 				4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */,
 			);
 			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		4A4CE2ED1F35B151002E3CD0 /* 订单 */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE2EE1F35B151002E3CD0 /* Controller */,
+				4A4CE2EF1F35B151002E3CD0 /* View */,
+			);
+			path = "订单";
+			sourceTree = "<group>";
+		};
+		4A4CE2EE1F35B151002E3CD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE2F01F35B22A002E3CD0 /* GLMine_OrderListController.h */,
+				4A4CE2F11F35B22A002E3CD0 /* GLMine_OrderListController.m */,
+				4A4CE2F21F35B22A002E3CD0 /* GLMine_OrderListController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A4CE2EF1F35B151002E3CD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE2F51F35B394002E3CD0 /* GLMine_OrderListCell.h */,
+				4A4CE2F61F35B394002E3CD0 /* GLMine_OrderListCell.m */,
+				4A4CE2F71F35B394002E3CD0 /* GLMine_OrderListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A4CE3011F35BF48002E3CD0 /* 转赠 */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE3021F35BF48002E3CD0 /* Controller */,
+				4A4CE3031F35BF48002E3CD0 /* View */,
+			);
+			path = "转赠";
+			sourceTree = "<group>";
+		};
+		4A4CE3021F35BF48002E3CD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE3041F35BF8B002E3CD0 /* GLMine_DonationListController.h */,
+				4A4CE3051F35BF8B002E3CD0 /* GLMine_DonationListController.m */,
+				4A4CE3061F35BF8B002E3CD0 /* GLMine_DonationListController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A4CE3031F35BF48002E3CD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CE3091F35C20C002E3CD0 /* GLMine_DonationListCell.h */,
+				4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */,
+				4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4A50A62B1F31768700A28363 /* 商品详情 */ = {
@@ -666,6 +760,9 @@
 				4A77683E1F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.h */,
 				4A77683F1F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.m */,
 				4A7768401F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.xib */,
+				4A4CE2FA1F35BA5A002E3CD0 /* GLHome_AgentCell.h */,
+				4A4CE2FB1F35BA5A002E3CD0 /* GLHome_AgentCell.m */,
+				4A4CE2FC1F35BA5A002E3CD0 /* GLHome_AgentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,6 +811,7 @@
 		4A911A0E1F25E2FD003C0F6C /* KangDingRedWine */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CE3011F35BF48002E3CD0 /* 转赠 */,
 				4A4CE2D41F35911E002E3CD0 /* 登录注册 */,
 				4A911A261F25E3AB003C0F6C /* 商城 */,
 				4A6C29B81F302C4B00B3A568 /* 分类 */,
@@ -805,6 +903,7 @@
 			children = (
 				4A911A2C1F25E3AB003C0F6C /* 首页 */,
 				4A6B726F1F341AF200DF9FF7 /* 个人信息 */,
+				4A4CE2ED1F35B151002E3CD0 /* 订单 */,
 				4A6B72811F3460E900DF9FF7 /* 账户安全 */,
 				4A6B72891F3464D300DF9FF7 /* 银行卡 */,
 				4A4CE2C41F356445002E3CD0 /* 实名认证 */,
@@ -1041,6 +1140,7 @@
 				4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */,
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
 				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
+				4A4CE30D1F35C20C002E3CD0 /* GLMine_DonationListCell.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
@@ -1054,6 +1154,7 @@
 				4A911A1F1F25E2FD003C0F6C /* LaunchScreen.storyboard in Resources */,
 				4A6C29D71F302C4B00B3A568 /* GLHome_PersonCustomController.xib in Resources */,
 				4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */,
+				4A4CE3081F35BF8B002E3CD0 /* GLMine_DonationListController.xib in Resources */,
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
 				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
@@ -1070,9 +1171,13 @@
 				4A7768421F307A2A00C01BD5 /* GLHome_ResellingEnsurelCell.xib in Resources */,
 				4A1800CD1F2ACBFB00F6E63D /* GLMineController.xib in Resources */,
 				4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */,
+				4A4CE3001F35BB3C002E3CD0 /* 分类.xcassets in Resources */,
 				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
 				F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */,
+				4A4CE2F41F35B22A002E3CD0 /* GLMine_OrderListController.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
+				4A4CE2EC1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib in Resources */,
+				4A4CE2FE1F35BA5A002E3CD0 /* GLHome_AgentCell.xib in Resources */,
 				4A4CE2E31F35911E002E3CD0 /* LBRegisterViewController.xib in Resources */,
 				4A4CE2D31F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
@@ -1080,6 +1185,7 @@
 				4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
+				4A4CE2F91F35B394002E3CD0 /* GLMine_OrderListCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
 				4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */,
 				4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */,
@@ -1147,18 +1253,21 @@
 				4A7768381F3072B400C01BD5 /* GLHomePage_AllController.m in Sources */,
 				4A911A6D1F25E40B003C0F6C /* UIButton+SetEdgeInsets.m in Sources */,
 				4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */,
+				4A4CE2F31F35B22A002E3CD0 /* GLMine_OrderListController.m in Sources */,
 				4A911A6C1F25E40B003C0F6C /* ScaleSizeImage.m in Sources */,
 				F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */,
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,
 				4A1800E51F2ADE2A00F6E63D /* XBConst.m in Sources */,
 				4A1800E11F2ADE2A00F6E63D /* XBScrollPageController.m in Sources */,
 				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
+				4A4CE3071F35BF8B002E3CD0 /* GLMine_DonationListController.m in Sources */,
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
 				4A6C29DC1F302C4B00B3A568 /* GLHome_ResellingMallCollectionCell.m in Sources */,
 				4A6B72871F34615B00DF9FF7 /* GLMine_AccountSafetyController.m in Sources */,
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
+				4A4CE2FD1F35BA5A002E3CD0 /* GLHome_AgentCell.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
 				4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */,
@@ -1174,12 +1283,14 @@
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
 				4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */,
+				4A4CE2F81F35B394002E3CD0 /* GLMine_OrderListCell.m in Sources */,
 				4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */,
 				F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */,
 				4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */,
 				4A4CE2D21F3572EB002E3CD0 /* GLShoppingCart_OrderController.m in Sources */,
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
+				4A4CE30C1F35C20C002E3CD0 /* GLMine_DonationListCell.m in Sources */,
 				4A6B72A71F34801100DF9FF7 /* shopingModel.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
@@ -1191,6 +1302,7 @@
 				4A911A6B1F25E40B003C0F6C /* predicateModel.m in Sources */,
 				4A1800E31F2ADE2A00F6E63D /* XBPageCell.m in Sources */,
 				4A911A4C1F25E406003C0F6C /* BaseNavigationViewController.m in Sources */,
+				4A4CE2EB1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m in Sources */,
 				4A1800E41F2ADE2A00F6E63D /* XBTagTitleCell.m in Sources */,
 				4A1800E91F2B233300F6E63D /* GLHomePage_GoodsCell.m in Sources */,
 				4A4CE2DE1F35911E002E3CD0 /* LBForgetSecretViewController.m in Sources */,
