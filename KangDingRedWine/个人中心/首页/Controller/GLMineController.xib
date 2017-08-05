@@ -400,7 +400,7 @@
                                                     <state key="normal" title="我的上级" backgroundImage="我的上级"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="pushToMySuperior:" destination="-1" eventType="touchUpInside" id="c4P-4s-xca"/>

@@ -9,6 +9,8 @@
 #import "GLShoppingCart_OrderController.h"
 
 @interface GLShoppingCart_OrderController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewHeight;
 
 @end
 
