@@ -10,7 +10,7 @@
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
-#import "LBHarvestAddressListViewController.h"
+#import "LBWineCouponRepurchaseViewController.h"
 #import "GLMine_OrderListController.h"
 #import "GLMine_DonationListController.h"
 #import "GLMine_AccountSafetyController.h"
@@ -118,7 +118,7 @@
     
     NSLog(@"消息");
     self.hidesBottomBarWhenPushed = YES;
-    LBHarvestAddressListViewController *vc = [[LBHarvestAddressListViewController alloc]init];
+    LBWineCouponRepurchaseViewController *vc = [[LBWineCouponRepurchaseViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }

@@ -13,6 +13,7 @@
 #import "GLShoppingCart_OrderController.h"
 
 @interface GLShoppingCartController ()<UITableViewDataSource,UITableViewDelegate,LBShopingCarTableViewCelldelegete>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIButton *allChoseBt;//全选按钮
 @property (weak, nonatomic) IBOutlet UILabel *totalLb;//总计
@@ -132,7 +133,7 @@
     
     self.totalLb.text = [NSString stringWithFormat:@"总计:%ld/酒券",(long)numa];
     
- [self.tableview reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:row inSection:0], nil] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableview reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:row inSection:0], nil] withRowAnimation:UITableViewRowAnimationNone];
     
 }
 
