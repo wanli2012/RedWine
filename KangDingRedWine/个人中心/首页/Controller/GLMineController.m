@@ -13,6 +13,7 @@
 #import "LBHarvestAddressListViewController.h"
 #import "GLMine_OrderListController.h"
 #import "GLMine_DonationListController.h"
+#import "GLMine_AccountSafetyController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -124,8 +125,14 @@
 
 //设置界面
 - (IBAction)set:(id)sender {
-    NSLog(@"设置界面");
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLMine_AccountSafetyController *set = [[GLMine_AccountSafetyController alloc] init];
+    [self.navigationController pushViewController:set animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+    
 }
+
 //个人信息
 - (IBAction)personInfo:(id)sender {
     

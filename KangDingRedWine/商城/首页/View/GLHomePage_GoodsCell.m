@@ -48,9 +48,11 @@
     
     CGFloat width = (kSCREEN_WIDTH - 1) / 2;
     CGFloat height = (width - 20) * 260 / 335 + 75;
+    
     if(_number == 0){
         
         _collectionView.height = 0;
+        
     }else if(_number <= 2 && _number >0) {
         
         _collectionView.height = height;
@@ -66,7 +68,9 @@
     
     return self.number;
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     GLHome_GoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLHome_GoodsCollectionViewCell" forIndexPath:indexPath];
     
     return cell;

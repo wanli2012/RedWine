@@ -74,9 +74,8 @@
                                     <constraint firstAttribute="width" constant="15" id="Fjc-kU-jeR"/>
                                     <constraint firstAttribute="height" constant="25" id="YPA-SL-joj"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="叉" backgroundImage="半圆+"/>
-                                <state key="disabled" image="叉" backgroundImage="半圆+"/>
+                                <state key="normal" image="+"/>
+                                <state key="disabled" image="+" backgroundImage="半圆+"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,6 +168,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="+" width="15" height="25"/>
         <image name="timg" width="906" height="514"/>
         <image name="半圆+" width="15" height="25"/>
         <image name="叉" width="8" height="9"/>

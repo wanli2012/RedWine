@@ -8,6 +8,7 @@
 
 #import "GLShoppingCart_OrderController.h"
 #import "GLShoppingCart_OrderCell.h"
+#import "LBHarvestAddressListViewController.h"
 
 @interface GLShoppingCart_OrderController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -41,9 +42,18 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"GLShoppingCart_OrderCell" bundle:nil] forCellWithReuseIdentifier:@"GLShoppingCart_OrderCell"];
     
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = NO;
+}
 //更换地址
 - (IBAction)changeAddress:(id)sender {
-    NSLog(@"更换地址");
+    
+    self.hidesBottomBarWhenPushed = YES;
+    LBHarvestAddressListViewController *addressListVC = [[LBHarvestAddressListViewController alloc] init];
+    [self.navigationController pushViewController:addressListVC animated:YES];
+    
 }
 //所有商品
 - (IBAction)allGoods:(id)sender {
