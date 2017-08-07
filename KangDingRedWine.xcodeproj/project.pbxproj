@@ -48,7 +48,6 @@
 		4A4CE3071F35BF8B002E3CD0 /* GLMine_DonationListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE3051F35BF8B002E3CD0 /* GLMine_DonationListController.m */; };
 		4A4CE3081F35BF8B002E3CD0 /* GLMine_DonationListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE3061F35BF8B002E3CD0 /* GLMine_DonationListController.xib */; };
 		4A4CE30C1F35C20C002E3CD0 /* GLMine_DonationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */; };
-		4A4CE30D1F35C20C002E3CD0 /* GLMine_DonationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */; };
 		4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */; };
 		4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */; };
 		4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */; };
@@ -57,6 +56,7 @@
 		4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */; };
 		4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */; };
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
+		4A5D0B651F3808BD00F47F97 /* GLMine_DonationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D0B641F3808BD00F47F97 /* GLMine_DonationListCell.xib */; };
 		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
 		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
 		4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */; };
@@ -202,7 +202,6 @@
 		4A4CE3061F35BF8B002E3CD0 /* GLMine_DonationListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListController.xib; sourceTree = "<group>"; };
 		4A4CE3091F35C20C002E3CD0 /* GLMine_DonationListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_DonationListCell.h; sourceTree = "<group>"; };
 		4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_DonationListCell.m; sourceTree = "<group>"; };
-		4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListCell.xib; sourceTree = "<group>"; };
 		4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsDetailController.h; sourceTree = "<group>"; };
 		4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsDetailController.m; sourceTree = "<group>"; };
 		4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsDetailController.xib; sourceTree = "<group>"; };
@@ -214,6 +213,7 @@
 		4A50A63C1F31BEB100A28363 /* GLMineCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMineCollectionCell.h; sourceTree = "<group>"; };
 		4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMineCollectionCell.m; sourceTree = "<group>"; };
 		4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMineCollectionCell.xib; sourceTree = "<group>"; };
+		4A5D0B641F3808BD00F47F97 /* GLMine_DonationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListCell.xib; sourceTree = "<group>"; };
 		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
 		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
 		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
@@ -557,7 +557,7 @@
 			children = (
 				4A4CE3091F35C20C002E3CD0 /* GLMine_DonationListCell.h */,
 				4A4CE30A1F35C20C002E3CD0 /* GLMine_DonationListCell.m */,
-				4A4CE30B1F35C20C002E3CD0 /* GLMine_DonationListCell.xib */,
+				4A5D0B641F3808BD00F47F97 /* GLMine_DonationListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1193,7 +1193,7 @@
 				4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */,
 				4A6C29D31F302C4B00B3A568 /* GLHome_AllClassifyController.xib in Resources */,
 				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
-				4A4CE30D1F35C20C002E3CD0 /* GLMine_DonationListCell.xib in Resources */,
+				4A5D0B651F3808BD00F47F97 /* GLMine_DonationListCell.xib in Resources */,
 				4A6C29D91F302C4B00B3A568 /* GLHome_ReSellingMallController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
