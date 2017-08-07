@@ -131,6 +131,12 @@
 		F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */; };
 		F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */; };
 		F957D2C01F359FBF00A63845 /* HarvestAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */; };
+		F98A5B691F38062A0025754E /* LBWineCouponRepurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */; };
+		F98A5B6A1F38062A0025754E /* LBWineCouponRepurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */; };
+		F98A5B6F1F385B650025754E /* LBWineDonationVoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */; };
+		F98A5B701F385B650025754E /* LBWineDonationVoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */; };
+		F98A5B751F3860AA0025754E /* LBFinancialZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */; };
+		F98A5B761F3860AA0025754E /* LBFinancialZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -332,6 +338,15 @@
 		F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressTableViewCell.xib; sourceTree = "<group>"; };
 		F957D2BE1F359FBF00A63845 /* HarvestAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarvestAddressModel.h; sourceTree = "<group>"; };
 		F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarvestAddressModel.m; sourceTree = "<group>"; };
+		F98A5B661F38062A0025754E /* LBWineCouponRepurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineCouponRepurchaseViewController.h; sourceTree = "<group>"; };
+		F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineCouponRepurchaseViewController.m; sourceTree = "<group>"; };
+		F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineCouponRepurchaseViewController.xib; sourceTree = "<group>"; };
+		F98A5B6C1F385B650025754E /* LBWineDonationVoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineDonationVoucherViewController.h; sourceTree = "<group>"; };
+		F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineDonationVoucherViewController.m; sourceTree = "<group>"; };
+		F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineDonationVoucherViewController.xib; sourceTree = "<group>"; };
+		F98A5B721F3860AA0025754E /* LBFinancialZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBFinancialZoneViewController.h; sourceTree = "<group>"; };
+		F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBFinancialZoneViewController.m; sourceTree = "<group>"; };
+		F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBFinancialZoneViewController.xib; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -814,6 +829,9 @@
 		4A911A0E1F25E2FD003C0F6C /* KangDingRedWine */ = {
 			isa = PBXGroup;
 			children = (
+				F98A5B711F3860790025754E /* 理财专区 */,
+				F98A5B6B1F385B2A0025754E /* 酒券转赠 */,
+				F98A5B651F3805AD0025754E /* 酒券回购 */,
 				4A4CE3011F35BF48002E3CD0 /* 转赠 */,
 				4A4CE2D41F35911E002E3CD0 /* 登录注册 */,
 				4A911A261F25E3AB003C0F6C /* 商城 */,
@@ -1080,6 +1098,36 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		F98A5B651F3805AD0025754E /* 酒券回购 */ = {
+			isa = PBXGroup;
+			children = (
+				F98A5B661F38062A0025754E /* LBWineCouponRepurchaseViewController.h */,
+				F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */,
+				F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */,
+			);
+			path = "酒券回购";
+			sourceTree = "<group>";
+		};
+		F98A5B6B1F385B2A0025754E /* 酒券转赠 */ = {
+			isa = PBXGroup;
+			children = (
+				F98A5B6C1F385B650025754E /* LBWineDonationVoucherViewController.h */,
+				F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */,
+				F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */,
+			);
+			path = "酒券转赠";
+			sourceTree = "<group>";
+		};
+		F98A5B711F3860790025754E /* 理财专区 */ = {
+			isa = PBXGroup;
+			children = (
+				F98A5B721F3860AA0025754E /* LBFinancialZoneViewController.h */,
+				F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */,
+				F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */,
+			);
+			path = "理财专区";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1153,7 +1201,9 @@
 				F957D2BB1F359D6E00A63845 /* LBHarvestAddressListViewController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */,
+				F98A5B761F3860AA0025754E /* LBFinancialZoneViewController.xib in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
+				F98A5B6A1F38062A0025754E /* LBWineCouponRepurchaseViewController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
 				4A4CE2DF1F35911E002E3CD0 /* LBForgetSecretViewController.xib in Resources */,
 				4A911A1F1F25E2FD003C0F6C /* LaunchScreen.storyboard in Resources */,
@@ -1165,6 +1215,7 @@
 				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
 				4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */,
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
+				F98A5B701F385B650025754E /* LBWineDonationVoucherViewController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
 				4A911A1C1F25E2FD003C0F6C /* Assets.xcassets in Resources */,
 				4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */,
@@ -1267,6 +1318,7 @@
 				4A1800E11F2ADE2A00F6E63D /* XBScrollPageController.m in Sources */,
 				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
 				4A4CE3071F35BF8B002E3CD0 /* GLMine_DonationListController.m in Sources */,
+				F98A5B691F38062A0025754E /* LBWineCouponRepurchaseViewController.m in Sources */,
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
@@ -1277,6 +1329,7 @@
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
 				4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */,
+				F98A5B6F1F385B650025754E /* LBWineDonationVoucherViewController.m in Sources */,
 				4A911A7D1F25E7CA003C0F6C /* LoadWaitView.m in Sources */,
 				4A6C29D81F302C4B00B3A568 /* GLHome_ReSellingMallController.m in Sources */,
 				4A911A701F25E40B003C0F6C /* UIView+SFrame.m in Sources */,
@@ -1284,6 +1337,7 @@
 				4A4CE2CA1F35647E002E3CD0 /* GLMine_RealNameController.m in Sources */,
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
+				F98A5B751F3860AA0025754E /* LBFinancialZoneViewController.m in Sources */,
 				4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */,
 				4A911A711F25E40B003C0F6C /* UIView+XBExtension.m in Sources */,
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
