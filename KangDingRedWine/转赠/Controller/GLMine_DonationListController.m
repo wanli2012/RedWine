@@ -21,6 +21,9 @@
     
     [super viewDidLoad];
     
+    self.navigationItem.title = @"转赠列表";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"GLMine_DonationListCell" bundle:nil] forCellReuseIdentifier:@"GLMine_DonationListCell"];
     
 }
@@ -32,6 +35,7 @@
     
 }
 
+
 #pragma mark UITableViewDelegate UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -41,8 +45,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     GLMine_DonationListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLMine_DonationListCell"];
-    cell.selectionStyle = 0;
+
+//    cell.delegate = self;
+//    cell.index = indexPath.row;
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
@@ -51,7 +58,7 @@
 //    tableView.estimatedRowHeight = 44;
 //    tableView.rowHeight = UITableViewAutomaticDimension;
     
-    return 44;
+    return 50;
 }
 
 @end

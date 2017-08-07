@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -84,6 +84,23 @@
                         <outlet property="delegate" destination="-1" id="qnG-vq-5bt"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3z-yB-CwZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购物车" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiF-6h-y9M">
+                            <rect key="frame" x="162" y="33.5" width="52" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oiF-6h-y9M" secondAttribute="bottom" constant="10" id="VyI-dj-Zhw"/>
+                        <constraint firstAttribute="height" constant="64" id="Xgm-Ag-qWc"/>
+                        <constraint firstItem="oiF-6h-y9M" firstAttribute="centerX" secondItem="g3z-yB-CwZ" secondAttribute="centerX" id="XtP-qC-UtB"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -91,10 +108,16 @@
                 <constraint firstItem="Wp2-nd-I48" firstAttribute="top" secondItem="E6Z-Uo-W4z" secondAttribute="bottom" id="Evd-mS-mJZ"/>
                 <constraint firstAttribute="trailing" secondItem="Wp2-nd-I48" secondAttribute="trailing" id="HiR-vx-D2e"/>
                 <constraint firstAttribute="bottom" secondItem="Wp2-nd-I48" secondAttribute="bottom" constant="50" id="IPK-21-wHV"/>
+                <constraint firstItem="E6Z-Uo-W4z" firstAttribute="top" secondItem="g3z-yB-CwZ" secondAttribute="bottom" id="OAo-ht-EoE"/>
                 <constraint firstAttribute="trailing" secondItem="E6Z-Uo-W4z" secondAttribute="trailing" id="S7d-yk-04F"/>
+                <constraint firstItem="g3z-yB-CwZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SyG-GZ-dMi"/>
                 <constraint firstItem="E6Z-Uo-W4z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cm2-CV-gdV"/>
                 <constraint firstItem="Wp2-nd-I48" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rih-xN-IGd"/>
+                <constraint firstItem="g3z-yB-CwZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wUS-Og-dMd"/>
+                <constraint firstAttribute="trailing" secondItem="g3z-yB-CwZ" secondAttribute="trailing" id="xZU-6T-t1t"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
     <resources>
