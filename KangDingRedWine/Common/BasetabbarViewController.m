@@ -51,6 +51,7 @@
     BaseNavigationViewController *cartNav = [[BaseNavigationViewController alloc] initWithRootViewController:cartVC];
     cartNav.tabBarItem = [self barTitle:@"购物车" image:@"购物车白" selectImage:@"购物车"];
     cartVC.title = @"购物车";
+    
     //个人中心
     GLMineController *mineVC = [[GLMineController alloc] init];
     BaseNavigationViewController *mineNav = [[BaseNavigationViewController alloc] initWithRootViewController:mineVC];

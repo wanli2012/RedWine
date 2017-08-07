@@ -75,7 +75,7 @@
     layout.itemSize = CGSizeMake(100 * autoSizeScaleY, 100 * autoSizeScaleY);
     self.collectionView.collectionViewLayout = layout;
     
-    self.hidesBottomBarWhenPushed = YES;
+    
 
 }
 
@@ -144,7 +144,9 @@
 //四种订单界面
 - (IBAction)pushToOrder:(UITapGestureRecognizer *)tap {
     
-  NSLog(@"四种订单");
+    NSLog(@"四种订单");
+    
+    self.hidesBottomBarWhenPushed = YES;
     
     switch (tap.view.tag) {
             

@@ -57,7 +57,7 @@
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
 //    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
-    self.hidesBottomBarWhenPushed = YES;
+   
 }
 
 
@@ -122,9 +122,11 @@
 //全部分类
 - (IBAction)allClassify:(id)sender {
    
+     self.hidesBottomBarWhenPushed = YES;
     GLHomePage_AllController * allVC = [[GLHomePage_AllController alloc] init];
     [self.navigationController pushViewController:allVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -132,9 +134,10 @@
     
     self.navigationController.navigationBar.hidden = YES;
     self.tabBarController.tabBar.hidden = NO;
+    
 }
 
-
+//更多
 - (void)more:(UITapGestureRecognizer *)tap {
     
     switch (tap.view.tag) {
@@ -165,8 +168,9 @@
     }
 }
 
+//商品详情
 - (void)didSelectedItem:(NSInteger)section row:(NSInteger)row{
-    
+     self.hidesBottomBarWhenPushed = YES;
     GLHome_GoodsDetailController *detailVC = [[GLHome_GoodsDetailController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;

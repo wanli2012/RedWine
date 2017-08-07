@@ -37,13 +37,12 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
     self.tabBarController.tabBar.hidden = NO;
 }
 
 //重载init方法
-
 - (instancetype)init
 {
     if (self = [super initWithTagViewHeight:45])
