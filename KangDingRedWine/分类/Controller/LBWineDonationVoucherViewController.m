@@ -28,7 +28,7 @@
 
     self.navigationController.navigationBar.hidden = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationItem.title = @"酒券回购";
+    self.navigationItem.title = @"酒券转赠";
     
     _buttonedt=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 60)];
     [_buttonedt setImage:[UIImage imageNamed:@"总类"] forState:UIControlStateNormal];

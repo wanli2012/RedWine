@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg" translatesAutoresizingMaskIntoConstraints="NO" id="bV3-HJ-LDa">
-                        <rect key="frame" x="10" y="27" width="20" height="20"/>
+                        <rect key="frame" x="10" y="26" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="eqc-JM-nW5"/>
                             <constraint firstAttribute="width" constant="20" id="jj5-2V-yad"/>
@@ -59,23 +59,24 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-Rf-viP">
-                        <rect key="frame" x="0.0" y="72" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="71" width="320" height="1"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="ULa-Xq-529"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoP-fL-lOB" userLabel="openReasonView">
-                        <rect key="frame" x="300" y="0.0" width="20" height="71.5"/>
+                        <rect key="frame" x="300" y="0.0" width="20" height="72"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-DG-ZWO">
-                                <rect key="frame" x="5" y="23.5" width="15" height="25"/>
+                                <rect key="frame" x="5" y="24" width="15" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="Fjc-kU-jeR"/>
                                     <constraint firstAttribute="height" constant="25" id="YPA-SL-joj"/>
                                 </constraints>
-                                <state key="normal" image="+"/>
-                                <state key="disabled" image="+" backgroundImage="半圆+"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="加号"/>
+                                <state key="disabled" image="加号"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,13 +88,13 @@
                         </constraints>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJD-I7-3DZ" userLabel="reasonView">
-                        <rect key="frame" x="50" y="0.0" width="270" height="72.5"/>
+                        <rect key="frame" x="50" y="0.0" width="270" height="73"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-dq-il5" userLabel="closeReasonView">
-                                <rect key="frame" x="0.0" y="0.0" width="15" height="72.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="15" height="73"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtV-Tx-gy2">
-                                        <rect key="frame" x="0.0" y="24.5" width="15" height="25"/>
+                                        <rect key="frame" x="0.0" y="25" width="15" height="25"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="onM-d8-XYD"/>
@@ -112,7 +113,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    原因:我不爽,就不让你过,咋的" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-g0-SUZ">
-                                <rect key="frame" x="15" y="1" width="255" height="71.5"/>
+                                <rect key="frame" x="15" y="1" width="255" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -168,8 +169,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="+" width="15" height="25"/>
         <image name="timg" width="906" height="514"/>
+        <image name="加号" width="15" height="25"/>
         <image name="半圆+" width="15" height="25"/>
         <image name="叉" width="8" height="9"/>
     </resources>

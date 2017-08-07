@@ -4,13 +4,11 @@
 //
 //  Created by 龚磊 on 2017/7/28.
 //  Copyright © 2017年 三君科技有限公司. All rights reserved.
-//
 
 #import "GLMineController.h"
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
-#import "LBWineCouponRepurchaseViewController.h"
 #import "GLMine_OrderListController.h"
 #import "GLMine_DonationListController.h"
 #import "GLMine_AccountSafetyController.h"
@@ -118,8 +116,8 @@
     
     NSLog(@"消息");
     self.hidesBottomBarWhenPushed = YES;
-    LBWineCouponRepurchaseViewController *vc = [[LBWineCouponRepurchaseViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    LBWineCouponRepurchaseViewController *vc = [[LBWineCouponRepurchaseViewController alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
 

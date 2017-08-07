@@ -23,11 +23,12 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor=TABBARTITLE_COLOR;
+    self.view.backgroundColor = TABBARTITLE_COLOR;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.tabBar.barTintColor = TABBARTITLE_COLOR;
     self.delegate=self;
+    
     [self addViewControllers];
     
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(refreshInterface) name:@"refreshInterface" object:nil];

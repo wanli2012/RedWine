@@ -57,6 +57,10 @@
 		4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */; };
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
 		4A5D0B651F3808BD00F47F97 /* GLMine_DonationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D0B641F3808BD00F47F97 /* GLMine_DonationListCell.xib */; };
+		4A5D0B691F38673C00F47F97 /* LBWineDonationVoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D0B671F38673C00F47F97 /* LBWineDonationVoucherViewController.m */; };
+		4A5D0B6A1F38673C00F47F97 /* LBWineDonationVoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D0B681F38673C00F47F97 /* LBWineDonationVoucherViewController.xib */; };
+		4A5D0B6E1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D0B6C1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.m */; };
+		4A5D0B6F1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D0B6D1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.xib */; };
 		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
 		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
 		4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */; };
@@ -131,10 +135,6 @@
 		F957D2BC1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B61F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.m */; };
 		F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */; };
 		F957D2C01F359FBF00A63845 /* HarvestAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */; };
-		F98A5B691F38062A0025754E /* LBWineCouponRepurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */; };
-		F98A5B6A1F38062A0025754E /* LBWineCouponRepurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */; };
-		F98A5B6F1F385B650025754E /* LBWineDonationVoucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */; };
-		F98A5B701F385B650025754E /* LBWineDonationVoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */; };
 		F98A5B751F3860AA0025754E /* LBFinancialZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */; };
 		F98A5B761F3860AA0025754E /* LBFinancialZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */; };
 /* End PBXBuildFile section */
@@ -214,6 +214,12 @@
 		4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMineCollectionCell.m; sourceTree = "<group>"; };
 		4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMineCollectionCell.xib; sourceTree = "<group>"; };
 		4A5D0B641F3808BD00F47F97 /* GLMine_DonationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_DonationListCell.xib; sourceTree = "<group>"; };
+		4A5D0B661F38673C00F47F97 /* LBWineDonationVoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineDonationVoucherViewController.h; sourceTree = "<group>"; };
+		4A5D0B671F38673C00F47F97 /* LBWineDonationVoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineDonationVoucherViewController.m; sourceTree = "<group>"; };
+		4A5D0B681F38673C00F47F97 /* LBWineDonationVoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineDonationVoucherViewController.xib; sourceTree = "<group>"; };
+		4A5D0B6B1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineCouponRepurchaseViewController.h; sourceTree = "<group>"; };
+		4A5D0B6C1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineCouponRepurchaseViewController.m; sourceTree = "<group>"; };
+		4A5D0B6D1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineCouponRepurchaseViewController.xib; sourceTree = "<group>"; };
 		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
 		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
 		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
@@ -284,7 +290,7 @@
 		4A911A1E1F25E2FD003C0F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A911A201F25E2FD003C0F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A911A351F25E3EA003C0F6C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		4A911A361F25E3EA003C0F6C /* PublicOilCard.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicOilCard.pch; sourceTree = "<group>"; };
+		4A911A361F25E3EA003C0F6C /* RedWine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedWine.pch; sourceTree = "<group>"; };
 		4A911A381F25E3F8003C0F6C /* MerchantInformationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInformationModel.h; sourceTree = "<group>"; };
 		4A911A391F25E3F8003C0F6C /* MerchantInformationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInformationModel.m; sourceTree = "<group>"; };
 		4A911A3A1F25E3F8003C0F6C /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
@@ -338,12 +344,6 @@
 		F957D2B71F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressTableViewCell.xib; sourceTree = "<group>"; };
 		F957D2BE1F359FBF00A63845 /* HarvestAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarvestAddressModel.h; sourceTree = "<group>"; };
 		F957D2BF1F359FBF00A63845 /* HarvestAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarvestAddressModel.m; sourceTree = "<group>"; };
-		F98A5B661F38062A0025754E /* LBWineCouponRepurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineCouponRepurchaseViewController.h; sourceTree = "<group>"; };
-		F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineCouponRepurchaseViewController.m; sourceTree = "<group>"; };
-		F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineCouponRepurchaseViewController.xib; sourceTree = "<group>"; };
-		F98A5B6C1F385B650025754E /* LBWineDonationVoucherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBWineDonationVoucherViewController.h; sourceTree = "<group>"; };
-		F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBWineDonationVoucherViewController.m; sourceTree = "<group>"; };
-		F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBWineDonationVoucherViewController.xib; sourceTree = "<group>"; };
 		F98A5B721F3860AA0025754E /* LBFinancialZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBFinancialZoneViewController.h; sourceTree = "<group>"; };
 		F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBFinancialZoneViewController.m; sourceTree = "<group>"; };
 		F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBFinancialZoneViewController.xib; sourceTree = "<group>"; };
@@ -762,6 +762,12 @@
 				4A6C29C61F302C4B00B3A568 /* GLHome_ReSellingMallController.h */,
 				4A6C29C71F302C4B00B3A568 /* GLHome_ReSellingMallController.m */,
 				4A6C29C81F302C4B00B3A568 /* GLHome_ReSellingMallController.xib */,
+				4A5D0B6B1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.h */,
+				4A5D0B6C1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.m */,
+				4A5D0B6D1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.xib */,
+				4A5D0B661F38673C00F47F97 /* LBWineDonationVoucherViewController.h */,
+				4A5D0B671F38673C00F47F97 /* LBWineDonationVoucherViewController.m */,
+				4A5D0B681F38673C00F47F97 /* LBWineDonationVoucherViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -830,8 +836,6 @@
 			isa = PBXGroup;
 			children = (
 				F98A5B711F3860790025754E /* 理财专区 */,
-				F98A5B6B1F385B2A0025754E /* 酒券转赠 */,
-				F98A5B651F3805AD0025754E /* 酒券回购 */,
 				4A4CE3011F35BF48002E3CD0 /* 转赠 */,
 				4A4CE2D41F35911E002E3CD0 /* 登录注册 */,
 				4A911A261F25E3AB003C0F6C /* 商城 */,
@@ -853,7 +857,7 @@
 				4A911A181F25E2FD003C0F6C /* Main.storyboard */,
 				4A911A1B1F25E2FD003C0F6C /* Assets.xcassets */,
 				4A911A351F25E3EA003C0F6C /* Header.h */,
-				4A911A361F25E3EA003C0F6C /* PublicOilCard.pch */,
+				4A911A361F25E3EA003C0F6C /* RedWine.pch */,
 				4A911A1D1F25E2FD003C0F6C /* LaunchScreen.storyboard */,
 				4A911A201F25E2FD003C0F6C /* Info.plist */,
 				4A911A0F1F25E2FD003C0F6C /* Supporting Files */,
@@ -1098,26 +1102,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		F98A5B651F3805AD0025754E /* 酒券回购 */ = {
-			isa = PBXGroup;
-			children = (
-				F98A5B661F38062A0025754E /* LBWineCouponRepurchaseViewController.h */,
-				F98A5B671F38062A0025754E /* LBWineCouponRepurchaseViewController.m */,
-				F98A5B681F38062A0025754E /* LBWineCouponRepurchaseViewController.xib */,
-			);
-			path = "酒券回购";
-			sourceTree = "<group>";
-		};
-		F98A5B6B1F385B2A0025754E /* 酒券转赠 */ = {
-			isa = PBXGroup;
-			children = (
-				F98A5B6C1F385B650025754E /* LBWineDonationVoucherViewController.h */,
-				F98A5B6D1F385B650025754E /* LBWineDonationVoucherViewController.m */,
-				F98A5B6E1F385B650025754E /* LBWineDonationVoucherViewController.xib */,
-			);
-			path = "酒券转赠";
-			sourceTree = "<group>";
-		};
 		F98A5B711F3860790025754E /* 理财专区 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1203,7 +1187,6 @@
 				4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */,
 				F98A5B761F3860AA0025754E /* LBFinancialZoneViewController.xib in Resources */,
 				4A6C29D51F302C4B00B3A568 /* GLHome_ExchangeController.xib in Resources */,
-				F98A5B6A1F38062A0025754E /* LBWineCouponRepurchaseViewController.xib in Resources */,
 				4A6C29D11F302C4B00B3A568 /* GLHome_AgentController.xib in Resources */,
 				4A4CE2DF1F35911E002E3CD0 /* LBForgetSecretViewController.xib in Resources */,
 				4A911A1F1F25E2FD003C0F6C /* LaunchScreen.storyboard in Resources */,
@@ -1215,7 +1198,6 @@
 				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
 				4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */,
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
-				F98A5B701F385B650025754E /* LBWineDonationVoucherViewController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
 				4A911A1C1F25E2FD003C0F6C /* Assets.xcassets in Resources */,
 				4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */,
@@ -1230,6 +1212,7 @@
 				4A4CE3001F35BB3C002E3CD0 /* 分类.xcassets in Resources */,
 				4A6B729F1F346E8400DF9FF7 /* GLMine_BankCardBlindingController.xib in Resources */,
 				F957D2BD1F359D6E00A63845 /* LBAddHarvestAddressTableViewCell.xib in Resources */,
+				4A5D0B6F1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.xib in Resources */,
 				4A4CE2F41F35B22A002E3CD0 /* GLMine_OrderListController.xib in Resources */,
 				4A1800EF1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.xib in Resources */,
 				4A4CE2EC1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib in Resources */,
@@ -1238,6 +1221,7 @@
 				4A4CE2D31F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib in Resources */,
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A6C29DB1F302C4B00B3A568 /* GLHome_ReSellingMallCell.xib in Resources */,
+				4A5D0B6A1F38673C00F47F97 /* LBWineDonationVoucherViewController.xib in Resources */,
 				4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
@@ -1318,7 +1302,6 @@
 				4A1800E11F2ADE2A00F6E63D /* XBScrollPageController.m in Sources */,
 				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
 				4A4CE3071F35BF8B002E3CD0 /* GLMine_DonationListController.m in Sources */,
-				F98A5B691F38062A0025754E /* LBWineCouponRepurchaseViewController.m in Sources */,
 				4A6C29D61F302C4B00B3A568 /* GLHome_PersonCustomController.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
@@ -1329,19 +1312,20 @@
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
 				4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */,
-				F98A5B6F1F385B650025754E /* LBWineDonationVoucherViewController.m in Sources */,
 				4A911A7D1F25E7CA003C0F6C /* LoadWaitView.m in Sources */,
 				4A6C29D81F302C4B00B3A568 /* GLHome_ReSellingMallController.m in Sources */,
 				4A911A701F25E40B003C0F6C /* UIView+SFrame.m in Sources */,
 				4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */,
 				4A4CE2CA1F35647E002E3CD0 /* GLMine_RealNameController.m in Sources */,
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
+				4A5D0B691F38673C00F47F97 /* LBWineDonationVoucherViewController.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
 				F98A5B751F3860AA0025754E /* LBFinancialZoneViewController.m in Sources */,
 				4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */,
 				4A911A711F25E40B003C0F6C /* UIView+XBExtension.m in Sources */,
 				4A911A6A1F25E40B003C0F6C /* NullSafe.m in Sources */,
 				4A911A691F25E40B003C0F6C /* MBProgressHUD+LB.m in Sources */,
+				4A5D0B6E1F3868F100F47F97 /* LBWineCouponRepurchaseViewController.m in Sources */,
 				4A6C29D21F302C4B00B3A568 /* GLHome_AllClassifyController.m in Sources */,
 				4A4CE2F81F35B394002E3CD0 /* GLMine_OrderListCell.m in Sources */,
 				4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */,
@@ -1499,7 +1483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GCU762TQ3E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)//KangDingRedWine/PublicOilCard.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//KangDingRedWine/RedWine.pch";
 				INFOPLIST_FILE = KangDingRedWine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sanjun.KangDingRedWine;
@@ -1514,7 +1498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GCU762TQ3E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)//KangDingRedWine/PublicOilCard.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)//KangDingRedWine/RedWine.pch";
 				INFOPLIST_FILE = KangDingRedWine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sanjun.KangDingRedWine;
