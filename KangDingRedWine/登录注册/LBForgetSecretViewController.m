@@ -130,19 +130,19 @@
     dic[@"userphone"] = self.phoneTf.text;
     dic[@"password"] = encryptsecret;
     dic[@"user_name"] = self.recommendTf.text;
-    dic[@"yzm"] = self.phoneTf.text;
+    dic[@"yzm"] = self.yzmTf.text;
     dic[@"qtidnum"] = self.qtID.text;
     
     [NetworkManager requestPOSTWithURLStr:REGISTER paramDic:dic finish:^(id responseObject) {
         NSLog(@"%@",dic);
-        NSLog(@"%@",responseObject);
+        NSLog(@"%@",responseObject[@"message"]);
         if ([responseObject[@"code"] integerValue]==1) {
             
         }else{
-            
+            [MBProgressHUD showError:responseObject[@"message"]];
         }
     } enError:^(NSError *error) {
-        
+         [MBProgressHUD showError:@""];
     }];
     
     
