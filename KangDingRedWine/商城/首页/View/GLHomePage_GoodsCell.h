@@ -21,6 +21,9 @@
 @property (nonatomic, assign)NSInteger number;
 
 @property (nonatomic, assign)NSInteger section;
+
 @property (nonatomic, assign)NSInteger row;
+
+@property (nonatomic, copy)NSArray *models;
 
 @end

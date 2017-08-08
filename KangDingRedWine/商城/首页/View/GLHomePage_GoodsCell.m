@@ -57,7 +57,7 @@
         
         _collectionView.height = height;
         
-    }else if(_number > 2 && _number <=4){
+    }else if(_number > 2 && _number <= 4){
         
         _collectionView.height = height * 2;
         
@@ -66,17 +66,20 @@
         _collectionView.height = height * 3;
     }
     
-    return self.number;
+    return self.models.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     GLHome_GoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLHome_GoodsCollectionViewCell" forIndexPath:indexPath];
     
+    cell.model = self.models[indexPath.row];
+    
     return cell;
 }
 
 //定义每个UICollectionViewCell 的大小
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CGFloat width = (kSCREEN_WIDTH - 1) / 2;
