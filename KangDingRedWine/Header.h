@@ -43,5 +43,10 @@
 //公钥RSA
 #define public_RSA @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC14XtGpmuHCYlu7dgLbr8hoYNh6d8XRNY+pHulx/F+hMmOsPRX0HWZOTeFCpG11t9lVRQEcQdm587EyiUDiHEL7yrFPEnJ2Dlce55GrSSCP4IpEyH06gudK3O56t8AC02LSD9nrJ4e6WrGrPaahQVfvJBz4v+NSfvAao/xFthVlwIDAQAB"
 
+//身份
+#define  memberID @""//会员
+#define  managerID @""//经理
+#define  memberID @""//主管
+#define  memberID @""//部长
 
 #endif /* Header_h */

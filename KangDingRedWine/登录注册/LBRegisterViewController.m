@@ -30,13 +30,109 @@
 
 - (IBAction)tapgestureback:(UITapGestureRecognizer *)sender {
     
-    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    CATransition *animation = [CATransition animation];
+    animation.duration = 1;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+    animation.type = @"rippleEffect";
+    [self.view.window.layer addAnimation:animation forKey:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    
 }
 //获取验证码
 - (IBAction)getCode:(UIButton *)sender {
+    
+    if (self.phoneTf.text.length <=0 ) {
+        [MBProgressHUD showError:@"请输入手机号码"];
+        return;
+    }else{
+        if (![predicateModel valiMobile:self.phoneTf.text]) {
+            [MBProgressHUD showError:@"手机号格式不对"];
+            return;
+        }
+    }
+    
+    [self startTime];//获取倒计时
+    [NetworkManager requestPOSTWithURLStr:GETYZM paramDic:@{@"phone":self.phoneTf.text} finish:^(id responseObject) {
+        if ([responseObject[@"code"] integerValue]==1) {
+            
+        }else{
+            
+        }
+    } enError:^(NSError *error) {
+        
+    }];
+
+    
 }
 //提交
 - (IBAction)submitEvent:(UIButton *)sender {
+    
+    if (self.phoneTf.text.length <=0 ) {
+        [MBProgressHUD showError:@"请输入手机号码"];
+        return;
+    }else{
+        if (![predicateModel valiMobile:self.phoneTf.text]) {
+            [MBProgressHUD showError:@"手机号格式不对"];
+            return;
+        }
+    }
+    
+    if (self.yzmTf.text.length <= 0) {
+        [MBProgressHUD showError:@"请输入验证码"];
+        return;
+    }
+    
+    if (self.secretTf.text.length <= 0) {
+        [MBProgressHUD showError:@"密码不能为空"];
+        return;
+    }
+    
+    if (self.secretTf.text.length < 8 || self.secretTf.text.length > 16) {
+        [MBProgressHUD showError:@"请输入8-16位密码"];
+        return;
+    }
+    if (![predicateModel checkPassWord:self.secretTf.text]) {
+        
+        [MBProgressHUD showError:@"密请输入正确的密码格式"];
+        return;
+    }
+    
+    if (self.ensureTf.text.length <= 0) {
+        [MBProgressHUD showError:@"请输入确认密码"];
+        return;
+    }
+    
+    if (![self.secretTf.text isEqualToString:self.ensureTf.text]) {
+        [MBProgressHUD showError:@"两次输入的密码不一致"];
+        return;
+    }
+    
+    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"phone"] = self.phoneTf.text;
+    dic[@"new_pwd"] = encryptsecret;
+    dic[@"yzm"] = self.yzmTf.text;
+    
+    [NetworkManager requestPOSTWithURLStr:BACKPWD paramDic:dic finish:^(id responseObject) {
+        
+        if ([responseObject[@"code"] integerValue]==1) {
+            [MBProgressHUD showError:responseObject[@"message"]];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"registerSucess" object:nil userInfo:@{@"phone":self.phoneTf.text}];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                CATransition *animation = [CATransition animation];
+                animation.duration = 1;
+                animation.timingFunction = UIViewAnimationCurveEaseInOut;
+                animation.type = @"rippleEffect";
+                [self.view.window.layer addAnimation:animation forKey:nil];
+                [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            });
+        }else{
+            [MBProgressHUD showError:responseObject[@"message"]];
+        }
+    } enError:^(NSError *error) {
+         [MBProgressHUD showError:@"请求失败,请检查网络"];
+    }];
+
 }
 
 
@@ -108,6 +204,38 @@
     
 }
 
+//获取倒计时
+-(void)startTime{
+    
+    __block int timeout=60; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<=0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                [self.codeBt setTitle:@"重发验证码" forState:UIControlStateNormal];
+                self.codeBt.userInteractionEnabled = YES;
+                //self.codeBt.backgroundColor = YYSRGBColor(44, 153, 46, 1);
+                self.codeBt.titleLabel.font = [UIFont systemFontOfSize:13];
+            });
+        }else{
+            int seconds = timeout % 61;
+            NSString *strTime = [NSString stringWithFormat:@"%.2d秒后重新发送", seconds];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.codeBt setTitle:[NSString stringWithFormat:@"%@",strTime] forState:UIControlStateNormal];
+                self.codeBt.userInteractionEnabled = NO;
+                //self.codeBt.backgroundColor = YYSRGBColor(184, 184, 184, 1);
+                self.codeBt.titleLabel.font = [UIFont systemFontOfSize:11];
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
+    
+}
 
 
 @end

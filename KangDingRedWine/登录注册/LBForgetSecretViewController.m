@@ -33,7 +33,12 @@
 }
 //返回
 - (IBAction)backevent:(UITapGestureRecognizer *)sender {
-     [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    CATransition *animation = [CATransition animation];
+    animation.duration = 1;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+    animation.type = @"rippleEffect";
+    [self.view.window.layer addAnimation:animation forKey:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     
 }
 //查看注册协议
@@ -48,8 +53,6 @@
     }else{
         self.registerBt.alpha = 0.5;
     }
-    
-    
     
 }
 //获取验证码
@@ -134,18 +137,25 @@
     dic[@"qtidnum"] = self.qtID.text;
     
     [NetworkManager requestPOSTWithURLStr:REGISTER paramDic:dic finish:^(id responseObject) {
-        NSLog(@"%@",dic);
-        NSLog(@"%@",responseObject[@"message"]);
+        
         if ([responseObject[@"code"] integerValue]==1) {
-            
+             [MBProgressHUD showError:responseObject[@"message"]];
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"registerSucess" object:nil userInfo:@{@"phone":self.phoneTf.text}];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                CATransition *animation = [CATransition animation];
+                animation.duration = 1;
+                animation.timingFunction = UIViewAnimationCurveEaseInOut;
+                animation.type = @"rippleEffect";
+                [self.view.window.layer addAnimation:animation forKey:nil];
+                [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    
+            });
         }else{
             [MBProgressHUD showError:responseObject[@"message"]];
         }
     } enError:^(NSError *error) {
-         [MBProgressHUD showError:@""];
+         [MBProgressHUD showError:@"请求失败,请检查网络"];
     }];
-    
-    
     
 }
 
