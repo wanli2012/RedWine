@@ -130,6 +130,8 @@
 		4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A911A7A1F25E7CA003C0F6C /* NodataView.m */; };
 		4A911A801F25E7CA003C0F6C /* NodataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A911A7B1F25E7CA003C0F6C /* NodataView.xib */; };
 		F952A4551F398ABA00ED797F /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F952A4541F398ABA00ED797F /* RSAEncryptor.m */; };
+		F952A4591F39ACC000ED797F /* LoginIdentityView.m in Sources */ = {isa = PBXBuildFile; fileRef = F952A4571F39ACC000ED797F /* LoginIdentityView.m */; };
+		F952A45A1F39ACC000ED797F /* LoginIdentityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F952A4581F39ACC000ED797F /* LoginIdentityView.xib */; };
 		F957D2B81F359D6E00A63845 /* LBAddHarvestAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2AE1F359D6E00A63845 /* LBAddHarvestAddressViewController.m */; };
 		F957D2B91F359D6E00A63845 /* LBAddHarvestAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F957D2AF1F359D6E00A63845 /* LBAddHarvestAddressViewController.xib */; };
 		F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F957D2B11F359D6E00A63845 /* LBHarvestAddressListViewController.m */; };
@@ -340,6 +342,9 @@
 		6BE3557AB4434C9534835FDD /* Pods-KangDingRedWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.debug.xcconfig"; sourceTree = "<group>"; };
 		F952A4531F398ABA00ED797F /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
 		F952A4541F398ABA00ED797F /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		F952A4561F39ACC000ED797F /* LoginIdentityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginIdentityView.h; sourceTree = "<group>"; };
+		F952A4571F39ACC000ED797F /* LoginIdentityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginIdentityView.m; sourceTree = "<group>"; };
+		F952A4581F39ACC000ED797F /* LoginIdentityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginIdentityView.xib; sourceTree = "<group>"; };
 		F957D2AD1F359D6E00A63845 /* LBAddHarvestAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBAddHarvestAddressViewController.h; sourceTree = "<group>"; };
 		F957D2AE1F359D6E00A63845 /* LBAddHarvestAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBAddHarvestAddressViewController.m; sourceTree = "<group>"; };
 		F957D2AF1F359D6E00A63845 /* LBAddHarvestAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBAddHarvestAddressViewController.xib; sourceTree = "<group>"; };
@@ -665,6 +670,9 @@
 				4A4CE2DB1F35911E002E3CD0 /* LBRegisterViewController.h */,
 				4A4CE2DC1F35911E002E3CD0 /* LBRegisterViewController.m */,
 				4A4CE2DD1F35911E002E3CD0 /* LBRegisterViewController.xib */,
+				F952A4561F39ACC000ED797F /* LoginIdentityView.h */,
+				F952A4571F39ACC000ED797F /* LoginIdentityView.m */,
+				F952A4581F39ACC000ED797F /* LoginIdentityView.xib */,
 			);
 			path = "登录注册";
 			sourceTree = "<group>";
@@ -1326,6 +1334,7 @@
 				4A1800EA1F2B233400F6E63D /* GLHomePage_GoodsCell.xib in Resources */,
 				4A4CE2F91F35B394002E3CD0 /* GLMine_OrderListCell.xib in Resources */,
 				4A911A1A1F25E2FD003C0F6C /* Main.storyboard in Resources */,
+				F952A45A1F39ACC000ED797F /* LoginIdentityView.xib in Resources */,
 				4A4686901F39529C002B4AE5 /* GLMine_DonationListController.xib in Resources */,
 				4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */,
 				4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */,
@@ -1444,6 +1453,7 @@
 				4A4686911F39529C002B4AE5 /* GLMine_DonationListCell.m in Sources */,
 				4A911A681F25E40B003C0F6C /* GetLabelBounds.m in Sources */,
 				4A46868F1F39529C002B4AE5 /* GLMine_DonationListController.m in Sources */,
+				F952A4591F39ACC000ED797F /* LoginIdentityView.m in Sources */,
 				4A911A6B1F25E40B003C0F6C /* predicateModel.m in Sources */,
 				4A4686AF1F39873A002B4AE5 /* GLHome_GoodsModel.m in Sources */,
 				4A1800E31F2ADE2A00F6E63D /* XBPageCell.m in Sources */,
