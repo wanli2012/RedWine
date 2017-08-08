@@ -18,11 +18,7 @@
 
 @property (nonatomic, weak)id <GLHomePage_GoodsCellDelegate> delegate;
 
-//@property (nonatomic, assign)NSInteger number;
-
 @property (nonatomic, assign)NSInteger index;
-
-//@property (nonatomic, assign)NSInteger row;
 
 @property (nonatomic, copy)NSArray *models;
 

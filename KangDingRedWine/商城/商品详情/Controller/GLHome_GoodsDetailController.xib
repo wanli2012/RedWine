@@ -13,9 +13,12 @@
             <connections>
                 <outlet property="acountView" destination="88G-uG-zaW" id="2dU-gn-Of8"/>
                 <outlet property="backBtn" destination="wLS-z5-dWD" id="QqP-Lk-XQZ"/>
+                <outlet property="countLabel" destination="jo2-gz-3sZ" id="rug-es-GF9"/>
                 <outlet property="headerImageV" destination="YUB-dy-dd0" id="bDI-AZ-PNz"/>
                 <outlet property="headerView" destination="apz-C0-kUa" id="Hej-q4-xlK"/>
+                <outlet property="nameLabel" destination="7Pq-fi-BjE" id="jdu-sV-EfK"/>
                 <outlet property="navView" destination="xdk-oQ-wur" id="iL5-8q-eJP"/>
+                <outlet property="priceLabel" destination="Rrr-on-frz" id="NGe-0D-BpN"/>
                 <outlet property="tableView" destination="UgT-LQ-vHp" id="4C0-ve-J7f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

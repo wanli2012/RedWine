@@ -10,4 +10,6 @@
 
 @interface GLHome_GoodsDetailController : UIViewController
 
+@property (nonatomic, copy)NSString *goodsID;
+
 @end

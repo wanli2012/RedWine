@@ -12,7 +12,7 @@
 @interface GLHomePage_GoodsCell()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-//@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
 
@@ -21,8 +21,6 @@
 - (void)awakeFromNib {
     
     [super awakeFromNib];
-//    
-//    [self.collectionView registerNib:[UINib nibWithNibName:@"GLHome_GoodsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"GLHome_GoodsCollectionViewCell"];
 
 }
 
@@ -52,25 +50,25 @@
     CGFloat width = (kSCREEN_WIDTH - 1) / 2;
     CGFloat height = (width - 20) * 260 / 335 + 75;
     
-//    if(self.models.count == 0){
-//        
-//        _collectionView.height = 0;
-//        
-//    }else if(self.models.count <= 2 && self.models.count >0) {
+    if(self.models.count == 0){
+        
+        _collectionView.height = 0;
+        
+    }else if(self.models.count <= 2 && self.models.count >0) {
     
         _collectionView.height = height;
 
-//    }else if(self.models.count > 2 && self.models.count <= 4){
-//        
-//        _collectionView.height = height * 2;
-//        
-//    }else{
-//        
-//        _collectionView.height = height * 3;
-//    }
-//    
+    }else if(self.models.count > 2 && self.models.count <= 4){
+        
+        _collectionView.height = height * 2;
+        
+    }else{
+        
+        _collectionView.height = height * 3;
+    }
+    
     return self.models.count;
-//    return 2;
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -78,15 +76,7 @@
     GLHome_GoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLHome_GoodsCollectionViewCell" forIndexPath:indexPath];
     
     cell.model = self.models[indexPath.row];
-    NSLog(@"self.section = %zd",self.index);
-//    
-//    if (self.index == 1 || self.index == 2) {
-//        
-//    }else{
-//        
-//        cell.model = self.models[indexPath.row];
-//    }
-    
+
     return cell;
 }
 

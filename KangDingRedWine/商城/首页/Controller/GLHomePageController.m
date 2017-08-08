@@ -12,7 +12,7 @@
 #import "GLHomePage_AllController.h"
 #import "GLHome_GoodsDetailController.h"
 #import "GLHome_GoodsModel.h"
-#import "GLHome_agentModel.h"
+
 
 @interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,GLHomePage_GoodsCellDelegate>
 {
@@ -44,10 +44,9 @@
 @property (strong, nonatomic)LoadWaitView *loadV;
 @property (nonatomic,strong)NodataView *nodataV;
 
-@property (nonatomic, strong)NSMutableArray *fxModels;
-@property (nonatomic, strong)NSMutableArray *jqModels;
-@property (nonatomic, strong)NSMutableArray *dlModels;
-@property (nonatomic, strong)NSMutableArray *srModels;
+@property (nonatomic, strong)NSMutableArray *models;
+
+@property (nonatomic, strong)NSArray *goodsArr;//四部分的所有数据
 
 @end
 
@@ -65,7 +64,7 @@
     [self setHeaderView];
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
-//    [self.tableView registerNib:[UINib nibWithNibName:@"GLHomePage_GoodsCell" bundle:nil] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
+
 
     [self.tableView addSubview:self.nodataV];
   
@@ -91,12 +90,6 @@
 }
 
 - (void)updateData:(BOOL)status {
-    
-    [self.fxModels removeAllObjects];
-    [self.dlModels removeAllObjects];
-    [self.srModels removeAllObjects];
-    [self.jqModels removeAllObjects];
-    
 
     _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
     [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
@@ -111,23 +104,28 @@
                 return;
             }
             
-            for (NSDictionary *dic in responseObject[@"data"][@"fx_data"]) {
-                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
-                [self.fxModels addObject:model];
+            for (NSDictionary *dict in responseObject[@"data"][@"goods"]) {
+                
+                NSMutableArray *models = [NSMutableArray array];
+                
+                for (NSDictionary *dic in dict[@"datas"]) {
+                    
+                    GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                    [models addObject:model];
+                    
+                }
+                
+                [self.models addObject:models];
+                
             }
-            for (NSDictionary *dic in responseObject[@"data"][@"jq_data"]) {
-                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
-                [self.jqModels addObject:model];
-            }
-            for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
-                GLHome_agentModel *model = [GLHome_agentModel mj_objectWithKeyValues:dic];
-                [self.dlModels addObject:model];
-            }
-            for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
-                GLHome_agentModel *model = [GLHome_agentModel mj_objectWithKeyValues:dic];
-                [self.srModels addObject:model];
-            }
+            
+            self.goodsArr = responseObject[@"data"][@"goods"];
+            
+            self.newsLabel.text = responseObject[@"data"][@"header"][0][@"content"];
+            self.newsLabel2.text = responseObject[@"data"][@"header"][1][@"content"];
         }
+        
+        
         
         [self.tableView reloadData];
         
@@ -262,8 +260,13 @@
 //商品详情
 - (void)didSelectedItem:(NSInteger)section row:(NSInteger)row{
     
+    GLHome_GoodsModel *model = self.models[section][row];
+    
      self.hidesBottomBarWhenPushed = YES;
+    
     GLHome_GoodsDetailController *detailVC = [[GLHome_GoodsDetailController alloc] init];
+    detailVC.goodsID = model.goods_id;
+    
     [self.navigationController pushViewController:detailVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
@@ -271,12 +274,13 @@
 #pragma mark UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    
+    return self.goodsArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    return self.goodsArr.count ? 1 : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -287,37 +291,8 @@
     
     cell.index= indexPath.section;
     
-    cell.models = self.fxModels;
-    
-    NSLog(@"count == %zd",self.fxModels.count);
-    
-//    switch (indexPath.section) {
-//        case 0:
-//        {
-//            cell.models = self.dlModels;
-//            
-//        }
-//            break;
-//        case 1:
-//        {
-//            cell.models = self.fxModels;
-//        }
-//            break;
-//        case 2:
-//        {
-//            cell.models = self.jqModels;
-//        }
-//            break;
-//        case 3:
-//        {
-//            cell.models = self.srModels;
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-    
+    cell.models = self.models[indexPath.section];
+
     return cell;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -364,17 +339,7 @@
     return headerV;
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//    
-//    UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 20)];
-//    footerV.backgroundColor = [UIColor whiteColor];
-//    UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kSCREEN_WIDTH, 1)];
-//    lineV.backgroundColor = [UIColor groupTableViewBackgroundColor];
-//    
-//    [footerV addSubview:lineV];
-//    
-//    return footerV;
-//}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //确定图片宽高比为: 335:260 计算高度
@@ -382,56 +347,13 @@
     CGFloat height = width * 260 / 335 + 75;
     
     return height;
-//    switch (indexPath.section) {
-//        case 0:
-//        {
-//        }
-//            break;
-//        case 1:
-//        {
-//            
-//        }
-//            break;
-//        case 2:
-//        {
-//            
-//        }
-//            break;
-//        case 3:
-//        {
-//            
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    if(_number == 0){
-//        
-//        return 0;
-//        
-//    }else if(_number <= 2 && _number >0) {
-//        
-//        return height;
-//        
-//    }else if(_number > 2 && _number <= 4){
-//        
-//        return height * 2 ;
-//        
-//    }else{
-//        
-//        return height * 3 ;
-//    }
-    
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 60;
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 20;
-//}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat sectionHeaderHeight = 50;
@@ -470,29 +392,12 @@
     
 }
 
-- (NSMutableArray *)fxModels{
-    if (!_fxModels) {
-        _fxModels = [NSMutableArray array];
+- (NSMutableArray *)models{
+    if (!_models) {
+        _models = [NSMutableArray array];
     }
-    return _fxModels;
+    return _models;
 }
-- (NSMutableArray *)jqModels{
-    if (!_jqModels) {
-        _jqModels = [NSMutableArray array];
-    }
-    return _jqModels;
-}
-- (NSMutableArray *)dlModels{
-    if (!_dlModels) {
-        _dlModels = [NSMutableArray array];
-    }
-    return _dlModels;
-}
-- (NSMutableArray *)srModels{
-    if (!_srModels) {
-        _srModels = [NSMutableArray array];
-    }
-    return _srModels;
-}
+
 
 @end
