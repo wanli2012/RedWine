@@ -167,4 +167,16 @@
     
 }
 
++(BOOL)checkPassWord:(NSString *)string{
+    
+    BOOL result = false;
+    // 判断长度大于8位后再接着判断是否同时包含数字和字符
+    NSString * regex = @"(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{8,16}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    result = [pred evaluateWithObject:string];
+    return result;
+    
+}
+
+
 @end
