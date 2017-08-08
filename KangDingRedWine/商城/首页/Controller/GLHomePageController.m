@@ -116,8 +116,11 @@
                 GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
                 [self.jqModels addObject:model];
             }
-            
-            self.srModels = self.jqModels;
+            for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
+                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                [self.srModels addObject:model];
+            }
+           
         }
         
         
@@ -301,6 +304,7 @@
     cell.number = _number;
     cell.delegate = self;
     cell.section = indexPath.section;
+    
     switch (indexPath.section) {
         case 0:
         {
@@ -390,22 +394,48 @@
     CGFloat width = (kSCREEN_WIDTH - 1) / 2 - 20;
     CGFloat height = width * 260 / 335 + 75;
     
-    if(_number == 0){
-        
-        return 0;
-        
-    }else if(_number <= 2 && _number >0) {
-        
-        return height;
-        
-    }else if(_number > 2 && _number <= 4){
-        
-        return height * 2 ;
-        
-    }else{
-        
-        return height * 3 ;
-    }
+    return height;
+//    switch (indexPath.section) {
+//        case 0:
+//        {
+//        }
+//            break;
+//        case 1:
+//        {
+//            
+//        }
+//            break;
+//        case 2:
+//        {
+//            
+//        }
+//            break;
+//        case 3:
+//        {
+//            
+//        }
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    
+//    if(_number == 0){
+//        
+//        return 0;
+//        
+//    }else if(_number <= 2 && _number >0) {
+//        
+//        return height;
+//        
+//    }else if(_number > 2 && _number <= 4){
+//        
+//        return height * 2 ;
+//        
+//    }else{
+//        
+//        return height * 3 ;
+//    }
     
 }
 
