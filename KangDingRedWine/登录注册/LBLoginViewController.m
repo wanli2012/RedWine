@@ -50,6 +50,7 @@
     [self.loginView.twoView addGestureRecognizer:TwoVgesture];
     
      self.currentloginViewimage = self.loginView.shangImage;
+    self.usertype = memberID;
 }
 //注册成功
 -(void)registerSucess:(NSNotification*)noti{
@@ -112,7 +113,6 @@
         return;
     }
     
-    
     [self.view addSubview:self.maskView];
     [self.view addSubview:self.loginView];
     self.loginView.transform = CGAffineTransformMakeScale(0.8, 0.8);
@@ -130,11 +130,11 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userphone"] = self.phoneTf.text;
     dic[@"password"] = encryptsecret;
-    dic[@"groupID"] = @"";
+    dic[@"groupID"] = self.usertype;
     
     [NetworkManager requestPOSTWithURLStr:LOGIN paramDic:dic finish:^(id responseObject) {
         if ([responseObject[@"code"] integerValue]==1) {
-            
+             [MBProgressHUD showError:responseObject[@"message"]];
         }else{
             [MBProgressHUD showError:responseObject[@"message"]];
         }
@@ -144,10 +144,10 @@
 
 }
 
-//普通用户
+//会员
 -(void)shangViewgesture{
     
-    self.usertype = @"";
+    self.usertype = memberID;
     if (self.currentloginViewimage == self.loginView.shangImage) {
         return;
     }
@@ -155,10 +155,10 @@
     self.currentloginViewimage.image=[UIImage imageNamed:@"全选"];
     self.currentloginViewimage = self.loginView.shangImage;
 }
-//零售商
+//经理
 -(void)lingViewgesture{
     
-    self.usertype = @"";
+    self.usertype = managerID;
     if (self.currentloginViewimage == self.loginView.lingimage) {
         return;
     }
@@ -167,10 +167,10 @@
     self.currentloginViewimage = self.loginView.lingimage;
     
 }
-//一级业务员
+//主管
 -(void)oneSalerViewgesture{
     
-    self.usertype = @"";
+    self.usertype = directorID;
     if (self.currentloginViewimage == self.loginView.oneImage) {
         return;
     }
@@ -179,10 +179,10 @@
     self.currentloginViewimage = self.loginView.oneImage;
     
 }
-//二级业务员
+//部长
 -(void)twoSalerViewgesture{
     
-    self.usertype = @"";
+    self.usertype = ministerID;
     if (self.currentloginViewimage == self.loginView.twoImage) {
         return;
     }
