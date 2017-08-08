@@ -39,6 +39,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *newsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *newsLabel2;
 
+@property (strong, nonatomic)LoadWaitView *loadV;
+@property (nonatomic,strong)NodataView *nodataV;
+//@property (nonatomic, strong)NSMutableArray *models;
+
 @end
 
 @implementation GLHomePageController
@@ -56,23 +60,46 @@
     [self setHeaderView];
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
-//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+
+    [self.tableView addSubview:self.nodataV];
+  
     //加载数据
-    [self initDataSource];
-   
+    __weak __typeof(self) weakSelf = self;
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [weakSelf updateData:YES];
+        
+    }];
+    
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf updateData:NO];
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+    }];
+    
+    // 设置文字
+    [header setTitle:@"快扯我，快点" forState:MJRefreshStateIdle];
+    
+    [header setTitle:@"数据要来啦" forState:MJRefreshStatePulling];
+    
+    [header setTitle:@"服务器正在狂奔 ..." forState:MJRefreshStateRefreshing];
+    
+    self.tableView.mj_header = header;
+    self.tableView.mj_footer = footer;
+    
+    
 }
 
--(void)initDataSource{
-    
-    [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
+- (void)updateData:(BOOL)status {
 
+    [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
+        
+        NSLog(@"dd");
         
     } enError:^(NSError *error) {
         
     }];
 
 }
-
 
 //设置headerView
 - (void)setHeaderView {

@@ -20,12 +20,11 @@
 #define autoSizeScaleY (kSCREEN_HEIGHT/568.f)
 
 ///接口
-
 #define URL_Base @"http://192.168.0.101/RedWine/index.php/App/"
 
 #define PlaceHolderImage @"picnodata"
 #define LUNBO_PlaceHolder @"banner"
-#define kGOODS_PlaceHolder @"产品占位图"
+#define kGOODS_PlaceHolder @"首页商品占位图"
 
 //分享
 #define SHARE_URL @"http://dzgx.joshuaweb.cn/index.php/Home/Regist/index.html?mod=member&act=register&username="

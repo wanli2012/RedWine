@@ -21,7 +21,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-v0-kyq">
                         <rect key="frame" x="10" y="0.0" width="153" height="118.5"/>
-                        <color key="backgroundColor" red="0.99841088060000005" green="0.37008202080000002" blue="0.0025905172809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ehS-v0-kyq" secondAttribute="height" multiplier="335:260" id="KSe-XW-5ZU"/>
                         </constraints>

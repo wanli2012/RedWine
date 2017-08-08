@@ -47,6 +47,7 @@
 		4A4686A41F3952EF002B4AE5 /* LBWineDonationVoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4686A21F3952EF002B4AE5 /* LBWineDonationVoucherViewController.xib */; };
 		4A4686A81F39562E002B4AE5 /* GLHome_AllClassifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4686A61F39562E002B4AE5 /* GLHome_AllClassifyController.m */; };
 		4A4686A91F39562E002B4AE5 /* GLHome_AllClassifyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4686A71F39562E002B4AE5 /* GLHome_AllClassifyController.xib */; };
+		4A4686AB1F395811002B4AE5 /* 占位图.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4686AA1F395811002B4AE5 /* 占位图.xcassets */; };
 		4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */; };
 		4A4CE2CA1F35647E002E3CD0 /* GLMine_RealNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2C81F35647E002E3CD0 /* GLMine_RealNameController.m */; };
 		4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2C91F35647E002E3CD0 /* GLMine_RealNameController.xib */; };
@@ -199,6 +200,8 @@
 		4A4686A51F39562E002B4AE5 /* GLHome_AllClassifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_AllClassifyController.h; sourceTree = "<group>"; };
 		4A4686A61F39562E002B4AE5 /* GLHome_AllClassifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_AllClassifyController.m; sourceTree = "<group>"; };
 		4A4686A71F39562E002B4AE5 /* GLHome_AllClassifyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_AllClassifyController.xib; sourceTree = "<group>"; };
+		4A4686AA1F395811002B4AE5 /* 占位图.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "占位图.xcassets"; sourceTree = "<group>"; };
+		4A4686AC1F395D09002B4AE5 /* HeaderUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderUrl.h; sourceTree = "<group>"; };
 		4A48DA8F1F33224B00FF8D8F /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
 		4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
 		4A4CE2C71F35647E002E3CD0 /* GLMine_RealNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_RealNameController.h; sourceTree = "<group>"; };
@@ -367,6 +370,7 @@
 				4A50A6381F31A4BC00A28363 /* 商品详情.xcassets */,
 				4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */,
 				4A4CE2FF1F35BB3C002E3CD0 /* 分类.xcassets */,
+				4A4686AA1F395811002B4AE5 /* 占位图.xcassets */,
 			);
 			path = "图片资源";
 			sourceTree = "<group>";
@@ -938,6 +942,7 @@
 				4A911A1B1F25E2FD003C0F6C /* Assets.xcassets */,
 				4A911A351F25E3EA003C0F6C /* Header.h */,
 				4A911A361F25E3EA003C0F6C /* RedWine.pch */,
+				4A4686AC1F395D09002B4AE5 /* HeaderUrl.h */,
 				4A911A1D1F25E2FD003C0F6C /* LaunchScreen.storyboard */,
 				4A911A201F25E2FD003C0F6C /* Info.plist */,
 				4A911A0F1F25E2FD003C0F6C /* Supporting Files */,
@@ -1271,6 +1276,7 @@
 				4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */,
 				4A4686761F39512D002B4AE5 /* GLHome_AgentCell.xib in Resources */,
 				4A4686621F3950D1002B4AE5 /* GLHome_PersonCustomController.xib in Resources */,
+				4A4686AB1F395811002B4AE5 /* 占位图.xcassets in Resources */,
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
 				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
