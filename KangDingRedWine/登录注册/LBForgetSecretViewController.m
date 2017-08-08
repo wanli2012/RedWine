@@ -125,8 +125,17 @@
         return;
     }
     
+    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userphone"] = self.phoneTf.text;
+    dic[@"password"] = encryptsecret;
+    dic[@"user_name"] = self.recommendTf.text;
+    dic[@"yzm"] = self.phoneTf.text;
+    dic[@"qtidnum"] = self.qtID.text;
     
-    [NetworkManager requestPOSTWithURLStr:GETYZM paramDic:@{@"phone":self.phoneTf.text} finish:^(id responseObject) {
+    [NetworkManager requestPOSTWithURLStr:REGISTER paramDic:dic finish:^(id responseObject) {
+        NSLog(@"%@",dic);
+        NSLog(@"%@",responseObject);
         if ([responseObject[@"code"] integerValue]==1) {
             
         }else{
