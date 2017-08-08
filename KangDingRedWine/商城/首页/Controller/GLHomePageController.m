@@ -11,6 +11,7 @@
 #import "GLHomePage_GoodsCell.h"
 #import "GLHomePage_AllController.h"
 #import "GLHome_GoodsDetailController.h"
+#import "GLHome_GoodsModel.h"
 
 @interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,GLHomePage_GoodsCellDelegate>
 {
@@ -41,7 +42,11 @@
 
 @property (strong, nonatomic)LoadWaitView *loadV;
 @property (nonatomic,strong)NodataView *nodataV;
-//@property (nonatomic, strong)NSMutableArray *models;
+
+@property (nonatomic, strong)NSMutableArray *fxModels;
+@property (nonatomic, strong)NSMutableArray *jqModels;
+@property (nonatomic, strong)NSMutableArray *dlModels;
+@property (nonatomic, strong)NSMutableArray *srModels;
 
 @end
 
@@ -70,12 +75,7 @@
         [weakSelf updateData:YES];
         
     }];
-    
-    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf updateData:NO];
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-    }];
-    
+ 
     // 设置文字
     [header setTitle:@"快扯我，快点" forState:MJRefreshStateIdle];
     
@@ -84,21 +84,62 @@
     [header setTitle:@"服务器正在狂奔 ..." forState:MJRefreshStateRefreshing];
     
     self.tableView.mj_header = header;
-    self.tableView.mj_footer = footer;
     
+    [weakSelf updateData:YES];
     
 }
 
 - (void)updateData:(BOOL)status {
 
+    _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
     [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
         
-        NSLog(@"dd");
+        [self endRefresh];
+        [self.loadV removeloadview];
+        
+        if([responseObject[@"code"] integerValue] == 0){
+            
+            if ([responseObject[@"data"] count] == 0) {
+                [MBProgressHUD showError:@"没有数据"];
+                return;
+            }
+            
+            for (NSDictionary *dic in responseObject[@"data"][@"fx_data"]) {
+                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                [self.fxModels addObject:model];
+            }
+            for (NSDictionary *dic in responseObject[@"data"][@"jq_data"]) {
+                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                [self.jqModels addObject:model];
+            }
+            for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
+                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                [self.jqModels addObject:model];
+            }
+            
+            self.srModels = self.jqModels;
+        }
+        
         
     } enError:^(NSError *error) {
+        [self endRefresh];
+        [self.loadV removeloadview];
         
     }];
+}
 
+- (void)endRefresh {
+    [self.tableView.mj_header endRefreshing];
+}
+
+-(NodataView*)nodataV{
+    
+    if (!_nodataV) {
+        _nodataV=[[NSBundle mainBundle]loadNibNamed:@"NodataView" owner:self options:nil].firstObject;
+        _nodataV.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT-114-49);
+    }
+    return _nodataV;
+    
 }
 
 //设置headerView
@@ -260,6 +301,31 @@
     cell.number = _number;
     cell.delegate = self;
     cell.section = indexPath.section;
+    switch (indexPath.section) {
+        case 0:
+        {
+            cell.models = self.dlModels;
+        }
+            break;
+        case 1:
+        {
+            cell.models = self.fxModels;
+        }
+            break;
+        case 2:
+        {
+            cell.models = self.jqModels;
+        }
+            break;
+        case 3:
+        {
+            cell.models = self.srModels;
+        }
+            break;
+            
+        default:
+            break;
+    }
     
     return cell;
 }
@@ -386,4 +452,30 @@
     return _cycleScrollView;
     
 }
+
+- (NSMutableArray *)fxModels{
+    if (!_fxModels) {
+        _fxModels = [NSMutableArray array];
+    }
+    return _fxModels;
+}
+- (NSMutableArray *)jqModels{
+    if (!_jqModels) {
+        _jqModels = [NSMutableArray array];
+    }
+    return _jqModels;
+}
+- (NSMutableArray *)dlModels{
+    if (!_dlModels) {
+        _dlModels = [NSMutableArray array];
+    }
+    return _dlModels;
+}
+- (NSMutableArray *)srModels{
+    if (!_srModels) {
+        _srModels = [NSMutableArray array];
+    }
+    return _srModels;
+}
+
 @end

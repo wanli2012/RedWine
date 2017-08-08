@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLHome_GoodsModel.h"
 
 @interface GLHome_GoodsCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong)GLHome_GoodsModel *model;
 
 @end

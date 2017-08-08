@@ -60,6 +60,12 @@
                 <constraint firstAttribute="bottom" secondItem="lMX-ck-ERY" secondAttribute="bottom" constant="10" id="yoE-Ex-nzO"/>
             </constraints>
             <size key="customSize" width="216" height="227"/>
+            <connections>
+                <outlet property="countLabel" destination="lMX-ck-ERY" id="WPf-Zl-Vvg"/>
+                <outlet property="imageV" destination="ehS-v0-kyq" id="eqW-sa-n5D"/>
+                <outlet property="nameLabel" destination="T7u-WY-3rd" id="mTZ-fV-pds"/>
+                <outlet property="priceLabel" destination="WAQ-uE-uSB" id="tzS-Qq-gWi"/>
+            </connections>
             <point key="canvasLocation" x="-78.5" y="-14"/>
         </collectionViewCell>
     </objects>
