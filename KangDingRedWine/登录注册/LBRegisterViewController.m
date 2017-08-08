@@ -7,6 +7,7 @@
 //
 
 #import "LBRegisterViewController.h"
+#import "LoginIdentityView.h"
 
 @interface LBRegisterViewController ()
 
@@ -16,6 +17,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *ensureTf;
 @property (weak, nonatomic) IBOutlet UIButton *codeBt;
 @property (weak, nonatomic) IBOutlet UIButton *submitbt;
+@property (strong, nonatomic)LoginIdentityView *loginView;
+@property (strong, nonatomic)UIImageView *currentloginViewimage;//当前选择身份的选中图
+
+@property (strong, nonatomic)UIView *maskView;
+@property (strong, nonatomic)NSString *usertype;//用户类型 默认为善行者
 
 @end
 
@@ -24,7 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.loginView.cancelBt addTarget:self action:@selector(maskviewgesture) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginView.sureBt addTarget:self action:@selector(surebuttonEvent) forControlEvents:UIControlEventTouchUpInside];
     
+    UITapGestureRecognizer *maskvgesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(maskviewgesture)];
+    [self.maskView addGestureRecognizer:maskvgesture];
+    //选择会员
+    UITapGestureRecognizer *shanVgesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(shangViewgesture)];
+    [self.loginView.shangView addGestureRecognizer:shanVgesture];
+    //选择经理
+    UITapGestureRecognizer *lingVgesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(lingViewgesture)];
+    [self.loginView.lingView addGestureRecognizer:lingVgesture];
+    //选择主管
+    UITapGestureRecognizer *OneVgesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(oneSalerViewgesture)];
+    [self.loginView.oneView addGestureRecognizer:OneVgesture];
+    //选择部长
+    UITapGestureRecognizer *TwoVgesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(twoSalerViewgesture)];
+    [self.loginView.twoView addGestureRecognizer:TwoVgesture];
+    
+    self.currentloginViewimage = self.loginView.shangImage;
+    self.usertype = memberID;
     
 }
 
@@ -107,11 +132,23 @@
         return;
     }
     
+    [self.view addSubview:self.maskView];
+    [self.view addSubview:self.loginView];
+    self.loginView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.loginView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:nil];
+}
+
+//确定按
+-(void)surebuttonEvent{
+    [self maskviewgesture];
     NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"phone"] = self.phoneTf.text;
     dic[@"new_pwd"] = encryptsecret;
     dic[@"yzm"] = self.yzmTf.text;
+    dic[@"groupID"] = self.usertype;
     
     [NetworkManager requestPOSTWithURLStr:BACKPWD paramDic:dic finish:^(id responseObject) {
         
@@ -130,9 +167,68 @@
             [MBProgressHUD showError:responseObject[@"message"]];
         }
     } enError:^(NSError *error) {
-         [MBProgressHUD showError:@"请求失败,请检查网络"];
+        [MBProgressHUD showError:@"请求失败,请检查网络"];
     }];
 
+    
+}
+
+
+//会员
+-(void)shangViewgesture{
+    
+    self.usertype = memberID;
+    if (self.currentloginViewimage == self.loginView.shangImage) {
+        return;
+    }
+    self.loginView.shangImage.image=[UIImage imageNamed:@"全选选中"];
+    self.currentloginViewimage.image=[UIImage imageNamed:@"全选"];
+    self.currentloginViewimage = self.loginView.shangImage;
+}
+//经理
+-(void)lingViewgesture{
+    
+    self.usertype = managerID;
+    if (self.currentloginViewimage == self.loginView.lingimage) {
+        return;
+    }
+    self.loginView.lingimage.image=[UIImage imageNamed:@"全选选中"];
+    self.currentloginViewimage.image=[UIImage imageNamed:@"全选"];
+    self.currentloginViewimage = self.loginView.lingimage;
+    
+}
+//主管
+-(void)oneSalerViewgesture{
+    
+    self.usertype = directorID;
+    if (self.currentloginViewimage == self.loginView.oneImage) {
+        return;
+    }
+    self.loginView.oneImage.image=[UIImage imageNamed:@"全选选中"];
+    self.currentloginViewimage.image=[UIImage imageNamed:@"全选"];
+    self.currentloginViewimage = self.loginView.oneImage;
+    
+}
+//部长
+-(void)twoSalerViewgesture{
+    
+    self.usertype = ministerID;
+    if (self.currentloginViewimage == self.loginView.twoImage) {
+        return;
+    }
+    self.loginView.twoImage.image=[UIImage imageNamed:@"全选选中"];
+    self.currentloginViewimage.image=[UIImage imageNamed:@"全选"];
+    self.currentloginViewimage = self.loginView.twoImage;
+    
+}
+
+
+//点击maskview
+-(void)maskviewgesture{
+    
+    [self.maskView removeFromSuperview];
+    [self.loginView removeFromSuperview];
+    
 }
 
 
@@ -171,6 +267,29 @@
     
 }
 
+-(LoginIdentityView*)loginView{
+    
+    if (!_loginView) {
+        _loginView=[[NSBundle mainBundle]loadNibNamed:@"LoginIdentityView" owner:self options:nil].firstObject;
+        _loginView.frame=CGRectMake(20, (kSCREEN_HEIGHT - 240)/2, kSCREEN_WIDTH-40, 240);
+        _loginView.alpha=1;
+        
+    }
+    
+    return _loginView;
+    
+}
+
+-(UIView*)maskView{
+    
+    if (!_maskView) {
+        _maskView=[[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        [_maskView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.8f]];
+        
+    }
+    return _maskView;
+    
+}
 
 -(void)updateViewConstraints{
     [super updateViewConstraints];
