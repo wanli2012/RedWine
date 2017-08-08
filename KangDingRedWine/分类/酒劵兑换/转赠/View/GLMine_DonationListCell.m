@@ -28,8 +28,7 @@
     
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeReason)];
     [self.closeReasonView addGestureRecognizer:tap1];
-    
-    self.openBtn.imageView.transform = CGAffineTransformMakeRotation(M_PI_4);
+
    
 }
 

@@ -27,11 +27,18 @@
     
     self.navigationItem.title = @"账户安全";
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.hidesBottomBarWhenPushed = YES;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"GLMine_PersonInfoCell" bundle:nil] forCellReuseIdentifier:@"GLMine_PersonInfoCell"];
     
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = NO;
+    
+}
+
 #pragma mark UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -95,6 +102,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.hidesBottomBarWhenPushed = YES;
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0://登录密码

@@ -4,15 +4,13 @@
 //
 //  Created by 龚磊 on 2017/7/28.
 //  Copyright © 2017年 三君科技有限公司. All rights reserved.
-//
 
 #import "GLMineController.h"
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
-#import "LBLoginViewController.h"
 #import "GLMine_OrderListController.h"
-#import "GLMine_DonationListController.h"
+#import "GLMine_AccountSafetyController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -116,17 +114,22 @@
 - (IBAction)infomation:(id)sender {
     
     NSLog(@"消息");
-
-    LBLoginViewController *vc = [[LBLoginViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
-
-    
+    self.hidesBottomBarWhenPushed = YES;
+//    LBWineCouponRepurchaseViewController *vc = [[LBWineCouponRepurchaseViewController alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 //设置界面
 - (IBAction)set:(id)sender {
-    NSLog(@"设置界面");
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLMine_AccountSafetyController *set = [[GLMine_AccountSafetyController alloc] init];
+    [self.navigationController pushViewController:set animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+    
 }
+
 //个人信息
 - (IBAction)personInfo:(id)sender {
     
@@ -193,8 +196,8 @@
 - (IBAction)pushToSalesAcount:(id)sender {
     
     self.hidesBottomBarWhenPushed =YES;
-    GLMine_DonationListController *donationVC = [[GLMine_DonationListController alloc] init];
-    [self.navigationController pushViewController:donationVC animated:YES];
+//    GLMine_DonationListController *donationVC = [[GLMine_DonationListController alloc] init];
+//    [self.navigationController pushViewController:donationVC animated:YES];
     
     self.hidesBottomBarWhenPushed = NO;
 }

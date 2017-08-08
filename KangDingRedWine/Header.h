@@ -14,7 +14,7 @@
 
 #define YYSRGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
-#define TABBARTITLE_COLOR YYSRGBColor(15, 15,  15, 1.0) //导航栏颜色
+#define TABBARTITLE_COLOR YYSRGBColor(0, 0, 0, 1.0) //导航栏,tabbar栏颜色
 
 #define autoSizeScaleX (kSCREEN_WIDTH/320.f)
 #define autoSizeScaleY (kSCREEN_HEIGHT/568.f)

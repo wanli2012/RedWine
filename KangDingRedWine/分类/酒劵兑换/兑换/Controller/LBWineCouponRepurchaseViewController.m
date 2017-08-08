@@ -7,6 +7,7 @@
 //
 
 #import "LBWineCouponRepurchaseViewController.h"
+#import "LBWineDonationVoucherViewController.h"
 
 @interface LBWineCouponRepurchaseViewController ()
 
@@ -28,7 +29,6 @@
 
     self.navigationController.navigationBar.hidden = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationItem.title = @"酒券回购";
     
     _buttonedt=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 60)];
     [_buttonedt setImage:[UIImage imageNamed:@"总类"] forState:UIControlStateNormal];
@@ -38,6 +38,11 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_buttonedt];
     
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 -(void)edtingInfo{
@@ -58,6 +63,10 @@
 }
 //转赠他人
 - (IBAction)DonationToOthers:(UIButton *)sender {
+    
+    self.hidesBottomBarWhenPushed = YES;
+    LBWineDonationVoucherViewController *donationVC = [[LBWineDonationVoucherViewController alloc] init];
+    [self.navigationController pushViewController:donationVC animated:YES];
     
 }
 

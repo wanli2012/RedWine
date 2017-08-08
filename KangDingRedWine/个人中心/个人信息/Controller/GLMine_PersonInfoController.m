@@ -9,6 +9,7 @@
 #import "GLMine_PersonInfoController.h"
 #import "GLMine_PersonInfoCell.h"
 #import "GLMine_AccountSafetyController.h"
+#import "LBHarvestAddressListViewController.h"
 
 @interface GLMine_PersonInfoController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -117,18 +118,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.hidesBottomBarWhenPushed = YES;
     if (indexPath.section == 1) {
         
         switch (indexPath.row) {
             case 0:
             {
-                NSLog(@"地址管理");
+                LBHarvestAddressListViewController * addressVC = [[LBHarvestAddressListViewController alloc] init];
+                [self.navigationController pushViewController:addressVC animated:YES];
             }
                 break;
             case 1:
             {
               
-                self.hidesBottomBarWhenPushed = YES;
                 GLMine_AccountSafetyController *safetyVC = [[GLMine_AccountSafetyController alloc] init];
                 [self.navigationController pushViewController:safetyVC animated:YES];
                 

@@ -10,7 +10,7 @@
 #import "GLHome_AgentController.h"
 #import "GLHome_ReSellingMallController.h"
 #import "GLHome_PersonCustomController.h"
-#import "GLHome_ExchangeController.h"
+#import "LBWineCouponRepurchaseViewController.h"
 
 @interface GLHome_AllClassifyController ()
 
@@ -70,7 +70,7 @@
                             [GLHome_AgentController class],
                             [GLHome_ReSellingMallController class],
                             [GLHome_PersonCustomController class],
-                            [GLHome_ExchangeController class]
+                            [LBWineCouponRepurchaseViewController class]
                             ];
     self.backgroundColor = [UIColor blackColor];
     self.view.backgroundColor = [UIColor blackColor];
