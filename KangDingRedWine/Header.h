@@ -20,7 +20,7 @@
 #define autoSizeScaleY (kSCREEN_HEIGHT/568.f)
 
 ///接口
-#define URL_Base @"http://192.168.0.101/RedWine/index.php/App/"
+#define URL_Base @"http://www.51kdh.cn/index.php/App/"
 
 #define PlaceHolderImage @"picnodata"
 #define LUNBO_PlaceHolder @"banner"
@@ -38,9 +38,10 @@
 //友盟分享 AppKey
 #define USHARE_DEMO_APPKEY @"594b286765b6d607f3000f9a"
 
-
-
 #define NMUBERS @"0123456789./*-+~!@#$%^&()_+-=,./;'[]{}:<>?`"
+
+//公钥RSA
+#define public_RSA @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC14XtGpmuHCYlu7dgLbr8hoYNh6d8XRNY+pHulx/F+hMmOsPRX0HWZOTeFCpG11t9lVRQEcQdm587EyiUDiHEL7yrFPEnJ2Dlce55GrSSCP4IpEyH06gudK3O56t8AC02LSD9nrJ4e6WrGrPaahQVfvJBz4v+NSfvAao/xFthVlwIDAQAB"
 
 
 #endif /* Header_h */

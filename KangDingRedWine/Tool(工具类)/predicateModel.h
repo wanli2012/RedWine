@@ -33,7 +33,8 @@
 +(BOOL)judgePassWordLegal:(NSString *)pass;
 //判断字符串是否包含数字，字母，或混合
 +(int)checkIsHaveNumAndLetter:(NSString*)password;
-
+//验证8-16位密码  至少包含数字.字母.符号中的2种 
++(BOOL)checkPassWord:(NSString *)string;
 
 
 @end

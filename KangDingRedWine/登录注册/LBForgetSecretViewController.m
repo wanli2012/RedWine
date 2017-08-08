@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *qtID;
 @property (weak, nonatomic) IBOutlet UIButton *codeBt;
 @property (weak, nonatomic) IBOutlet UIButton *registerBt;
+@property (weak, nonatomic) IBOutlet UIButton *protcolBt;
 
 @end
 
@@ -37,14 +38,18 @@
 }
 //查看注册协议
 - (IBAction)checkXieyi:(UITapGestureRecognizer *)sender {
+    
 }
 //选中协议
 - (IBAction)selectEvent:(UIButton *)sender {
     sender.selected = !sender.selected;
-    
     if (sender.selected) {
-       // self.registerBt.backgroundColor
+        self.registerBt.alpha = 1;
+    }else{
+        self.registerBt.alpha = 0.5;
     }
+    
+    
     
 }
 //获取验证码
@@ -74,6 +79,74 @@
 }
 //点击注册
 - (IBAction)clickRegister:(UIButton *)sender {
+    
+    if (!self.protcolBt.selected) {
+        [MBProgressHUD showError:@"请同意注册协议"];
+        return;
+    }
+    
+    if (self.phoneTf.text.length <=0 ) {
+        [MBProgressHUD showError:@"请输入手机号码"];
+        return;
+    }else{
+        if (![predicateModel valiMobile:self.phoneTf.text]) {
+            [MBProgressHUD showError:@"手机号格式不对"];
+            return;
+        }
+    }
+    
+    if (self.yzmTf.text.length <= 0) {
+        [MBProgressHUD showError:@"请输入验证码"];
+        return;
+    }
+    
+    if (self.secretTf.text.length <= 0) {
+        [MBProgressHUD showError:@"密码不能为空"];
+        return;
+    }
+    
+    if (self.secretTf.text.length < 8 || self.secretTf.text.length > 16) {
+        [MBProgressHUD showError:@"请输入8-16位密码"];
+        return;
+    }
+    if (![predicateModel checkPassWord:self.secretTf.text]) {
+        
+        [MBProgressHUD showError:@"密请输入正确的密码格式"];
+        return;
+    }
+    
+    if (self.ensureTf.text.length <= 0) {
+        [MBProgressHUD showError:@"请输入确认密码"];
+        return;
+    }
+    
+    if (![self.secretTf.text isEqualToString:self.ensureTf.text]) {
+        [MBProgressHUD showError:@"两次输入的密码不一致"];
+        return;
+    }
+    
+    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"userphone"] = self.phoneTf.text;
+    dic[@"password"] = encryptsecret;
+    dic[@"user_name"] = self.recommendTf.text;
+    dic[@"yzm"] = self.phoneTf.text;
+    dic[@"qtidnum"] = self.qtID.text;
+    
+    [NetworkManager requestPOSTWithURLStr:REGISTER paramDic:dic finish:^(id responseObject) {
+        NSLog(@"%@",dic);
+        NSLog(@"%@",responseObject);
+        if ([responseObject[@"code"] integerValue]==1) {
+            
+        }else{
+            
+        }
+    } enError:^(NSError *error) {
+        
+    }];
+    
+    
+    
 }
 
 
