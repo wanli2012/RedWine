@@ -347,6 +347,7 @@
 		F98A5B721F3860AA0025754E /* LBFinancialZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBFinancialZoneViewController.h; sourceTree = "<group>"; };
 		F98A5B731F3860AA0025754E /* LBFinancialZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBFinancialZoneViewController.m; sourceTree = "<group>"; };
 		F98A5B741F3860AA0025754E /* LBFinancialZoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBFinancialZoneViewController.xib; sourceTree = "<group>"; };
+		F98A5B771F38690E0025754E /* HeaderUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderUrl.h; sourceTree = "<group>"; };
 		FA91CCAE288FE6AB3AD55EF7 /* Pods-KangDingRedWine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangDingRedWine.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangDingRedWine/Pods-KangDingRedWine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -853,6 +854,7 @@
 				4A911A181F25E2FD003C0F6C /* Main.storyboard */,
 				4A911A1B1F25E2FD003C0F6C /* Assets.xcassets */,
 				4A911A351F25E3EA003C0F6C /* Header.h */,
+				F98A5B771F38690E0025754E /* HeaderUrl.h */,
 				4A911A361F25E3EA003C0F6C /* PublicOilCard.pch */,
 				4A911A1D1F25E2FD003C0F6C /* LaunchScreen.storyboard */,
 				4A911A201F25E2FD003C0F6C /* Info.plist */,

@@ -10,7 +10,7 @@
 #import "GLMineCollectionCell.h"
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
-#import "LBWineCouponRepurchaseViewController.h"
+#import "LBLoginViewController.h"
 #import "GLMine_OrderListController.h"
 #import "GLMine_DonationListController.h"
 
@@ -116,10 +116,11 @@
 - (IBAction)infomation:(id)sender {
     
     NSLog(@"消息");
-    self.hidesBottomBarWhenPushed = YES;
-    LBWineCouponRepurchaseViewController *vc = [[LBWineCouponRepurchaseViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+
+    LBLoginViewController *vc = [[LBLoginViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+
+    
 }
 
 //设置界面

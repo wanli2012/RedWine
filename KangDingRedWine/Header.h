@@ -21,7 +21,7 @@
 
 ///接口
 
-#define URL_Base @"http://192.168.0.191/CMcard/index.php/App/"
+#define URL_Base @"http://192.168.0.101/RedWine/index.php/App/"
 
 #define PlaceHolderImage @"picnodata"
 #define LUNBO_PlaceHolder @"banner"

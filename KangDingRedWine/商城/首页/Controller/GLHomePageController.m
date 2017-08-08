@@ -57,7 +57,20 @@
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
 //    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    //加载数据
+    [self initDataSource];
    
+}
+
+-(void)initDataSource{
+    
+    [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
+
+        
+    } enError:^(NSError *error) {
+        
+    }];
+
 }
 
 
