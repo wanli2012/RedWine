@@ -10,7 +10,6 @@
 #import "HJCarouselViewLayout.h"
 #import "GLMine_PersonInfoController.h"
 #import "GLMine_OrderListController.h"
-#import "GLMine_DonationListController.h"
 #import "GLMine_AccountSafetyController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -197,8 +196,8 @@
 - (IBAction)pushToSalesAcount:(id)sender {
     
     self.hidesBottomBarWhenPushed =YES;
-    GLMine_DonationListController *donationVC = [[GLMine_DonationListController alloc] init];
-    [self.navigationController pushViewController:donationVC animated:YES];
+//    GLMine_DonationListController *donationVC = [[GLMine_DonationListController alloc] init];
+//    [self.navigationController pushViewController:donationVC animated:YES];
     
     self.hidesBottomBarWhenPushed = NO;
 }

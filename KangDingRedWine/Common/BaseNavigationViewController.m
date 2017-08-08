@@ -25,26 +25,8 @@
 
 //    self.navigationBar.translucent = YES;
 //    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-//
-//    gradientLayer.colors = @[(__bridge id)YYSRGBColor(255, 80, 0, 1).CGColor,(__bridge id)YYSRGBColor(246, 109, 2, 1).CGColor];
-//    gradientLayer.locations = @[@0.5, @1.0];
-//    gradientLayer.startPoint = CGPointMake(0, 0);
-//    gradientLayer.endPoint = CGPointMake(1.0, 0);
-//    gradientLayer.frame = CGRectMake(0, -20, self.view.frame.size.width, 64);
-//    [self.navigationBar.layer addSublayer:gradientLayer];
+
 }
-
-//+(void)initialize
-//{
-//    UINavigationBar *naBar = [UINavigationBar appearance];
-//    naBar.tintColor = YYSRGBColor(230, 38, 7);
-//    naBar.backgroundColor = YYSRGBColor(230, 38, 7);
-//    naBar.translucent = NO;
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//    dict[NSForegroundColorAttributeName] = YYSRGBColor(230, 38, 7);
-//    [naBar setTitleTextAttributes:dict];
-//}
-
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 
@@ -52,10 +34,6 @@
     // viewController.hidesBottomBarWhenPushed = YES; //隐藏底部标签栏
     
     [super pushViewController:viewController animated:animated];
-    
-    
-//    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
-//    self.visibleViewController.navigationItem.backBarButtonItem = backButtonItem;
     
     [self.visibleViewController.navigationItem setHidesBackButton:YES];
     

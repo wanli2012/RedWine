@@ -7,6 +7,7 @@
 //
 
 #import "LBWineDonationVoucherViewController.h"
+#import "GLMine_DonationListController.h"
 
 @interface LBWineDonationVoucherViewController ()
 
@@ -25,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.navigationController.navigationBar.hidden = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"酒券转赠";
@@ -33,7 +34,6 @@
     _buttonedt=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 60)];
     [_buttonedt setImage:[UIImage imageNamed:@"总类"] forState:UIControlStateNormal];
     [_buttonedt setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, -10)];
-    
     [_buttonedt addTarget:self action:@selector(edtingInfo) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_buttonedt];
@@ -41,6 +41,10 @@
 }
 
 -(void)edtingInfo{
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLMine_DonationListController *donationListVC = [[GLMine_DonationListController alloc] init];
+    [self.navigationController pushViewController:donationListVC animated:YES];
     
 }
 

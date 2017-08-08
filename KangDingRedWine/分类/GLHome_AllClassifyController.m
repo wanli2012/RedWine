@@ -72,7 +72,6 @@
                             [GLHome_PersonCustomController class],
                             [LBWineCouponRepurchaseViewController class]
                             ];
-    
     self.backgroundColor = [UIColor blackColor];
     self.view.backgroundColor = [UIColor blackColor];
     self.normalTitleColor = [UIColor whiteColor];
