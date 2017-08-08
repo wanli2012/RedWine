@@ -30,7 +30,7 @@
     
     [self setUI];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationItem.title = @"商品详情";
+//    self.navigationItem.title = @"商品详情";
     [self.tableView registerNib:[UINib nibWithNibName:@"GLHome_GoodsDetailCellCell" bundle:nil] forCellReuseIdentifier:@"GLHome_GoodsDetailCellCell"];
 
 }

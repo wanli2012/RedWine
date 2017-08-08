@@ -20,10 +20,5 @@
 
 @property (nonatomic, copy)NSString *salenum;//销量
 
-@property (nonatomic, copy)NSString *title;//代理名字
-
-@property (nonatomic, copy)NSString *money;//代理价格
-
-@property (nonatomic, copy)NSString *content;//代理身份
 
 @end

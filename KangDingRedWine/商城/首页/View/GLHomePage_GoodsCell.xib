@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-mJ-LIQ">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-mJ-LIQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EbU-IG-gtQ">
@@ -27,6 +27,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="SlI-16-q1l"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="13A-cc-3cj"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <constraints>
@@ -36,6 +40,9 @@
                     <constraint firstAttribute="bottom" secondItem="a2v-mJ-LIQ" secondAttribute="bottom" id="xz9-Mw-Iku"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="a2v-mJ-LIQ" id="PsC-Fr-aqL"/>
+            </connections>
             <point key="canvasLocation" x="-5" y="63"/>
         </tableViewCell>
     </objects>
