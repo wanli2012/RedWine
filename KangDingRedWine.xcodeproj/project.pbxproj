@@ -49,6 +49,7 @@
 		4A4686A91F39562E002B4AE5 /* GLHome_AllClassifyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4686A71F39562E002B4AE5 /* GLHome_AllClassifyController.xib */; };
 		4A4686AB1F395811002B4AE5 /* 占位图.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4686AA1F395811002B4AE5 /* 占位图.xcassets */; };
 		4A4686AF1F39873A002B4AE5 /* GLHome_GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4686AE1F39873A002B4AE5 /* GLHome_GoodsModel.m */; };
+		4A4686B21F3996E0002B4AE5 /* GLHome_agentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4686B11F3996E0002B4AE5 /* GLHome_agentModel.m */; };
 		4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */; };
 		4A4CE2CA1F35647E002E3CD0 /* GLMine_RealNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE2C81F35647E002E3CD0 /* GLMine_RealNameController.m */; };
 		4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4CE2C91F35647E002E3CD0 /* GLMine_RealNameController.xib */; };
@@ -206,6 +207,8 @@
 		4A4686AC1F395D09002B4AE5 /* HeaderUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderUrl.h; sourceTree = "<group>"; };
 		4A4686AD1F39873A002B4AE5 /* GLHome_GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsModel.h; sourceTree = "<group>"; };
 		4A4686AE1F39873A002B4AE5 /* GLHome_GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsModel.m; sourceTree = "<group>"; };
+		4A4686B01F3996E0002B4AE5 /* GLHome_agentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_agentModel.h; sourceTree = "<group>"; };
+		4A4686B11F3996E0002B4AE5 /* GLHome_agentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_agentModel.m; sourceTree = "<group>"; };
 		4A48DA8F1F33224B00FF8D8F /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
 		4A48DA901F33224B00FF8D8F /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
 		4A4CE2C71F35647E002E3CD0 /* GLMine_RealNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_RealNameController.h; sourceTree = "<group>"; };
@@ -999,6 +1002,8 @@
 			children = (
 				4A4686AD1F39873A002B4AE5 /* GLHome_GoodsModel.h */,
 				4A4686AE1F39873A002B4AE5 /* GLHome_GoodsModel.m */,
+				4A4686B01F3996E0002B4AE5 /* GLHome_agentModel.h */,
+				4A4686B11F3996E0002B4AE5 /* GLHome_agentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1391,6 +1396,7 @@
 				4A4CE2E01F35911E002E3CD0 /* LBLoginViewController.m in Sources */,
 				4A4CE2F31F35B22A002E3CD0 /* GLMine_OrderListController.m in Sources */,
 				4A911A6C1F25E40B003C0F6C /* ScaleSizeImage.m in Sources */,
+				4A4686B21F3996E0002B4AE5 /* GLHome_agentModel.m in Sources */,
 				F957D2C01F359FBF00A63845 /* HarvestAddressModel.m in Sources */,
 				F957D2BA1F359D6E00A63845 /* LBHarvestAddressListViewController.m in Sources */,
 				4A911A171F25E2FD003C0F6C /* ViewController.m in Sources */,

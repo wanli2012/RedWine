@@ -26,11 +26,22 @@
 }
 - (void)setModel:(GLHome_GoodsModel *)model{
     _model = model;
+    
     self.nameLabel.text = model.goods_name;
     self.priceLabel.text = [NSString stringWithFormat:@"¥%@",model.discount];
     self.countLabel.text = [NSString stringWithFormat:@"销量:%@",model.salenum];
     
-    [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:PlaceHolderImage]];
+//    [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:kGOODS_PlaceHolder]];
     
+}
+
+- (void)setAgentModel:(GLHome_agentModel *)agentModel{
+    _agentModel = agentModel;
+    self.nameLabel.text = agentModel.title;
+    self.priceLabel.text = [NSString stringWithFormat:@"¥%@",agentModel.money];
+    self.countLabel.text = [NSString stringWithFormat:@"销量:%@",agentModel.salenum];
+    
+//    [self.imageV sd_setImageWithURL:[NSURL URLWithString:agentModel.thumb] placeholderImage:[UIImage imageNamed:kGOODS_PlaceHolder]];
+    self.imageV.image = [UIImage imageNamed:kGOODS_PlaceHolder];
 }
 @end

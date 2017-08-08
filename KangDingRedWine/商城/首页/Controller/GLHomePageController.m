@@ -12,6 +12,7 @@
 #import "GLHomePage_AllController.h"
 #import "GLHome_GoodsDetailController.h"
 #import "GLHome_GoodsModel.h"
+#import "GLHome_agentModel.h"
 
 @interface GLHomePageController ()<SDCycleScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,GLHomePage_GoodsCellDelegate>
 {
@@ -55,7 +56,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _number = 4;
     _headerImageHeight = 200 * autoSizeScaleX; //banner 高度
     self.newsViewHeight.constant = 70 * autoSizeScaleX;
     self.cycleScrollViewHeight.constant = _headerImageHeight;
@@ -65,6 +65,7 @@
     [self setHeaderView];
     
     [self.tableView registerClass:[GLHomePage_GoodsCell class] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
+//    [self.tableView registerNib:[UINib nibWithNibName:@"GLHomePage_GoodsCell" bundle:nil] forCellReuseIdentifier:@"GLHomePage_GoodsCell"];
 
     [self.tableView addSubview:self.nodataV];
   
@@ -90,6 +91,12 @@
 }
 
 - (void)updateData:(BOOL)status {
+    
+    [self.fxModels removeAllObjects];
+    [self.dlModels removeAllObjects];
+    [self.srModels removeAllObjects];
+    [self.jqModels removeAllObjects];
+    
 
     _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
     [NetworkManager requestPOSTWithURLStr:SHOPMAIN paramDic:@{} finish:^(id responseObject) {
@@ -97,7 +104,7 @@
         [self endRefresh];
         [self.loadV removeloadview];
         
-        if([responseObject[@"code"] integerValue] == 0){
+        if([responseObject[@"code"] integerValue] == 1){
             
             if ([responseObject[@"data"] count] == 0) {
                 [MBProgressHUD showError:@"没有数据"];
@@ -113,16 +120,16 @@
                 [self.jqModels addObject:model];
             }
             for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
-                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
-                [self.jqModels addObject:model];
+                GLHome_agentModel *model = [GLHome_agentModel mj_objectWithKeyValues:dic];
+                [self.dlModels addObject:model];
             }
             for (NSDictionary *dic in responseObject[@"data"][@"dl_data"]) {
-                GLHome_GoodsModel *model = [GLHome_GoodsModel mj_objectWithKeyValues:dic];
+                GLHome_agentModel *model = [GLHome_agentModel mj_objectWithKeyValues:dic];
                 [self.srModels addObject:model];
             }
-           
         }
         
+        [self.tableView reloadData];
         
     } enError:^(NSError *error) {
         [self endRefresh];
@@ -254,11 +261,13 @@
 
 //商品详情
 - (void)didSelectedItem:(NSInteger)section row:(NSInteger)row{
+    
      self.hidesBottomBarWhenPushed = YES;
     GLHome_GoodsDetailController *detailVC = [[GLHome_GoodsDetailController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
+
 #pragma mark UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -267,69 +276,47 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    switch (section) {
-        case 0:
-        {
-            return 1;
-        }
-            break;
-        case 1:
-        {
-            return 1;
-        }
-            break;
-        case 2:
-        {
-            return 1;
-        }
-            break;
-        case 3:
-        {
-            return 1;
-        }
-            break;
-            
-        default:
-        {
-            return 4;
-        }
-            break;
-    }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     GLHomePage_GoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLHomePage_GoodsCell"];
-    
-    cell.number = _number;
+
     cell.delegate = self;
-    cell.section = indexPath.section;
     
-    switch (indexPath.section) {
-        case 0:
-        {
-            cell.models = self.dlModels;
-        }
-            break;
-        case 1:
-        {
-            cell.models = self.fxModels;
-        }
-            break;
-        case 2:
-        {
-            cell.models = self.jqModels;
-        }
-            break;
-        case 3:
-        {
-            cell.models = self.srModels;
-        }
-            break;
-            
-        default:
-            break;
-    }
+    cell.index= indexPath.section;
+    
+    cell.models = self.fxModels;
+    
+    NSLog(@"count == %zd",self.fxModels.count);
+    
+//    switch (indexPath.section) {
+//        case 0:
+//        {
+//            cell.models = self.dlModels;
+//            
+//        }
+//            break;
+//        case 1:
+//        {
+//            cell.models = self.fxModels;
+//        }
+//            break;
+//        case 2:
+//        {
+//            cell.models = self.jqModels;
+//        }
+//            break;
+//        case 3:
+//        {
+//            cell.models = self.srModels;
+//        }
+//            break;
+//            
+//        default:
+//            break;
+//    }
     
     return cell;
 }
