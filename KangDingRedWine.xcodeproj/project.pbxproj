@@ -94,6 +94,8 @@
 		4A6B72A71F34801100DF9FF7 /* shopingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72A21F34801100DF9FF7 /* shopingModel.m */; };
 		4A6B72A81F34801100DF9FF7 /* LBShopingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72A51F34801100DF9FF7 /* LBShopingCarTableViewCell.m */; };
 		4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */; };
+		4A6CA0E21F3AA7E100720438 /* PYArcMenu_button_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CA0DF1F3AA7E100720438 /* PYArcMenu_button_image.png */; };
+		4A6CA0E31F3AA7E100720438 /* PYArcMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */; };
 		4A7768381F3072B400C01BD5 /* GLHomePage_AllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77682F1F3072B400C01BD5 /* GLHomePage_AllController.m */; };
 		4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7768301F3072B400C01BD5 /* GLHomePage_AllController.xib */; };
 		4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7768331F3072B400C01BD5 /* GLHomePage_AllOneCell.m */; };
@@ -274,6 +276,9 @@
 		4A6B72A41F34801100DF9FF7 /* LBShopingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBShopingCarTableViewCell.h; sourceTree = "<group>"; };
 		4A6B72A51F34801100DF9FF7 /* LBShopingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBShopingCarTableViewCell.m; sourceTree = "<group>"; };
 		4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBShopingCarTableViewCell.xib; sourceTree = "<group>"; };
+		4A6CA0DF1F3AA7E100720438 /* PYArcMenu_button_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PYArcMenu_button_image.png; sourceTree = "<group>"; };
+		4A6CA0E01F3AA7E100720438 /* PYArcMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYArcMenuView.h; sourceTree = "<group>"; };
+		4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYArcMenuView.m; sourceTree = "<group>"; };
 		4A77682E1F3072B400C01BD5 /* GLHomePage_AllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHomePage_AllController.h; sourceTree = "<group>"; };
 		4A77682F1F3072B400C01BD5 /* GLHomePage_AllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHomePage_AllController.m; sourceTree = "<group>"; };
 		4A7768301F3072B400C01BD5 /* GLHomePage_AllController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHomePage_AllController.xib; sourceTree = "<group>"; };
@@ -725,6 +730,7 @@
 		4A50A62D1F31768700A28363 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A6CA0DE1F3AA7E100720438 /* PYArcMenuView */,
 				4A50A6331F317BC300A28363 /* GLHome_GoodsDetailCellCell.h */,
 				4A50A6341F317BC300A28363 /* GLHome_GoodsDetailCellCell.m */,
 				4A50A6351F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib */,
@@ -888,6 +894,16 @@
 				4A4686561F39508A002B4AE5 /* 酒劵兑换 */,
 			);
 			path = "分类";
+			sourceTree = "<group>";
+		};
+		4A6CA0DE1F3AA7E100720438 /* PYArcMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CA0DF1F3AA7E100720438 /* PYArcMenu_button_image.png */,
+				4A6CA0E01F3AA7E100720438 /* PYArcMenuView.h */,
+				4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */,
+			);
+			path = PYArcMenuView;
 			sourceTree = "<group>";
 		};
 		4A77682D1F3072B400C01BD5 /* Controller */ = {
@@ -1323,6 +1339,7 @@
 				4A77683D1F3072B400C01BD5 /* GLHomePage_AllTwoCell.xib in Resources */,
 				4A4CE2E71F359145002E3CD0 /* 购物车.xcassets in Resources */,
 				4A4686671F3950E6002B4AE5 /* GLHome_ReSellingMallController.xib in Resources */,
+				4A6CA0E21F3AA7E100720438 /* PYArcMenu_button_image.png in Resources */,
 				4A4686A41F3952EF002B4AE5 /* LBWineDonationVoucherViewController.xib in Resources */,
 				4A4686A91F39562E002B4AE5 /* GLHome_AllClassifyController.xib in Resources */,
 				4A50A6321F3176AF00A28363 /* GLHome_GoodsDetailController.xib in Resources */,
@@ -1455,6 +1472,7 @@
 				4A4CE2EB1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m in Sources */,
 				4A4686821F39514B002B4AE5 /* GLHome_ReSellingMallCell.m in Sources */,
 				4A1800E41F2ADE2A00F6E63D /* XBTagTitleCell.m in Sources */,
+				4A6CA0E31F3AA7E100720438 /* PYArcMenuView.m in Sources */,
 				4A1800E91F2B233300F6E63D /* GLHomePage_GoodsCell.m in Sources */,
 				4A4CE2DE1F35911E002E3CD0 /* LBForgetSecretViewController.m in Sources */,
 				4A46869C1F3952D5002B4AE5 /* LBWineCouponRepurchaseViewController.m in Sources */,
