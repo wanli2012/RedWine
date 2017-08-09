@@ -15,5 +15,8 @@
 #define CHECKYZM @"User/check_yzm"  //验证验证码
 #define BACKPWD @"User/back_pwd"  //忘记密码
 #define LOGIN @"User/login"  //登录
+#define GOODSDETAIL @"shop/getGoodsCommentAndDetailByGoodsId"  //商品详情
+#define ADDTOCART @"shop/addCart"//加入购物车
+
 
 #endif /* HeaderUrl_h */

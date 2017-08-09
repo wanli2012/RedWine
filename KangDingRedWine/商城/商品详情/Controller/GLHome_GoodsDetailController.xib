@@ -13,10 +13,14 @@
             <connections>
                 <outlet property="acountView" destination="88G-uG-zaW" id="2dU-gn-Of8"/>
                 <outlet property="backBtn" destination="wLS-z5-dWD" id="QqP-Lk-XQZ"/>
+                <outlet property="countLabel" destination="jo2-gz-3sZ" id="rug-es-GF9"/>
                 <outlet property="headerImageV" destination="YUB-dy-dd0" id="bDI-AZ-PNz"/>
                 <outlet property="headerView" destination="apz-C0-kUa" id="Hej-q4-xlK"/>
+                <outlet property="nameLabel" destination="7Pq-fi-BjE" id="jdu-sV-EfK"/>
                 <outlet property="navView" destination="xdk-oQ-wur" id="iL5-8q-eJP"/>
+                <outlet property="priceLabel" destination="Rrr-on-frz" id="NGe-0D-BpN"/>
                 <outlet property="tableView" destination="UgT-LQ-vHp" id="4C0-ve-J7f"/>
+                <outlet property="titleLabel" destination="C5q-3g-Y4p" id="IR2-Oa-PAz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -187,15 +191,23 @@
                                 <action selector="back:" destination="-1" eventType="touchUpInside" id="A1a-yl-mfG"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-3g-Y4p">
+                            <rect key="frame" x="160.5" y="33" width="69.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="wLS-z5-dWD" secondAttribute="bottom" id="1rJ-5r-EOn"/>
                         <constraint firstItem="wLS-z5-dWD" firstAttribute="leading" secondItem="xdk-oQ-wur" secondAttribute="leading" id="R1u-qB-BH9"/>
+                        <constraint firstAttribute="bottom" secondItem="C5q-3g-Y4p" secondAttribute="bottom" constant="10" id="U4G-8h-F61"/>
                         <constraint firstAttribute="height" constant="64" id="lwW-iG-P78"/>
+                        <constraint firstItem="C5q-3g-Y4p" firstAttribute="centerX" secondItem="xdk-oQ-wur" secondAttribute="centerX" id="wzE-Db-0vs"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="购物车1" translatesAutoresizingMaskIntoConstraints="NO" id="lHz-99-sY2">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="购物车1" translatesAutoresizingMaskIntoConstraints="NO" id="lHz-99-sY2">
                     <rect key="frame" x="310" y="646" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="Kow-To-JgN"/>
