@@ -83,8 +83,6 @@
 		4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72741F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib */; };
 		4A6B727F1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */; };
 		4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */; };
-		4A6B72871F34615B00DF9FF7 /* GLMine_AccountSafetyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */; };
-		4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */; };
 		4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B728D1F3464E700DF9FF7 /* GLMine_BankListController.m */; };
 		4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B728E1F3464E700DF9FF7 /* GLMine_BankListController.xib */; };
 		4A6B72991F34687800DF9FF7 /* GLMine_BankListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72971F34687800DF9FF7 /* GLMine_BankListCell.m */; };
@@ -96,6 +94,11 @@
 		4A6B72A91F34801100DF9FF7 /* LBShopingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B72A61F34801100DF9FF7 /* LBShopingCarTableViewCell.xib */; };
 		4A6CA0E21F3AA7E100720438 /* PYArcMenu_button_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CA0DF1F3AA7E100720438 /* PYArcMenu_button_image.png */; };
 		4A6CA0E31F3AA7E100720438 /* PYArcMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */; };
+		4A6CA0EA1F3AEA4200720438 /* GLMine_AccountSafetyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CA0E71F3AEA4200720438 /* GLMine_AccountSafetyController.m */; };
+		4A6CA0EB1F3AEA4200720438 /* GLMine_AccountSafetyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CA0E81F3AEA4200720438 /* GLMine_AccountSafetyController.xib */; };
+		4A6CA0EF1F3B183000720438 /* GLCart_OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CA0EE1F3B183000720438 /* GLCart_OrderModel.m */; };
+		4A6CA0F31F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6CA0F11F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.m */; };
+		4A6CA0F41F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6CA0F21F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.xib */; };
 		4A7768381F3072B400C01BD5 /* GLHomePage_AllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A77682F1F3072B400C01BD5 /* GLHomePage_AllController.m */; };
 		4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7768301F3072B400C01BD5 /* GLHomePage_AllController.xib */; };
 		4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7768331F3072B400C01BD5 /* GLHomePage_AllOneCell.m */; };
@@ -259,9 +262,6 @@
 		4A6B727C1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_PersonInfoCell.h; sourceTree = "<group>"; };
 		4A6B727D1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_PersonInfoCell.m; sourceTree = "<group>"; };
 		4A6B727E1F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_PersonInfoCell.xib; sourceTree = "<group>"; };
-		4A6B72841F34615B00DF9FF7 /* GLMine_AccountSafetyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_AccountSafetyController.h; sourceTree = "<group>"; };
-		4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_AccountSafetyController.m; sourceTree = "<group>"; };
-		4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_AccountSafetyController.xib; sourceTree = "<group>"; };
 		4A6B728C1F3464E700DF9FF7 /* GLMine_BankListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_BankListController.h; sourceTree = "<group>"; };
 		4A6B728D1F3464E700DF9FF7 /* GLMine_BankListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_BankListController.m; sourceTree = "<group>"; };
 		4A6B728E1F3464E700DF9FF7 /* GLMine_BankListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_BankListController.xib; sourceTree = "<group>"; };
@@ -279,6 +279,14 @@
 		4A6CA0DF1F3AA7E100720438 /* PYArcMenu_button_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PYArcMenu_button_image.png; sourceTree = "<group>"; };
 		4A6CA0E01F3AA7E100720438 /* PYArcMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYArcMenuView.h; sourceTree = "<group>"; };
 		4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYArcMenuView.m; sourceTree = "<group>"; };
+		4A6CA0E61F3AEA4200720438 /* GLMine_AccountSafetyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMine_AccountSafetyController.h; sourceTree = "<group>"; };
+		4A6CA0E71F3AEA4200720438 /* GLMine_AccountSafetyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMine_AccountSafetyController.m; sourceTree = "<group>"; };
+		4A6CA0E81F3AEA4200720438 /* GLMine_AccountSafetyController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMine_AccountSafetyController.xib; sourceTree = "<group>"; };
+		4A6CA0ED1F3B183000720438 /* GLCart_OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCart_OrderModel.h; sourceTree = "<group>"; };
+		4A6CA0EE1F3B183000720438 /* GLCart_OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLCart_OrderModel.m; sourceTree = "<group>"; };
+		4A6CA0F01F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCart_AllGoodsController.h; sourceTree = "<group>"; };
+		4A6CA0F11F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCart_AllGoodsController.m; sourceTree = "<group>"; };
+		4A6CA0F21F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCart_AllGoodsController.xib; sourceTree = "<group>"; };
 		4A77682E1F3072B400C01BD5 /* GLHomePage_AllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHomePage_AllController.h; sourceTree = "<group>"; };
 		4A77682F1F3072B400C01BD5 /* GLHomePage_AllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHomePage_AllController.m; sourceTree = "<group>"; };
 		4A7768301F3072B400C01BD5 /* GLHomePage_AllController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHomePage_AllController.xib; sourceTree = "<group>"; };
@@ -635,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4CE2CD1F3572B3002E3CD0 /* Controller */,
+				4A6CA0EC1F3B17FA00720438 /* Model */,
 				4A4CE2CE1F3572B3002E3CD0 /* View */,
 			);
 			path = "订单";
@@ -646,6 +655,9 @@
 				4A4CE2CF1F3572EB002E3CD0 /* GLShoppingCart_OrderController.h */,
 				4A4CE2D01F3572EB002E3CD0 /* GLShoppingCart_OrderController.m */,
 				4A4CE2D11F3572EB002E3CD0 /* GLShoppingCart_OrderController.xib */,
+				4A6CA0F01F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.h */,
+				4A6CA0F11F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.m */,
+				4A6CA0F21F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -796,32 +808,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4A6B72811F3460E900DF9FF7 /* 账户安全 */ = {
-			isa = PBXGroup;
-			children = (
-				4A6B72821F3460E900DF9FF7 /* Controller */,
-				4A6B72831F3460E900DF9FF7 /* View */,
-			);
-			path = "账户安全";
-			sourceTree = "<group>";
-		};
-		4A6B72821F3460E900DF9FF7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A6B72841F34615B00DF9FF7 /* GLMine_AccountSafetyController.h */,
-				4A6B72851F34615B00DF9FF7 /* GLMine_AccountSafetyController.m */,
-				4A6B72861F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A6B72831F3460E900DF9FF7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4A6B72891F3464D300DF9FF7 /* 银行卡 */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +890,41 @@
 				4A6CA0E11F3AA7E100720438 /* PYArcMenuView.m */,
 			);
 			path = PYArcMenuView;
+			sourceTree = "<group>";
+		};
+		4A6CA0E41F3AEA4200720438 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CA0E51F3AEA4200720438 /* Controller */,
+				4A6CA0E91F3AEA4200720438 /* View */,
+			);
+			path = "设置";
+			sourceTree = "<group>";
+		};
+		4A6CA0E51F3AEA4200720438 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CA0E61F3AEA4200720438 /* GLMine_AccountSafetyController.h */,
+				4A6CA0E71F3AEA4200720438 /* GLMine_AccountSafetyController.m */,
+				4A6CA0E81F3AEA4200720438 /* GLMine_AccountSafetyController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A6CA0E91F3AEA4200720438 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A6CA0EC1F3B17FA00720438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A6CA0ED1F3B183000720438 /* GLCart_OrderModel.h */,
+				4A6CA0EE1F3B183000720438 /* GLCart_OrderModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4A77682D1F3072B400C01BD5 /* Controller */ = {
@@ -1045,8 +1066,8 @@
 			children = (
 				4A911A2C1F25E3AB003C0F6C /* 首页 */,
 				4A6B726F1F341AF200DF9FF7 /* 个人信息 */,
+				4A6CA0E41F3AEA4200720438 /* 设置 */,
 				4A4CE2ED1F35B151002E3CD0 /* 订单 */,
-				4A6B72811F3460E900DF9FF7 /* 账户安全 */,
 				4A6B72891F3464D300DF9FF7 /* 银行卡 */,
 				4A4CE2C41F356445002E3CD0 /* 实名认证 */,
 			);
@@ -1300,6 +1321,7 @@
 				4A46869D1F3952D5002B4AE5 /* LBWineCouponRepurchaseViewController.xib in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
 				4A6B72901F3464E700DF9FF7 /* GLMine_BankListController.xib in Resources */,
+				4A6CA0F41F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.xib in Resources */,
 				F957D2BB1F359D6E00A63845 /* LBHarvestAddressListViewController.xib in Resources */,
 				4A1800F11F2B420000F6E63D /* Tabbar和Nav.xcassets in Resources */,
 				4A4CE2E61F359145002E3CD0 /* 登录注册.xcassets in Resources */,
@@ -1314,6 +1336,7 @@
 				4A911A7E1F25E7CA003C0F6C /* LoadWaitView.xib in Resources */,
 				4A1800D01F2AD83A00F6E63D /* 首页.xcassets in Resources */,
 				4A4CE2E11F35911E002E3CD0 /* LBLoginViewController.xib in Resources */,
+				4A6CA0EB1F3AEA4200720438 /* GLMine_AccountSafetyController.xib in Resources */,
 				4A50A6371F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib in Resources */,
 				4A1800C81F2ACBE800F6E63D /* GLHomePageController.xib in Resources */,
 				4A7768391F3072B400C01BD5 /* GLHomePage_AllController.xib in Resources */,
@@ -1349,7 +1372,6 @@
 				F952A45A1F39ACC000ED797F /* LoginIdentityView.xib in Resources */,
 				4A4686901F39529C002B4AE5 /* GLMine_DonationListController.xib in Resources */,
 				4A4CE2CB1F35647E002E3CD0 /* GLMine_RealNameController.xib in Resources */,
-				4A6B72881F34615B00DF9FF7 /* GLMine_AccountSafetyController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1426,7 +1448,6 @@
 				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
-				4A6B72871F34615B00DF9FF7 /* GLMine_AccountSafetyController.m in Sources */,
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
 				4A911A3F1F25E3F8003C0F6C /* UserModel.m in Sources */,
@@ -1454,10 +1475,12 @@
 				4A6B728F1F3464E700DF9FF7 /* GLMine_BankListController.m in Sources */,
 				4A4CE2D21F3572EB002E3CD0 /* GLShoppingCart_OrderController.m in Sources */,
 				4A1800C71F2ACBE800F6E63D /* GLHomePageController.m in Sources */,
+				4A6CA0EF1F3B183000720438 /* GLCart_OrderModel.m in Sources */,
 				4A1800EE1F2B2BE700F6E63D /* GLHome_GoodsCollectionViewCell.m in Sources */,
 				4A6B72A71F34801100DF9FF7 /* shopingModel.m in Sources */,
 				4A1800E21F2ADE2A00F6E63D /* XBTagTitleModel.m in Sources */,
 				4A911A6E1F25E40B003C0F6C /* UILabel+UILabel_ChangeLineSpaceAndWordSpace.m in Sources */,
+				4A6CA0EA1F3AEA4200720438 /* GLMine_AccountSafetyController.m in Sources */,
 				4A50A6361F317BC300A28363 /* GLHome_GoodsDetailCellCell.m in Sources */,
 				F957D2B81F359D6E00A63845 /* LBAddHarvestAddressViewController.m in Sources */,
 				4A911A4D1F25E406003C0F6C /* BasetabbarViewController.m in Sources */,
@@ -1484,6 +1507,7 @@
 				4A4686611F3950D1002B4AE5 /* GLHome_PersonCustomController.m in Sources */,
 				4A6B72991F34687800DF9FF7 /* GLMine_BankListCell.m in Sources */,
 				4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */,
+				4A6CA0F31F3B1E9F00720438 /* GLShoppingCart_AllGoodsController.m in Sources */,
 				4A50A6311F3176AF00A28363 /* GLHome_GoodsDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

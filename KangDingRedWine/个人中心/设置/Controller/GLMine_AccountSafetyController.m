@@ -11,7 +11,7 @@
 #import "GLMine_BankListController.h"
 #import "GLMine_RealNameController.h"
 
-@interface GLMine_AccountSafetyController ()
+@interface GLMine_AccountSafetyController ()<UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"账户安全";
+    self.navigationItem.title = @"设置";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"GLMine_PersonInfoCell" bundle:nil] forCellReuseIdentifier:@"GLMine_PersonInfoCell"];
@@ -143,6 +143,15 @@
                 
             }
                 break;
+            case 3://退出登录
+            {
+                
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"您确定要退出吗?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+                alert.tag = 10;
+                [alert show];
+                
+            }
+                break;
                 
             default:
                 break;
@@ -151,7 +160,26 @@
 
     }
 }
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex==1) {
+        
+//        if (alertView.tag == 10) {
+        
+            [UserModel defaultUser].loginstatus = NO;
 
+            [usermodelachivar achive];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshInterface" object:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+            
+//        }else if (alertView.tag == 11){
+            
+//            [self clearFile];//清楚缓存
+//        }
+        
+    }
+    
+}
 #pragma mark 懒加载
 - (NSArray *)titlesArr{
     if (!_titlesArr) {
@@ -161,7 +189,7 @@
 }
 - (NSArray *)titlesArr2{
     if (!_titlesArr2) {
-        _titlesArr2 = [NSArray arrayWithObjects:@"绑定手机",@"实名认证",@"银行卡", nil];
+        _titlesArr2 = [NSArray arrayWithObjects:@"绑定手机",@"实名认证",@"银行卡",@"退出登录", nil];
     }
     return _titlesArr2;
 }

@@ -9,16 +9,22 @@
 #import "GLHome_GoodsDetailController.h"
 #import "GLHome_GoodsDetailCellCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>
 #import "PYArcMenuView.h"
 
 #define kPIC_HEIGHT  200
 
-@interface GLHome_GoodsDetailController ()<UITableViewDataSource,UITableViewDelegate,PYArcMenuViewDelegate>
+@interface GLHome_GoodsDetailController ()<UITableViewDataSource,UITableViewDelegate,PYArcMenuViewDelegate,SDCycleScrollViewDelegate>
+{
+    CGFloat _headerImageHeight;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIView *navView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (nonatomic, strong)SDCycleScrollView *cycleScrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;//头视图
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageV;//图片
@@ -42,31 +48,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self setUI];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:@"GLHome_GoodsDetailCellCell" bundle:nil] forCellReuseIdentifier:@"GLHome_GoodsDetailCellCell"];
-    
-    [self.tableView addSubview:self.nodataV];
-    
-    //加载数据
-    __weak __typeof(self) weakSelf = self;
-    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-        [weakSelf updateData:YES];
-        
-    }];
-    
-    // 设置文字
-    [header setTitle:@"快扯我，快点" forState:MJRefreshStateIdle];
-    
-    [header setTitle:@"数据要来啦" forState:MJRefreshStatePulling];
-    
-    [header setTitle:@"服务器正在狂奔 ..." forState:MJRefreshStateRefreshing];
-    
-    self.tableView.mj_header = header;
-    
-    [weakSelf updateData:YES];
+//    
+//    [self.tableView addSubview:self.nodataV];
+//    
+//    //加载数据
+//    __weak __typeof(self) weakSelf = self;
+//    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//        
+//        [weakSelf updateData:YES];
+//        
+//    }];
+//    
+//    // 设置文字
+//    [header setTitle:@"快扯我，快点" forState:MJRefreshStateIdle];
+//    
+//    [header setTitle:@"数据要来啦" forState:MJRefreshStatePulling];
+//    
+//    [header setTitle:@"服务器正在狂奔 ..." forState:MJRefreshStateRefreshing];
+//    
+//    self.tableView.mj_header = header;
+//    
+    [self updateData:YES];
     
 }
 
@@ -135,6 +141,12 @@
 
 - (void)setUI{
     
+    _headerImageHeight = 250;
+    [self.tableView addSubview:self.cycleScrollView];
+    self.cycleScrollView.tag = 101;
+    self.tableView.contentInset = UIEdgeInsetsMake(_headerImageHeight, 0, 0, 0);
+
+    
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.acountView.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerTopLeft cornerRadii:CGSizeMake(13, 13)];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = self.acountView.bounds;
@@ -167,14 +179,25 @@
 }
 
 - (void)PYArcMenuView:(PYArcMenuView *)menu didSelectedForIndex:(NSInteger)index {
+    
     NSLog(@"%ld", index);
+    
+    if (![UserModel defaultUser].loginstatus) {
+        [MBProgressHUD showError:@"请先登录!"];
+        return;
+    }
+    
     NSString *url;
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     switch (index) {
         case 0:
         {
             url = ADDTOCART;
-//            dict[@"uid"] = ;
+            dict[@"uid"] = [UserModel defaultUser].uid;
+            dict[@"token"] = [UserModel defaultUser].token;
+            dict[@"goods_id"] = self.goodsID;
+            dict[@"count"] = @1;
+            
         }
             break;
         case 1:
@@ -199,20 +222,11 @@
         
         if([responseObject[@"code"] integerValue] == 1){
             
-            if ([responseObject[@"data"] count] == 0) {
-                
-                [MBProgressHUD showError:@"没有数据"];
-                return;
-                
-            }
+            [MBProgressHUD showSuccess:responseObject[@"message"]];
             
-            if ([responseObject[@"data"][@"goods_detail"] count] == 0) {
-                
-                [MBProgressHUD showError:@"没有数据"];
-                return;
-                
-            }
+        }else{
             
+            [MBProgressHUD showError:responseObject[@"message"]];
         }
         
         [self.tableView reloadData];
@@ -265,10 +279,19 @@
 //滚动代理事件 图片放大 以及 导航栏颜色渐变
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    
+    CGPoint point = scrollView.contentOffset;
+    
+    if (point.y < -_headerImageHeight) {
+        CGRect rect = [self.tableView viewWithTag:101].frame;
+        rect.origin.y = point.y;
+        rect.size.height = -point.y;
+        [self.tableView viewWithTag:101].frame = rect;
+    }
 
     //导航栏颜色渐变
     UIColor *color=[UIColor blackColor];
-    CGFloat offset = scrollView.contentOffset.y - 40;
+    CGFloat offset = scrollView.contentOffset.y + 140;
     if (offset < 0) {
         
         self.navView.backgroundColor = [color colorWithAlphaComponent:0];
@@ -283,6 +306,30 @@
         self.acountView.x = kSCREEN_WIDTH - 100 + offset;
         
     }
+    
+}
+-(SDCycleScrollView*)cycleScrollView
+{
+    if (!_cycleScrollView) {
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, -_headerImageHeight)
+                                                              delegate:self
+                                                      placeholderImage:[UIImage imageNamed:LUNBO_PlaceHolder]];
+        
+        _cycleScrollView.autoScrollTimeInterval = 5.f;
+        _cycleScrollView.localizationImageNamesGroup = @[LUNBO_PlaceHolder,LUNBO_PlaceHolder,LUNBO_PlaceHolder];
+        _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+        
+        _cycleScrollView.placeholderImageContentMode = UIViewContentModeScaleAspectFill;
+        _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;// 翻页 右下角
+        _cycleScrollView.titleLabelBackgroundColor = YYSRGBColor(241, 242, 243, 1);// 图片对应的标题的 背景色。（因为没有设标题）
+        
+        _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"矩形-4-拷贝-2"];
+        _cycleScrollView.pageDotImage = [UIImage imageNamed:@"矩形-4-拷贝"];
+        _cycleScrollView.placeholderImage = [UIImage imageNamed:LUNBO_PlaceHolder];
+        _cycleScrollView.pageControlDotSize = CGSizeMake(10, 2);
+    }
+    
+    return _cycleScrollView;
     
 }
 @end

@@ -11,7 +11,6 @@
 #import "GLMine_PersonInfoController.h"
 #import "GLMine_OrderListController.h"
 #import "GLMine_AccountSafetyController.h"
-#import "LBLoginViewController.h"
 
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
@@ -119,8 +118,8 @@
 //    [self.navigationController pushViewController:vc animated:YES];
 //    self.hidesBottomBarWhenPushed = NO;
     
-    LBLoginViewController*vc=[[LBLoginViewController alloc]init];
-    [self presentViewController:vc animated:NO completion:nil];
+//    LBLoginViewController*vc=[[LBLoginViewController alloc]init];
+//    [self presentViewController:vc animated:NO completion:nil];
 }
 
 //设置界面

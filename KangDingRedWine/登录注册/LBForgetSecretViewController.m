@@ -128,10 +128,10 @@
         return;
     }
     
-    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+//    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userphone"] = self.phoneTf.text;
-    dic[@"password"] = encryptsecret;
+    dic[@"password"] = self.secretTf.text;
     dic[@"user_name"] = self.recommendTf.text;
     dic[@"yzm"] = self.yzmTf.text;
     dic[@"qtidnum"] = self.qtID.text;
@@ -151,6 +151,7 @@
     
             });
         }else{
+            
             [MBProgressHUD showError:responseObject[@"message"]];
         }
     } enError:^(NSError *error) {

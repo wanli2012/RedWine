@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GLShoppingCart_OrderCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
 
 @end

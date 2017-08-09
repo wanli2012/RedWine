@@ -8,6 +8,17 @@
 
 #import "LBShopingCarTableViewCell.h"
 #import "shopingModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface LBShopingCarTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imagev;//商品图片
+@property (weak, nonatomic) IBOutlet UIButton *selectedBt;//选中button
+@property (weak, nonatomic) IBOutlet UILabel *infoLb;//描述
+@property (weak, nonatomic) IBOutlet UILabel *priceLb;//价格
+@property (weak, nonatomic) IBOutlet UILabel *numLb;//数量
+
+@end
 
 @implementation LBShopingCarTableViewCell
 
@@ -19,10 +30,16 @@
    
 }
 
+//模型赋值
 -(void)setModel:(shopingModel *)model{
     _model = model;
+    
     self.selectedBt.selected = _model.isSelect;
     self.numLb.text = _model.num;
+    self.infoLb.text = _model.info;
+    self.priceLb.text = _model.goods_price;
+    
+    [self.imagev sd_setImageWithURL:[NSURL URLWithString:_model.thumb] placeholderImage:[UIImage imageNamed:kGOODS_PlaceHolder]];
     
 }
 //单选按钮

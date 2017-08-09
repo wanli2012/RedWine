@@ -12,6 +12,7 @@
 #import "GLMineController.h"
 #import "GLHome_AllClassifyController.h"
 #import "GLShoppingCartController.h"
+#import "LBLoginViewController.h"
 
 @interface BasetabbarViewController ()<UITabBarControllerDelegate>
 
@@ -58,21 +59,16 @@
     BaseNavigationViewController *mineNav = [[BaseNavigationViewController alloc] initWithRootViewController:mineVC];
     mineNav.tabBarItem = [self barTitle:@"我的" image:@"个人白" selectImage:@"个人"];
     
-//    if ([UserModel defaultUser].loginstatus == YES) {//登录状态
+    if ([UserModel defaultUser].loginstatus == YES) {//登录状态
 //        if ([[UserModel defaultUser].group_id isEqualToString:MANAGER] || [[UserModel defaultUser].group_id isEqualToString:DIRECTOR] || [[UserModel defaultUser].group_id isEqualToString:MINISTER]) {//经理
-//
-//            self.viewControllers = @[mineNav];
-//
-//        }else if ([[UserModel defaultUser].group_id isEqualToString:Retailer] || [[UserModel defaultUser].group_id isEqualToString:OrdinaryUser]|| [[UserModel defaultUser].group_id isEqualToString:TWODELEGATE]){//商家
-//            self.viewControllers = @[mallNav,uploadNav,mineNav];
-//        }else{
-//            self.viewControllers = @[mallNav,mineNav];
-//        }
-//    }else{//退出状态
+
+            self.viewControllers = @[homeNav,classifyNav,cartNav,mineNav];
+       
+    }else{//退出状态
         self.viewControllers = @[homeNav,classifyNav,cartNav,mineNav];
-//    }
+    }
 //
-//    self.selectedIndex=0;
+    self.selectedIndex=0;
     
 }
 
@@ -90,48 +86,32 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    
-//    int index;
-//    if ([[UserModel defaultUser].group_id isEqualToString:OrdinaryUser] || [[UserModel defaultUser].group_id isEqualToString:Retailer] ) {
-//        
-//        index = 2;
-//        
-//    }else if ([[UserModel defaultUser].group_id isEqualToString:MANAGER] || [[UserModel defaultUser].group_id isEqualToString:DIRECTOR]|| [[UserModel defaultUser].group_id isEqualToString:MINISTER]){
-//        
-//        index = 0;
-//        
-//    }else if ( [UserModel defaultUser].group_id == nil || [[UserModel defaultUser].group_id integerValue] == 0){
-//        
-//        index = 1;
-//        
-//    }else{
-//        
-//        index = 1;
-//        
-//    }
-//    if (viewController == [tabBarController.viewControllers objectAtIndex:index]) {
-//
-//        if ([UserModel defaultUser].loginstatus == YES) {
-//            
-//            if ([[UserModel defaultUser].isBqInfo integerValue] == 0) {
-//                
-//                GLCompleteInfoController *infoVC = [[GLCompleteInfoController alloc] init];
-//                infoVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-//                [self presentViewController:infoVC animated:YES completion:nil];
-//                
-//                return NO;
-//            }
-//            return YES;
-//        }
-//        
-//        GLLoginController *loginVC = [[GLLoginController alloc] init];
-//        BaseNavigationViewController *nav = [[BaseNavigationViewController alloc]initWithRootViewController:loginVC];
-//        nav.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-//        [self presentViewController:nav animated:YES completion:nil];
-//        return NO;
-//
-//    }
 
+    
+    if (viewController == [tabBarController.viewControllers objectAtIndex:2] || viewController == [tabBarController.viewControllers objectAtIndex:3]) {
+        
+        if ([UserModel defaultUser].loginstatus == YES) {
+            
+            //            if ([[UserModel defaultUser].isBqInfo integerValue] == 0) {
+            
+            //                GLCompleteInfoController *infoVC = [[GLCompleteInfoController alloc] init];
+            //                infoVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            //                [self presentViewController:infoVC animated:YES completion:nil];
+            
+            //                return NO;
+            //            }
+            
+            return YES;
+        }
+        
+        LBLoginViewController *loginVC = [[LBLoginViewController alloc] init];
+        BaseNavigationViewController *nav = [[BaseNavigationViewController alloc]initWithRootViewController:loginVC];
+        nav.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:nav animated:YES completion:nil];
+        return NO;
+        
+    }
+    
     return YES;
 }
 //刷新界面

@@ -31,6 +31,9 @@
                 <constraint firstItem="J3m-YS-XeV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uIO-ER-WOz"/>
             </constraints>
             <size key="customSize" width="86" height="76"/>
+            <connections>
+                <outlet property="imageV" destination="J3m-YS-XeV" id="tn1-1U-5k7"/>
+            </connections>
             <point key="canvasLocation" x="-15" y="26"/>
         </collectionViewCell>
     </objects>

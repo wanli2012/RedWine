@@ -17,6 +17,9 @@
 #define LOGIN @"User/login"  //登录
 #define GOODSDETAIL @"shop/getGoodsCommentAndDetailByGoodsId"  //商品详情
 #define ADDTOCART @"shop/addCart"//加入购物车
+#define CARTLIST @"shop/myCartList"//购物车列表
+#define CARTDELETE @"shop/delCart"//购物车删除商品
+#define PLACEORDER_BEFORE @"shop/placeOrderBefore"//提交订单前
 
 
 #endif /* HeaderUrl_h */

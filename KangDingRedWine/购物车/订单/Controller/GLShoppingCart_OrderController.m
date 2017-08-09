@@ -9,6 +9,8 @@
 #import "GLShoppingCart_OrderController.h"
 #import "GLShoppingCart_OrderCell.h"
 #import "LBHarvestAddressListViewController.h"
+#import "GLCart_OrderModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface GLShoppingCart_OrderController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -22,6 +24,11 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet UILabel *sumLabel;//合计
+
+@property (strong, nonatomic)LoadWaitView *loadV;
+@property (nonatomic,strong)NodataView *nodataV;
+
+@property (nonatomic, strong)NSMutableArray *models;
 
 
 @end
@@ -41,7 +48,59 @@
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"GLShoppingCart_OrderCell" bundle:nil] forCellWithReuseIdentifier:@"GLShoppingCart_OrderCell"];
     
+    [self initDataSource];
+    
 }
+
+- (void)initDataSource{
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"uid"] = [UserModel defaultUser].uid;
+    dict[@"token"] = [UserModel defaultUser].token;
+    dict[@"goods_id"] = self.goods_id;
+    dict[@"goods_count"] = self.goods_count;
+    
+    _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
+    [NetworkManager requestPOSTWithURLStr:PLACEORDER_BEFORE paramDic:dict finish:^(id responseObject) {
+
+        [self.loadV removeloadview];
+        
+        if([responseObject[@"code"] integerValue] == 1){
+            
+            if ([responseObject[@"data"] count] == 0) {
+                
+                [MBProgressHUD showError:responseObject[@"message"]];
+                
+                return;
+            }
+            
+            for (NSDictionary *dic in responseObject[@"data"]) {
+                GLCart_OrderModel *model = [GLCart_OrderModel mj_objectWithKeyValues:dic];
+                [self.models addObject:model];
+            }
+    
+        }
+
+        [self.collectionView reloadData];
+        
+    } enError:^(NSError *error) {
+
+        [self.loadV removeloadview];
+        
+    }];
+    
+}
+
+-(NodataView*)nodataV{
+    
+    if (!_nodataV) {
+        _nodataV=[[NSBundle mainBundle]loadNibNamed:@"NodataView" owner:self options:nil].firstObject;
+        _nodataV.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT-64-50-49);
+    }
+    return _nodataV;
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -91,12 +150,15 @@
 #pragma UICollectionViewDelegate UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return self.models.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    GLCart_OrderModel *model = self.models[indexPath.row];
     GLShoppingCart_OrderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLShoppingCart_OrderCell" forIndexPath:indexPath];
+    
+    [cell.imageV sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:kGOODS_PlaceHolder]];
     
     return cell;
 }
@@ -107,4 +169,10 @@
     return CGSizeMake(80, 80);
 }
 
+- (NSMutableArray *)models{
+    if (!_models) {
+        _models = [NSMutableArray array];
+    }
+    return _models;
+}
 @end

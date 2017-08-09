@@ -10,4 +10,8 @@
 
 @interface GLShoppingCart_OrderController : UIViewController
 
+@property (nonatomic, copy)NSString *goods_id;
+
+@property (nonatomic, copy)NSString *goods_count;
+
 @end

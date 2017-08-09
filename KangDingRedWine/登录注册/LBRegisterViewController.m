@@ -143,10 +143,10 @@
 //确定按
 -(void)surebuttonEvent{
     [self maskviewgesture];
-    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+//    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"phone"] = self.phoneTf.text;
-    dic[@"new_pwd"] = encryptsecret;
+    dic[@"new_pwd"] = self.secretTf.text;
     dic[@"yzm"] = self.yzmTf.text;
     dic[@"groupID"] = self.usertype;
     

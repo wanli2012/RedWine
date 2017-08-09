@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LBLoginViewController">
             <connections>
+                <outlet property="backBtn" destination="tNn-TT-30R" id="CNk-KF-mbA"/>
                 <outlet property="loginBt" destination="QWW-Fc-gCp" id="zID-5R-QFq"/>
                 <outlet property="phoneTf" destination="9dv-3z-uoV" id="8fi-JZ-nu6"/>
                 <outlet property="secretTf" destination="Qlm-t2-hQU" id="jhb-uf-aH0"/>
@@ -26,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="h4b-PO-MjX">
-                    <rect key="frame" x="127.5" y="102.5" width="120" height="100"/>
+                    <rect key="frame" x="128" y="103" width="120" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="31Y-qA-r0n"/>
@@ -167,6 +168,18 @@
                         <action selector="loginEvent:" destination="-1" eventType="touchUpInside" id="Yuo-FS-TAu"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNn-TT-30R">
+                    <rect key="frame" x="0.0" y="20" width="75" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="Omf-DE-zua"/>
+                        <constraint firstAttribute="height" constant="44" id="tBk-y7-hKi"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="25" maxY="0.0"/>
+                    <state key="normal" image="标题栏返回键1白"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="I8m-hE-VLB"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -175,6 +188,7 @@
                 <constraint firstItem="QNt-a0-h9t" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="3Lb-dR-HSt"/>
                 <constraint firstItem="QWW-Fc-gCp" firstAttribute="top" secondItem="Qay-Ar-R6k" secondAttribute="bottom" constant="40" id="D3n-zE-u7M"/>
                 <constraint firstAttribute="trailing" secondItem="OV8-Ia-5vO" secondAttribute="trailing" constant="40" id="Iut-zZ-5Wd"/>
+                <constraint firstItem="tNn-TT-30R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OXz-Wh-ldL"/>
                 <constraint firstAttribute="bottom" secondItem="Z0S-Me-5le" secondAttribute="bottom" id="PLX-io-LKD"/>
                 <constraint firstItem="cCd-bh-Js4" firstAttribute="leading" secondItem="Qay-Ar-R6k" secondAttribute="trailing" constant="5" id="RhZ-oj-CEj"/>
                 <constraint firstItem="QNt-a0-h9t" firstAttribute="top" secondItem="h4b-PO-MjX" secondAttribute="bottom" constant="58.5" id="TbL-fD-M0h"/>
@@ -187,6 +201,7 @@
                 <constraint firstItem="cCd-bh-Js4" firstAttribute="top" secondItem="OV8-Ia-5vO" secondAttribute="bottom" constant="10" id="gjS-Z0-EAe"/>
                 <constraint firstItem="Z0S-Me-5le" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ihD-4K-A9j"/>
                 <constraint firstItem="Qay-Ar-R6k" firstAttribute="top" secondItem="OV8-Ia-5vO" secondAttribute="bottom" constant="10" id="je4-t1-MLI"/>
+                <constraint firstItem="tNn-TT-30R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="lsK-rE-d9r"/>
                 <constraint firstItem="QNt-a0-h9t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="ylE-nd-xcB"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
@@ -194,6 +209,7 @@
     </objects>
     <resources>
         <image name="logo" width="96" height="80"/>
+        <image name="标题栏返回键1白" width="25" height="15"/>
         <image name="登录注册背景图" width="375" height="667"/>
     </resources>
 </document>

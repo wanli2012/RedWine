@@ -21,6 +21,7 @@
 
 @property (strong, nonatomic)UIView *maskView;
 @property (strong, nonatomic)NSString *usertype;//用户类型 默认为善行者
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
 
 @end
 
@@ -51,6 +52,11 @@
     
      self.currentloginViewimage = self.loginView.shangImage;
     self.usertype = memberID;
+}
+
+//返回
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 //注册成功
 -(void)registerSucess:(NSNotification*)noti{
@@ -125,36 +131,44 @@
 //确定按
 -(void)surebuttonEvent{
     [self maskviewgesture];
-    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
+//    NSString *encryptsecret = [RSAEncryptor encryptString:self.secretTf.text publicKey:public_RSA];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[@"userphone"] = self.phoneTf.text;
-    dic[@"password"] = encryptsecret;
+    dic[@"password"] = self.secretTf.text;
     dic[@"groupID"] = self.usertype;
     [NetworkManager requestPOSTWithURLStr:LOGIN paramDic:dic finish:^(id responseObject) {
         if ([responseObject[@"code"] integerValue]==1) {
             
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"uid"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"IDCard"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"address"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"banknumber"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"group_id"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"group_name"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"isBqInfo"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"mark"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"openbank"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"phone"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"pic"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"price"]];
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"qtIdNum"]];
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recNumber"]];
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recommendID"]];
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recommendUser"]];
-            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"token"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"truename"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"version"]];
-             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"username"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"uid"]];
+            [UserModel defaultUser].token = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"token"]];
+            [UserModel defaultUser].IDCard = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"IDCard"]];
+            [UserModel defaultUser].address = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"address"]];
+            [UserModel defaultUser].banknumber = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"banknumber"]];
+            [UserModel defaultUser].group_id = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"group_id"]];
+            [UserModel defaultUser].group_name = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"group_name"]];
+            [UserModel defaultUser].isBqInfo = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"isBqInfo"]];
+            [UserModel defaultUser].mark = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"mark"]];
+            [UserModel defaultUser].openbank = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"openbank"]];
+            [UserModel defaultUser].phone = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"phone"]];
+            [UserModel defaultUser].pic = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"pic"]];
+            [UserModel defaultUser].price = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"price"]];
+            [UserModel defaultUser].qtIdNum = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"qtIdNum"]];
+            [UserModel defaultUser].recNumber = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"recNumber"]];
+            [UserModel defaultUser].recNumber = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"recommendID"]];
+            [UserModel defaultUser].recommendUser = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"recommendUser"]];
+            [UserModel defaultUser].truename = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"truename"]];
+            [UserModel defaultUser].version = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"version"]];
+            [UserModel defaultUser].username = [NSString stringWithFormat:@"%@",responseObject[@"data"][@"username"]];
             
-             [MBProgressHUD showError:responseObject[@"message"]];
+            [UserModel defaultUser].loginstatus = YES;
+            [MBProgressHUD showError:responseObject[@"message"]];
+            [usermodelachivar achive];
+            
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshInterface" object:nil];
+      
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+            
         }else{
             [MBProgressHUD showError:responseObject[@"message"]];
         }
@@ -282,6 +296,7 @@
     if (!_loginView) {
         _loginView=[[NSBundle mainBundle]loadNibNamed:@"LoginIdentityView" owner:self options:nil].firstObject;
         _loginView.frame=CGRectMake(20, (kSCREEN_HEIGHT - 240)/2, kSCREEN_WIDTH-40, 240);
+        _loginView.layer.cornerRadius = 10.f;
         _loginView.alpha=1;
         
     }

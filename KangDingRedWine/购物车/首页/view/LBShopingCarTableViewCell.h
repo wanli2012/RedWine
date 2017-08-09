@@ -19,11 +19,7 @@
 
 @interface LBShopingCarTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imagev;
-@property (weak, nonatomic) IBOutlet UIButton *selectedBt;
-@property (weak, nonatomic) IBOutlet UILabel *infoLb;
-@property (weak, nonatomic) IBOutlet UILabel *priceLb;
-@property (weak, nonatomic) IBOutlet UILabel *numLb;
+
 
 @property(nonatomic,assign)id<LBShopingCarTableViewCelldelegete>  delegete;
 @property(nonatomic,assign)NSInteger  row;
