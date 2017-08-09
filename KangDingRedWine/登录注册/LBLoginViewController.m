@@ -120,7 +120,6 @@
         self.loginView.transform = CGAffineTransformMakeScale(1.0, 1.0);
     } completion:nil];
     
-    
 }
 
 //确定按
@@ -131,9 +130,30 @@
     dic[@"userphone"] = self.phoneTf.text;
     dic[@"password"] = encryptsecret;
     dic[@"groupID"] = self.usertype;
-    
     [NetworkManager requestPOSTWithURLStr:LOGIN paramDic:dic finish:^(id responseObject) {
         if ([responseObject[@"code"] integerValue]==1) {
+            
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"uid"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"IDCard"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"address"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"banknumber"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"group_id"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"group_name"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"isBqInfo"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"mark"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"openbank"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"phone"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"pic"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"price"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"qtIdNum"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recNumber"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recommendID"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"recommendUser"]];
+            [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"token"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"truename"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"version"]];
+             [UserModel defaultUser].uid = [NSString stringWithFormat:@"%@",responseObject[@"username"]];
+            
              [MBProgressHUD showError:responseObject[@"message"]];
         }else{
             [MBProgressHUD showError:responseObject[@"message"]];
