@@ -15,6 +15,7 @@
 @interface GLMineController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     NSArray *_titleArr;
+    NSArray *_valueArr;
     
 }
 
@@ -47,6 +48,10 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *pendingEvaluationImageVWidth;//待评价图片宽度
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *completeImageVWidth;//已完成图片宽度
 
+@property (strong, nonatomic)LoadWaitView *loadV;
+@property (nonatomic,strong)NodataView *nodataV;
+
+
 @end
 
 @implementation GLMineController
@@ -59,7 +64,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self adaptUI];//适配UI
     
-    _titleArr = @[@"理财积分",@"余额",@"余额4",@"余额3",@"余额2",@"1"];
+    _titleArr = @[@"已返酒劵",@"未返酒劵",@"理财积分",@"账户余额",@"全团积分",@"积分"];
     
     self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
@@ -72,8 +77,58 @@
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(100 * autoSizeScaleY, 100 * autoSizeScaleY);
     self.collectionView.collectionViewLayout = layout;
+
+}
+- (void)viewWillAppear:(BOOL)animated{
     
+    [super viewWillAppear:animated];
     
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
+    
+    [self refreshData];//请求数据
+    
+}
+- (void)refreshData {
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"uid"] = [UserModel defaultUser].uid;
+    dict[@"token"] = [UserModel defaultUser].token;
+    
+    _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
+    [NetworkManager requestPOSTWithURLStr:REFRESH paramDic:dict finish:^(id responseObject) {
+
+        [self.loadV removeloadview];
+        
+        if([responseObject[@"code"] integerValue] == 1){
+            
+            if ([responseObject[@"data"] count] == 0) {
+                
+                [MBProgressHUD showError:@"没有数据"];
+                return;
+            }
+            
+            [UserModel defaultUser].username = responseObject[@"data"][@"username"];
+            [UserModel defaultUser].mark = responseObject[@"data"][@"mark"];
+            [UserModel defaultUser].yue = responseObject[@"data"][@"yue"];
+            
+            [usermodelachivar achive];
+            
+            _valueArr = @[[UserModel defaultUser].mark,[UserModel defaultUser].mark,[UserModel defaultUser].mark,[UserModel defaultUser].mark,[UserModel defaultUser].mark,[UserModel defaultUser].mark];
+            
+            self.nameLabel.text = responseObject[@"data"][@"username"];
+            
+        }else{
+            [MBProgressHUD showError:responseObject[@"message"]];
+        }
+        
+        [self.collectionView reloadData];
+        
+    } enError:^(NSError *error) {
+
+        [self.loadV removeloadview];
+        
+    }];
 
 }
 
@@ -204,14 +259,7 @@
     self.hidesBottomBarWhenPushed = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = NO;
-    
-}
+
 
 - (NSIndexPath *)curIndexPath {
     
@@ -247,12 +295,14 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     GLMineCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GLMineCollectionCell" forIndexPath:indexPath];
+    
     cell.layer.cornerRadius = 50 * autoSizeScaleY;
     cell.clipsToBounds = YES;
     cell.layer.borderColor = [UIColor whiteColor].CGColor;
     cell.layer.borderWidth = 2 * autoSizeScaleY;
     
     cell.titleLabel.text = _titleArr[indexPath.row];
+    cell.valueLabel.text = _valueArr[indexPath.row];
     
     return cell;
 }

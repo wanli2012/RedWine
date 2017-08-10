@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLHome_GoodsCommentModel.h"
 
 @interface GLHome_GoodsDetailCellCell : UITableViewCell
+
+@property (nonatomic, strong)GLHome_GoodsCommentModel *model;
 
 @end

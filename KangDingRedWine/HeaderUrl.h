@@ -20,6 +20,7 @@
 #define CARTLIST @"shop/myCartList"//购物车列表
 #define CARTDELETE @"shop/delCart"//购物车删除商品
 #define PLACEORDER_BEFORE @"shop/placeOrderBefore"//提交订单前
+#define REFRESH @"User/refresh"//刷新
 
 
 #endif /* HeaderUrl_h */

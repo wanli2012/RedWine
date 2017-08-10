@@ -10,4 +10,6 @@
 
 @interface GLShoppingCartController : UIViewController
 
+@property (nonatomic, assign)NSInteger pushIndex; //1:商品详情 跳转过来的
+
 @end

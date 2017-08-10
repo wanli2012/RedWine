@@ -7,8 +7,10 @@
 //
 
 #import "GLShoppingCart_AllGoodsController.h"
+#import "GLShoppineCart_GoodsCell.h"
 
 @interface GLShoppingCart_AllGoodsController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -17,26 +19,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"商品清单";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"GLShoppineCart_GoodsCell" bundle:nil] forCellReuseIdentifier:@"GLShoppineCart_GoodsCell"];
 }
 
 #pragma mark UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 2;
+    return self.models.count;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+
+    GLShoppineCart_GoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLShoppineCart_GoodsCell"];
+    
+    cell.model = self.models[indexPath.row];
+    
+    cell.selectionStyle = 0;
     
     return cell;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 120;
+    return 100;
 }
 
 @end

@@ -11,6 +11,9 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import "PYArcMenuView.h"
+#import "GLHome_GoodsCommentController.h"
+#import "GLShoppingCartController.h"
+#import "GLShoppingCart_OrderController.h"
 
 #define kPIC_HEIGHT  200
 
@@ -27,9 +30,9 @@
 @property (nonatomic, strong)SDCycleScrollView *cycleScrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;//头视图
-@property (weak, nonatomic) IBOutlet UIImageView *headerImageV;//图片
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;//商品名字
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;//价格
+@property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;//评论数
 
 @property (weak, nonatomic) IBOutlet UIView *acountView;//销量View
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;//销量Label
@@ -42,6 +45,11 @@
 @property (strong, nonatomic) NSArray<PYArcMenuView *> *menuArray;
 @property (strong, nonatomic) NSArray<UIImage *> *menuImageArray;
 
+@property (nonatomic, strong)NSMutableArray *models;
+@property (weak, nonatomic) IBOutlet UIButton *addToCartBtn;
+@property (weak, nonatomic) IBOutlet UIButton *buyNowBtn;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+
 @end
 
 @implementation GLHome_GoodsDetailController
@@ -52,32 +60,14 @@
     
     [self setUI];
     [self.tableView registerNib:[UINib nibWithNibName:@"GLHome_GoodsDetailCellCell" bundle:nil] forCellReuseIdentifier:@"GLHome_GoodsDetailCellCell"];
-//    
-//    [self.tableView addSubview:self.nodataV];
-//    
-//    //加载数据
-//    __weak __typeof(self) weakSelf = self;
-//    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//        
-//        [weakSelf updateData:YES];
-//        
-//    }];
-//    
-//    // 设置文字
-//    [header setTitle:@"快扯我，快点" forState:MJRefreshStateIdle];
-//    
-//    [header setTitle:@"数据要来啦" forState:MJRefreshStatePulling];
-//    
-//    [header setTitle:@"服务器正在狂奔 ..." forState:MJRefreshStateRefreshing];
-//    
-//    self.tableView.mj_header = header;
-//    
+
     [self updateData:YES];
     
 }
 
 - (void)updateData:(BOOL)status {
     
+    [self.models removeAllObjects];
     
     _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
     [NetworkManager requestPOSTWithURLStr:GOODSDETAIL paramDic:@{@"goods_id":self.goodsID} finish:^(id responseObject) {
@@ -90,13 +80,15 @@
             if ([responseObject[@"data"] count] == 0) {
                 
                 [MBProgressHUD showError:@"没有数据"];
+                
                 return;
                 
             }
             
             if ([responseObject[@"data"][@"goods_detail"] count] == 0) {
                 
-                [MBProgressHUD showError:@"没有数据"];
+                [MBProgressHUD showError:responseObject[@"message"]];
+                
                 return;
                 
             }
@@ -105,10 +97,22 @@
             
             self.nameLabel.text = self.goodsDetailDic[@"goods_info"];
             self.priceLabel.text = [NSString stringWithFormat:@"%@酒劵",self.goodsDetailDic[@"discount"]];
-            self.countLabel.text = [NSString stringWithFormat:@"销量:%@",self.goodsDetailDic[@"salenum"]];
+            self.countLabel.text = [NSString stringWithFormat:@"销量: %@",self.goodsDetailDic[@"salenum"]];
+            [self.commentCountBtn setTitle:[NSString stringWithFormat:@"评论:(%@)",responseObject[@"data"][@"comment"][@"count"]] forState:UIControlStateNormal];
             
-            NSString *urlStr = self.goodsDetailDic[@"thumb_url"][0];
-            [self.headerImageV sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:kGOODS_PlaceHolder]];
+            if ([responseObject[@"data"][@"comment"][@"datas"] count] == 0) {
+                
+                return;
+                
+            }
+            
+            for (NSDictionary *dic in responseObject[@"data"][@"comment"][@"datas"]) {
+                GLHome_GoodsCommentModel *model = [GLHome_GoodsCommentModel mj_objectWithKeyValues:dic];
+                [self.models addObject:model];
+            }
+
+        }else{
+            [MBProgressHUD showError:responseObject[@"message"]];
         }
         
         [self.tableView reloadData];
@@ -155,21 +159,91 @@
     
     self.titleLabel.alpha = 0;
     
-    PYArcMenuView *arcMenuViewRightBottom = [[PYArcMenuView alloc] initWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, kSCREEN_HEIGHT-64) withPosition:PYArcMenuViewPositionRightBottom];
-    arcMenuViewRightBottom.backgroundColor = [UIColor clearColor];
-    arcMenuViewRightBottom.delegate = self;
-    [self.view addSubview:arcMenuViewRightBottom];
+    self.addToCartBtn.layer.cornerRadius = 5.f;
+    self.buyNowBtn.layer.cornerRadius = 5.f;
     
-    self.menuArray = @[arcMenuViewRightBottom];
+    self.bottomView.layer.shadowColor=[UIColor darkGrayColor].CGColor;
+    self.bottomView.layer.shadowOpacity=0.5;
+    self.bottomView.layer.shadowOffset = CGSizeMake(0,0);
     
-    self.menuImageArray = @[[UIImage imageNamed:@"购物车1"], [UIImage imageNamed:@"购物车1"], [UIImage imageNamed:@"购物车1"]];
     
-    for (int i=0; i<self.menuArray.count; i++) {
-        [self.menuArray[i] addMenuItemsWithUIImages:self.menuImageArray];
-    }
+//    PYArcMenuView *arcMenuViewRightBottom = [[PYArcMenuView alloc] initWithFrame:CGRectMake(0, 64, kSCREEN_WIDTH, kSCREEN_HEIGHT-64) withPosition:PYArcMenuViewPositionRightBottom];
+//    arcMenuViewRightBottom.backgroundColor = [UIColor clearColor];
+//    arcMenuViewRightBottom.delegate = self;
+//    [self.view addSubview:arcMenuViewRightBottom];
+//    
+//    self.menuArray = @[arcMenuViewRightBottom];
+//    
+//    self.menuImageArray = @[[UIImage imageNamed:@"购物车1"], [UIImage imageNamed:@"购物车1"], [UIImage imageNamed:@"购物车1"]];
+//    
+//    for (int i=0; i<self.menuArray.count; i++) {
+//        [self.menuArray[i] addMenuItemsWithUIImages:self.menuImageArray];
+//    }
     
 }
 
+//购物车
+- (IBAction)shoppingCart:(id)sender {
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLShoppingCartController *cartVC = [[GLShoppingCartController alloc] init];
+    cartVC.pushIndex = 1;
+    [self.navigationController pushViewController:cartVC animated:YES];
+    
+}
+//加入购物车
+- (IBAction)addToCart:(id)sender {
+    NSString *url;
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    url = ADDTOCART;
+    dict[@"uid"] = [UserModel defaultUser].uid;
+    dict[@"token"] = [UserModel defaultUser].token;
+    dict[@"goods_id"] = self.goodsID;
+    dict[@"count"] = @1;
+    
+    [self requestWithUrl:url andDict:dict];
+
+}
+//立即购买
+- (IBAction)buyNow:(id)sender {
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLShoppingCart_OrderController * orderVC = [[GLShoppingCart_OrderController alloc] init];
+    
+    orderVC.goods_id = self.goodsID;
+    orderVC.goods_count = @"1";
+    
+    [self.navigationController pushViewController:orderVC animated:YES];
+}
+
+//请求
+- (void)requestWithUrl:(NSString *)url andDict:(NSMutableDictionary *)dict {
+
+    _loadV=[LoadWaitView addloadview:[UIScreen mainScreen].bounds tagert:self.view];
+    [NetworkManager requestPOSTWithURLStr:url paramDic:dict finish:^(id responseObject) {
+        
+        [self endRefresh];
+        [self.loadV removeloadview];
+        
+        if([responseObject[@"code"] integerValue] == 1){
+            
+            [MBProgressHUD showSuccess:responseObject[@"message"]];
+            
+        }else{
+            
+            [MBProgressHUD showError:responseObject[@"message"]];
+        }
+        
+        [self.tableView reloadData];
+        
+    } enError:^(NSError *error) {
+        
+        [self endRefresh];
+        [self.loadV removeloadview];
+        
+    }];
+
+}
 - (void)PYArcMenuWillExpand:(PYArcMenuView *)menu {
     
 }
@@ -248,6 +322,23 @@
 
 }
 
+//查看全部评论
+- (IBAction)checkAllComment:(id)sender {
+    
+    if (self.models.count == 0) {
+        [MBProgressHUD showError:@"没有更多评论"];
+        return;
+    }
+    
+    self.hidesBottomBarWhenPushed = YES;
+    
+    GLHome_GoodsCommentController *comment = [[GLHome_GoodsCommentController alloc] init];
+    comment.models = self.models;
+    [self.navigationController pushViewController:comment animated:YES];
+    
+}
+
+//返回
 - (IBAction)back:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
@@ -256,7 +347,8 @@
 #pragma mark UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    
+    return self.models.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -264,6 +356,8 @@
     GLHome_GoodsDetailCellCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GLHome_GoodsDetailCellCell"];
 
     cell.selectionStyle = 0;
+    
+    cell.model = self.models.count == 0 ? 0 : self.models[indexPath.row];
     
     return cell;
 }
@@ -308,6 +402,7 @@
     }
     
 }
+
 -(SDCycleScrollView*)cycleScrollView
 {
     if (!_cycleScrollView) {
@@ -331,5 +426,12 @@
     
     return _cycleScrollView;
     
+}
+
+- (NSMutableArray *)models{
+    if (_models == nil) {
+        _models = [NSMutableArray array];
+    }
+    return _models;
 }
 @end

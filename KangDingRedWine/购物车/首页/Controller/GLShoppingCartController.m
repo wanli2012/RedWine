@@ -23,6 +23,7 @@
 
 @property (nonatomic, strong)NSMutableArray *models;
 @property (nonatomic, strong)NSMutableArray *selectedArr;//选中的商品 数组
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstant;
 
 @end
 
@@ -33,14 +34,26 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableview registerNib:[UINib nibWithNibName:@"LBShopingCarTableViewCell" bundle:nil] forCellReuseIdentifier:@"LBShopingCarTableViewCell"];
 
+    self.navigationItem.title = @"购物车";
     [self.allChoseBt horizontalCenterImageAndTitle:10];
   
 }
+
 - (void)viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = NO;
+    
+    if (self.pushIndex == 1) {
+        
+        self.bottomConstant.constant = 0;
+        self.navigationController.navigationBar.hidden = NO;
+    }
+
+    self.allChoseBt.selected = YES;
+    [self ChooseAllEvent:self.allChoseBt];//默认未选中状态
+    
     [self initDataSource];
     
 }
@@ -57,7 +70,7 @@
     [NetworkManager requestPOSTWithURLStr:CARTLIST paramDic:dict finish:^(id responseObject) {
         
         [self endRefresh];
-        [self.loadV removeloadview];
+        [_loadV removeloadview];
         
         if([responseObject[@"code"] integerValue] == 1){
             
@@ -113,7 +126,8 @@
     cell.selectionStyle = 0;
     cell.delegete = self;
     cell.row = indexPath.row;
-    cell.model = self.models[indexPath.row];
+    
+    cell.model = self.models.count == 0 ? nil:self.models[indexPath.row];
     
     return cell;
     
@@ -198,13 +212,21 @@
 - (IBAction)ChooseAllEvent:(UIButton *)sender {
     sender.selected = !sender.selected;
     NSInteger  num = 0;
+    [self.selectedArr removeAllObjects];
+    
     if (sender.selected) {
         for (int i = 0; i < self.models.count; i++) {
             shopingModel *model = self.models[i];
             model.isSelect = YES;
             num = num + [model.goods_price integerValue] * [model.num integerValue];
+            [self.selectedArr addObject:model];
         }
     }else{
+        [self.selectedArr removeAllObjects];
+        
+        if (self.models.count == 0) {
+            return;
+        }
         for (int i = 0; i < self.models.count; i++) {
             shopingModel *model = self.models[i];
             model.isSelect = NO;

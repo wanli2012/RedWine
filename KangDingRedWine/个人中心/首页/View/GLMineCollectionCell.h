@@ -10,5 +10,6 @@
 
 @interface GLMineCollectionCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 
 @end

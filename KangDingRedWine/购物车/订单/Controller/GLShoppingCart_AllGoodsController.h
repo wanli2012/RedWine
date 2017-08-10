@@ -10,4 +10,6 @@
 
 @interface GLShoppingCart_AllGoodsController : UIViewController
 
+@property (nonatomic, strong)NSArray *models;
+
 @end

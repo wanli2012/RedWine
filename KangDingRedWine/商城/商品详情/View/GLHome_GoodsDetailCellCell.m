@@ -7,6 +7,14 @@
 //
 
 #import "GLHome_GoodsDetailCellCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface GLHome_GoodsDetailCellCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *picImageV;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@end
 
 @implementation GLHome_GoodsDetailCellCell
 
@@ -15,10 +23,12 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setModel:(GLHome_GoodsCommentModel *)model{
+    _model = model;
+    self.nameLabel.text = _model.user_name;
+    self.contentLabel.text = _model.comment;
+    [self.picImageV sd_setImageWithURL:[NSURL URLWithString:_model.pic] placeholderImage:[UIImage imageNamed:kPic_HolderImage]];
+    
 }
 
 @end

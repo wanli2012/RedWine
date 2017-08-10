@@ -23,7 +23,8 @@
 #define URL_Base @"http://www.51kdh.cn/index.php/App/"
 
 #define PlaceHolderImage @"picnodata"
-#define LUNBO_PlaceHolder @"banner"
+#define kPic_HolderImage @"头像底" //头像占位图
+#define LUNBO_PlaceHolder @"商品详情页banner占位"
 #define kGOODS_PlaceHolder @"首页商品占位图"
 
 //分享

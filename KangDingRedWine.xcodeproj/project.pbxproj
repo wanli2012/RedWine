@@ -77,6 +77,13 @@
 		4A50A63B1F31AF9F00A28363 /* 个人中心.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63A1F31AF9F00A28363 /* 个人中心.xcassets */; };
 		4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */; };
 		4A50A6401F31BEB100A28363 /* GLMineCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */; };
+		4A55D4541F3BEAE5008C785A /* GLShoppineCart_GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55D4521F3BEAE5008C785A /* GLShoppineCart_GoodsCell.m */; };
+		4A55D4551F3BEAE5008C785A /* GLShoppineCart_GoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A55D4531F3BEAE5008C785A /* GLShoppineCart_GoodsCell.xib */; };
+		4A55D4591F3C0144008C785A /* GLHome_GoodsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55D4581F3C0144008C785A /* GLHome_GoodsCommentModel.m */; };
+		4A55D45D1F3C0A9C008C785A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55D45B1F3C0A9C008C785A /* TableViewController.m */; };
+		4A55D45E1F3C0A9C008C785A /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A55D45C1F3C0A9C008C785A /* TableViewController.xib */; };
+		4A55D4621F3C2AF7008C785A /* GLHome_GoodsCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A55D4601F3C2AF7008C785A /* GLHome_GoodsCommentController.m */; };
+		4A55D4631F3C2AF7008C785A /* GLHome_GoodsCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A55D4611F3C2AF7008C785A /* GLHome_GoodsCommentController.xib */; };
 		4A6B726D1F34124900DF9FF7 /* GLShoppingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */; };
 		4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */; };
 		4A6B72751F341BCF00DF9FF7 /* GLMine_PersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B72731F341BCF00DF9FF7 /* GLMine_PersonInfoController.m */; };
@@ -253,6 +260,17 @@
 		4A50A63C1F31BEB100A28363 /* GLMineCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMineCollectionCell.h; sourceTree = "<group>"; };
 		4A50A63D1F31BEB100A28363 /* GLMineCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLMineCollectionCell.m; sourceTree = "<group>"; };
 		4A50A63E1F31BEB100A28363 /* GLMineCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLMineCollectionCell.xib; sourceTree = "<group>"; };
+		4A55D4511F3BEAE5008C785A /* GLShoppineCart_GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppineCart_GoodsCell.h; sourceTree = "<group>"; };
+		4A55D4521F3BEAE5008C785A /* GLShoppineCart_GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppineCart_GoodsCell.m; sourceTree = "<group>"; };
+		4A55D4531F3BEAE5008C785A /* GLShoppineCart_GoodsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppineCart_GoodsCell.xib; sourceTree = "<group>"; };
+		4A55D4571F3C0144008C785A /* GLHome_GoodsCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsCommentModel.h; sourceTree = "<group>"; };
+		4A55D4581F3C0144008C785A /* GLHome_GoodsCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsCommentModel.m; sourceTree = "<group>"; };
+		4A55D45A1F3C0A9C008C785A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		4A55D45B1F3C0A9C008C785A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		4A55D45C1F3C0A9C008C785A /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		4A55D45F1F3C2AF7008C785A /* GLHome_GoodsCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHome_GoodsCommentController.h; sourceTree = "<group>"; };
+		4A55D4601F3C2AF7008C785A /* GLHome_GoodsCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLHome_GoodsCommentController.m; sourceTree = "<group>"; };
+		4A55D4611F3C2AF7008C785A /* GLHome_GoodsCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLHome_GoodsCommentController.xib; sourceTree = "<group>"; };
 		4A6B726A1F34124900DF9FF7 /* GLShoppingCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShoppingCartController.h; sourceTree = "<group>"; };
 		4A6B726B1F34124900DF9FF7 /* GLShoppingCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShoppingCartController.m; sourceTree = "<group>"; };
 		4A6B726C1F34124900DF9FF7 /* GLShoppingCartController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLShoppingCartController.xib; sourceTree = "<group>"; };
@@ -668,6 +686,9 @@
 				4A4CE2E81F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.h */,
 				4A4CE2E91F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.m */,
 				4A4CE2EA1F35AA9B002E3CD0 /* GLShoppingCart_OrderCell.xib */,
+				4A55D4511F3BEAE5008C785A /* GLShoppineCart_GoodsCell.h */,
+				4A55D4521F3BEAE5008C785A /* GLShoppineCart_GoodsCell.m */,
+				4A55D4531F3BEAE5008C785A /* GLShoppineCart_GoodsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				4A50A62C1F31768700A28363 /* Controller */,
+				4A55D4561F3C00EA008C785A /* Model */,
 				4A50A62D1F31768700A28363 /* View */,
 			);
 			path = "商品详情";
@@ -735,6 +757,9 @@
 				4A50A62E1F3176AF00A28363 /* GLHome_GoodsDetailController.h */,
 				4A50A62F1F3176AF00A28363 /* GLHome_GoodsDetailController.m */,
 				4A50A6301F3176AF00A28363 /* GLHome_GoodsDetailController.xib */,
+				4A55D45F1F3C2AF7008C785A /* GLHome_GoodsCommentController.h */,
+				4A55D4601F3C2AF7008C785A /* GLHome_GoodsCommentController.m */,
+				4A55D4611F3C2AF7008C785A /* GLHome_GoodsCommentController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -748,6 +773,15 @@
 				4A50A6351F317BC300A28363 /* GLHome_GoodsDetailCellCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A55D4561F3C00EA008C785A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A55D4571F3C0144008C785A /* GLHome_GoodsCommentModel.h */,
+				4A55D4581F3C0144008C785A /* GLHome_GoodsCommentModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4A6B72651F34121E00DF9FF7 /* 购物车 */ = {
@@ -1187,6 +1221,9 @@
 				4A911A791F25E7CA003C0F6C /* NodataView.h */,
 				4A911A7A1F25E7CA003C0F6C /* NodataView.m */,
 				4A911A7B1F25E7CA003C0F6C /* NodataView.xib */,
+				4A55D45A1F3C0A9C008C785A /* TableViewController.h */,
+				4A55D45B1F3C0A9C008C785A /* TableViewController.m */,
+				4A55D45C1F3C0A9C008C785A /* TableViewController.xib */,
 			);
 			path = "自定义View";
 			sourceTree = "<group>";
@@ -1314,9 +1351,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A55D4551F3BEAE5008C785A /* GLShoppineCart_GoodsCell.xib in Resources */,
 				4A6B729A1F34687800DF9FF7 /* GLMine_BankListCell.xib in Resources */,
 				4A6B72761F341BCF00DF9FF7 /* GLMine_PersonInfoController.xib in Resources */,
+				4A55D45E1F3C0A9C008C785A /* TableViewController.xib in Resources */,
 				4A4686831F39514B002B4AE5 /* GLHome_ReSellingMallCell.xib in Resources */,
+				4A55D4631F3C2AF7008C785A /* GLHome_GoodsCommentController.xib in Resources */,
 				4A6B726E1F34124900DF9FF7 /* GLShoppingCartController.xib in Resources */,
 				4A46869D1F3952D5002B4AE5 /* LBWineCouponRepurchaseViewController.xib in Resources */,
 				4A6B72801F341CBD00DF9FF7 /* GLMine_PersonInfoCell.xib in Resources */,
@@ -1433,6 +1473,7 @@
 				4A4CE2E21F35911E002E3CD0 /* LBRegisterViewController.m in Sources */,
 				4A911A4E1F25E406003C0F6C /* LBLoginNavigationViewController.m in Sources */,
 				4A1800CC1F2ACBFB00F6E63D /* GLMineController.m in Sources */,
+				4A55D4541F3BEAE5008C785A /* GLShoppineCart_GoodsCell.m in Sources */,
 				4A7768381F3072B400C01BD5 /* GLHomePage_AllController.m in Sources */,
 				4A911A6D1F25E40B003C0F6C /* UIButton+SetEdgeInsets.m in Sources */,
 				4A4686841F39514B002B4AE5 /* GLHome_ResellingMallCollectionCell.m in Sources */,
@@ -1447,6 +1488,7 @@
 				4A46865C1F39509B002B4AE5 /* GLHome_AgentController.m in Sources */,
 				4A48DA911F33224B00FF8D8F /* HJCarouselViewLayout.m in Sources */,
 				4A911A671F25E40B003C0F6C /* formattime.m in Sources */,
+				4A55D4591F3C0144008C785A /* GLHome_GoodsCommentModel.m in Sources */,
 				4A77683A1F3072B400C01BD5 /* GLHomePage_AllOneCell.m in Sources */,
 				4A911A441F25E400003C0F6C /* NetworkManager.m in Sources */,
 				4A911A6F1F25E40B003C0F6C /* UIView+Extension.m in Sources */,
@@ -1459,6 +1501,7 @@
 				4A4686A81F39562E002B4AE5 /* GLHome_AllClassifyController.m in Sources */,
 				4A911A7F1F25E7CA003C0F6C /* NodataView.m in Sources */,
 				4A4CE2CA1F35647E002E3CD0 /* GLMine_RealNameController.m in Sources */,
+				4A55D4621F3C2AF7008C785A /* GLHome_GoodsCommentController.m in Sources */,
 				4A50A63F1F31BEB100A28363 /* GLMineCollectionCell.m in Sources */,
 				4A77683C1F3072B400C01BD5 /* GLHomePage_AllTwoCell.m in Sources */,
 				F98A5B751F3860AA0025754E /* LBFinancialZoneViewController.m in Sources */,
@@ -1487,6 +1530,7 @@
 				4A4686911F39529C002B4AE5 /* GLMine_DonationListCell.m in Sources */,
 				4A911A681F25E40B003C0F6C /* GetLabelBounds.m in Sources */,
 				4A46868F1F39529C002B4AE5 /* GLMine_DonationListController.m in Sources */,
+				4A55D45D1F3C0A9C008C785A /* TableViewController.m in Sources */,
 				F952A4591F39ACC000ED797F /* LoginIdentityView.m in Sources */,
 				4A911A6B1F25E40B003C0F6C /* predicateModel.m in Sources */,
 				4A4686AF1F39873A002B4AE5 /* GLHome_GoodsModel.m in Sources */,

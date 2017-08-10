@@ -11,7 +11,7 @@
 #import "GLMine_BankListController.h"
 #import "GLMine_RealNameController.h"
 
-@interface GLMine_AccountSafetyController ()<UIAlertViewDelegate>
+@interface GLMine_AccountSafetyController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -145,10 +145,25 @@
                 break;
             case 3://退出登录
             {
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您确定要退出吗?" preferredStyle:UIAlertControllerStyleAlert];
                 
-                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"您确定要退出吗?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-                alert.tag = 10;
-                [alert show];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    
+                    //            NSLog(@"点击取消");
+                    
+                }]];
+                
+                [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
+                    [UserModel defaultUser].loginstatus = NO;
+                    
+                    [usermodelachivar achive];
+                    [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshInterface" object:nil];
+                    [self.navigationController popViewControllerAnimated:YES];
+
+                }]];
+
+                [self presentViewController:alertController animated:YES completion:nil];
                 
             }
                 break;
@@ -160,26 +175,26 @@
 
     }
 }
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    if (buttonIndex==1) {
-        
-//        if (alertView.tag == 10) {
-        
-            [UserModel defaultUser].loginstatus = NO;
-
-            [usermodelachivar achive];
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshInterface" object:nil];
-            [self.navigationController popViewControllerAnimated:YES];
-            
-//        }else if (alertView.tag == 11){
-            
-//            [self clearFile];//清楚缓存
-//        }
-        
-    }
-    
-}
+//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    
+//    if (buttonIndex==1) {
+//        
+////        if (alertView.tag == 10) {
+//        
+//            [UserModel defaultUser].loginstatus = NO;
+//
+//            [usermodelachivar achive];
+//            [[NSNotificationCenter defaultCenter]postNotificationName:@"refreshInterface" object:nil];
+//            [self.navigationController popViewControllerAnimated:YES];
+//            
+////        }else if (alertView.tag == 11){
+//            
+////            [self clearFile];//清楚缓存
+////        }
+//        
+//    }
+//    
+//}
 #pragma mark 懒加载
 - (NSArray *)titlesArr{
     if (!_titlesArr) {

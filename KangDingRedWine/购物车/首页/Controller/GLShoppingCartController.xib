@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GLShoppingCartController">
             <connections>
                 <outlet property="allChoseBt" destination="31G-dn-FMX" id="VyU-Xr-9R8"/>
+                <outlet property="bottomConstant" destination="IPK-21-wHV" id="F4z-mg-AmM"/>
                 <outlet property="tableview" destination="E6Z-Uo-W4z" id="rFw-rJ-uDm"/>
                 <outlet property="totalLb" destination="lpG-CJ-BJ1" id="ug1-SK-SmY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

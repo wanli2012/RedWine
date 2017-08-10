@@ -11,6 +11,7 @@
 #import "LBHarvestAddressListViewController.h"
 #import "GLCart_OrderModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "GLShoppingCart_AllGoodsController.h"
 
 @interface GLShoppingCart_OrderController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -74,7 +75,7 @@
                 return;
             }
             
-            for (NSDictionary *dic in responseObject[@"data"]) {
+            for (NSDictionary *dic in responseObject[@"data"][@"goods_info"]) {
                 GLCart_OrderModel *model = [GLCart_OrderModel mj_objectWithKeyValues:dic];
                 [self.models addObject:model];
             }
@@ -116,7 +117,13 @@
 }
 //所有商品
 - (IBAction)allGoods:(id)sender {
-    NSLog(@"所有商品");
+    
+    self.hidesBottomBarWhenPushed = YES;
+    GLShoppingCart_AllGoodsController *allVC = [[GLShoppingCart_AllGoodsController alloc] init];
+    allVC.models = self.models;
+    
+    [self.navigationController pushViewController:allVC animated:YES];
+    
 }
 //快递配送
 - (IBAction)express:(id)sender {

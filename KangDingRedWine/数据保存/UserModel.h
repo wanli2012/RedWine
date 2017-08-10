@@ -33,6 +33,7 @@
 @property (nonatomic, copy)NSString  *truename;
 @property (nonatomic, copy)NSString  *username;
 @property (nonatomic, copy)NSString  *version;
+@property (nonatomic, copy)NSString  *yue;//余额
 
 +(UserModel*)defaultUser;
 
